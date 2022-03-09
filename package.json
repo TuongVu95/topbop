@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass scss/main.scss css/style.css -w --output-style compressed"
+    "sass": "node-sass scss/main.scss css/style.css -w --output-style compressed",
+    "pug-migrate": "pug -w ./pug  -o ./ -P"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/TuongVu95/topbop/issues"
   },
-  "homepage": "https://github.com/TuongVu95/topbop#readme"
+  "homepage": "https://github.com/TuongVu95/topbop#readme",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
 }
