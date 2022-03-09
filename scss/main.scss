@@ -5,4 +5,11 @@
 @import "./base/color-variables";
 
 // Import Mixin file
-@import "./abtracts/mixins/_index";
+@import "./abstracts/mixins";
+
+// Import component
+@import "./components/_container";
+
+// Import Page
+
+@import "./layout/trang-ca-nhan";
