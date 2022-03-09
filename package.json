@@ -1,0 +1,20 @@
+{
+  "name": "topbop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass scss/main.scss css/style.css -w --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuongVu95/topbop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TuongVu95/topbop/issues"
+  },
+  "homepage": "https://github.com/TuongVu95/topbop#readme"
+}

@@ -1,0 +1,15 @@
+// stylelint-disable declaration-no-important
+%pesudo{
+  content:'';
+  position: absolute;
+}
+$index:(
+  1000, 2000, 3000, 9999, 99999
+);
+// Common values
+@each $position in $positions {
+  .position-#{$position} {
+    position: $position !important;
+  }
+}
+
