@@ -1,8 +1,0 @@
-@mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
-}
-
-// @include transform(rotate());
-// @include transform(translate());

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass scss/main.scss css/style.css -w --output-style compressed",
-    "pug": "npx pug -w ./pug  -o ./ -P"
+    "pug": "pug -w ./pug  -o ./ -P"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TuongVu95/topbop#readme",
   "dependencies": {
+    "pug": "^3.0.2",
     "pug-cli": "^1.0.0-alpha6"
   }
 }
