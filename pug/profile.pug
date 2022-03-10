@@ -10,4 +10,20 @@ block content
           p Thành viên Top Bop
       
       .topbop__profile--benefit
-        .swiper
+        .topbop__swiper.swiper.benefit__swiper
+          .topbop__swiper--top
+            p LỢI ÍCH THÀNH VIÊN
+            .group-button-director
+              .swiper-button-next
+              .swiper-button-prev
+          .swiper-wrapper 
+            -for( var i = 0; i < 6; i++ )
+              .swiper-slide
+                .slide-image
+                  picture
+                    img(src="/images/benefit-image.png")
+                .slide-text
+                  p Giảm 10% với thành viên Top Bop
+
+block script
+  script(src="js/function.js") 
