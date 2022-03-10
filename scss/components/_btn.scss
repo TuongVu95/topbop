@@ -1,0 +1,20 @@
+$padding-y: 1.1rem;
+$padding-x: 2.4rem;
+$background-btn: $black;
+$color: $white;
+$font-size: 1.4rem;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: $padding-y $padding-x;
+    background: $background-btn;
+    color: $color;
+
+    span {
+        font-size: $font-size;
+        line-height: 1.8rem;
+    }
+}
