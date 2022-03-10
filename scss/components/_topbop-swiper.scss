@@ -3,16 +3,30 @@
     font-size: 2.4rem;
     line-height: 3.2rem;
     font-weight: 700;
-    margin-bottom: 3.7rem;
   }
   &--top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.7rem;
   }
 }
 
 .slide-btn {
   position: initial;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  line-height: 100%;
+  border: 0.1rem solid #ccc;
+  margin-top: 0;
+  color: #161616;
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
   &::after {
     content: "";
   }
