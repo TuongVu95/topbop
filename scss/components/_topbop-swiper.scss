@@ -1,0 +1,19 @@
+.topbop__swiper {
+  &--heading {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 3.7rem;
+  }
+  &--top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.slide-btn {
+  position: initial;
+  &::after {
+    content: "";
+  }
+}
