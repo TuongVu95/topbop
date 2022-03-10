@@ -1,0 +1,29 @@
+.topbop__profile {
+  &--top {
+    display: flex;
+    align-items: center;
+    padding: 176px 0 72px;
+  }
+  &--icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: $gray-200;
+    border-radius: 50%;
+  }
+  &--name {
+    margin-left: 32px;
+    h2 {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 20px;
+      color: #898989;
+    }
+  }
+}
