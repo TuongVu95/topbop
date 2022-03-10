@@ -21,12 +21,33 @@ block content
                 i.icon-chevron-down
           .swiper-wrapper 
             -for( var i = 0; i < 7; i++ )
-              .swiper-slide
-                .slide-image
+              .swiper-slide.topbop__slide
+                .slide__image
                   picture
-                    img(src="/images/benefit-image.png")
-                .slide-text
-                  p Giảm 10% với thành viên Top Bop
+                    img(src="/images/slide-image/benefit-image.png")
+                .slide__text
+                  h4.slide__text--heading Giảm 10% với thành viên Top Bop
+
+      .topbop__profile--dicovery
+        .topbop__swiper.swiper.product__swiper
+          .topbop__swiper--top
+            p.topbop__swiper--heading KHÁM PHÁ THÊM
+            .group-button-director
+              .swiper-button-next.slide-btn 
+                i.icon-chevron-downp-left
+
+              .swiper-button-prev.slide-btn
+                i.icon-hear-black
+          .swiper-wrapper 
+            -for( var i = 0; i < 7; i++ )
+              .swiper-slide.topbop__slide
+                .slide__image
+                  picture
+                    img(src="/images/slide-image/watch-slide.png")
+                  span 
+                    i.icon-heart
+                .slide__text
+                  h4.slide__text--heading WALDHOFF
 
 block script
   script(src="js/function.js") 
