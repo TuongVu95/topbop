@@ -102,6 +102,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-heart1:before {
+  content: "\e91a";
+  color: #718198;
+}
 .icon-arrow-thin-down:before {
   content: "\e900";
 }
@@ -124,56 +128,30 @@
 .icon-flag-black:before {
   content: "\e906";
 }
-.icon-flag:before {
-  content: "\e907";
-}
-.icon-hear-black .path1:before {
+.icon-heart-black .path1:before {
   content: "\e908";
   color: rgb(255, 255, 255);
 }
-.icon-hear-black .path2:before {
+.icon-heart-black .path2:before {
   content: "\e909";
   margin-left: -1em;
   color: rgb(22, 22, 22);
 }
 .icon-heart:before {
   content: "\e90a";
-  color: #fff;
-}
-.icon-ic-check:before {
-  content: "\e90b";
+  color: #718198;
 }
 .icon-ic-options-filter:before {
   content: "\e90c";
 }
-.icon-ic-search:before {
-  content: "\e90d";
-}
-.icon-rectangle-caro-inline:before {
-  content: "\e90e";
-}
-.icon-rectangle-caro:before {
-  content: "\e90f";
-}
 .icon-rectangle-default:before {
   content: "\e910";
-}
-.icon-rectangle-outline:before {
-  content: "\e911";
-  color: #fff;
 }
 .icon-twitter-black:before {
   content: "\e912";
 }
 .icon-twitter:before {
   content: "\e913";
-  color: #898989;
-}
-.icon-upload-black:before {
-  content: "\e914";
-}
-.icon-upload:before {
-  content: "\e915";
   color: #898989;
 }
 .icon-youtube-black .path1:before {
