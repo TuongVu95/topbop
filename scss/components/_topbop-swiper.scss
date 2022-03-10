@@ -10,6 +10,30 @@
     align-items: center;
     margin-bottom: 3.7rem;
   }
+  .topbop__slide {
+    .slide__image {
+      margin-bottom: 16px;
+    }
+    .slide__text {
+      &--heading {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        font-weight: 700;
+        color: #000;
+      }
+    }
+  }
+  &.product__swiper {
+    .topbop__slide {
+      .slide__image {
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+    }
+  }
 }
 
 .slide-btn {
@@ -24,10 +48,17 @@
   border: 0.1rem solid #ccc;
   margin-top: 0;
   color: #161616;
+  transition: all 0.3s ease-in-out;
   &:not(:last-child) {
     margin-right: 16px;
   }
   &::after {
     content: "";
+  }
+  &:hover {
+    background: #ccc;
+  }
+  &:active {
+    background: #a3a3a3;
   }
 }
