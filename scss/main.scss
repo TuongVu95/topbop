@@ -1,13 +1,15 @@
-
 // Import variable color
 @import "./base/color-variables";
 
 // Import Mixin file
 @import "./abstracts/mixins";
 
+// Import reset css
+@import "./base/reset";
+
 // Import component
 @import "./components/_container";
 
 // Import Page
 
-@import "./layout/trang-ca-nhan";
+@import "./layout/_profile";
