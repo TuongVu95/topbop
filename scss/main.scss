@@ -1,12 +1,8 @@
-// Import Mixin file
-@import "./abstracts/index";
-
 // Import reset css
 @import "./base/reset";
 
 // Import component
-@import "./components/_container";
+@import "./components/index";
 
 // Import Page
-
 @import "./layout/_profile";
