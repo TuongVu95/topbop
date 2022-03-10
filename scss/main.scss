@@ -1,8 +1,5 @@
-// Import variable color
-@import "./base/color-variables";
-
 // Import Mixin file
-@import "./abstracts/mixins";
+@import "./abstracts/index";
 
 // Import reset css
 @import "./base/reset";
