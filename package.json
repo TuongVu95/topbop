@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass scss/main.scss css/style.css -w --output-style compressed",
-    "pug-migrate": "pug -w ./pug  -o ./ -P"
+    "pug": "npx pug -w ./pug  -o ./ -P"
   },
   "repository": {
     "type": "git",
