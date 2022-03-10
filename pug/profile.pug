@@ -23,10 +23,11 @@ block content
             -for( var i = 0; i < 7; i++ )
               .swiper-slide.topbop__slide
                 .slide__image
-                  picture
-                    img(src="/images/slide-image/benefit-image.png")
+                  a(href="#")
+                    picture
+                      img(src="/images/slide-image/benefit-image.png")
                 .slide__text
-                  h4.slide__text--heading Giảm 10% với thành viên Top Bop
+                  div.slide__text--heading Giảm 10% với thành viên Top Bop
 
       .topbop__profile--dicovery
         .topbop__swiper.swiper.product__swiper
@@ -37,17 +38,19 @@ block content
                 i.icon-chevron-downp-left
 
               .swiper-button-prev.slide-btn
-                i.icon-hear-black
+                i.icon-chevron-down
           .swiper-wrapper 
             -for( var i = 0; i < 7; i++ )
               .swiper-slide.topbop__slide
                 .slide__image
                   picture
                     img(src="/images/slide-image/watch-slide.png")
-                  span 
-                    i.icon-heart
                 .slide__text
-                  h4.slide__text--heading WALDHOFF
-
+                  .slide__text--heading WALDHOFF
+                    span.slide__text--saleoff 25% Off
+                  .slide__text--desc BB-01 Automatic Mariachi Skull CT43ASPGD.24-1.11
+                  .slide__text--price 
+                    p.price-content.main 37,746,000VNĐ
+                    p.price-content.discount 41,940,000VNĐ
 block script
   script(src="js/function.js") 

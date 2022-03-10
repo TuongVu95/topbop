@@ -11,6 +11,7 @@
     margin-bottom: 3.7rem;
   }
   .topbop__slide {
+    max-width: 416px;
     .slide__image {
       margin-bottom: 16px;
     }
@@ -20,12 +21,48 @@
         line-height: 2.4rem;
         font-weight: 700;
         color: #000;
+        position: relative;
+      }
+      &--saleoff {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #6ba139;
+        font-weight: 700;
+      }
+      &--desc {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        color: #757575;
+        margin-top: 1.2rem;
+      }
+      &--price {
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: start;
+        margin-top: 1.2rem;
+        .price-content {
+          font-weight: 700;
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+          color: #131313;
+          &.discount {
+            font-weight: 400;
+            color: #757575;
+            text-decoration: line-through;
+            margin-right: 32px;
+          }
+        }
       }
     }
   }
   &.product__swiper {
     .topbop__slide {
       .slide__image {
+        padding: 50px 0;
         background: #f4f4f4;
         display: flex;
         justify-content: center;

@@ -1,4 +1,10 @@
 .topbop__profile {
+  &--benefit {
+    padding-bottom: 109px;
+  }
+  &--dicovery {
+    padding-bottom: 100px;
+  }
   &--top {
     display: flex;
     align-items: center;
@@ -24,6 +30,7 @@
       font-size: 18px;
       line-height: 20px;
       color: #898989;
+      font-weight: 700;
     }
   }
 }
