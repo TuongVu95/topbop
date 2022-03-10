@@ -1,6 +1,14 @@
 root {
   --variable-prefix: 2;
 }
+//Grid Columns
+$grid-columns: 12 !default; //12 column desktop
+$grid-gutter-width: 24px !default;
+$grid-row-columns: 6 !default; //6 column mobile
+
+//Container padding
+$container-padding-x: ($grid-gutter-width / 2) !default;
+
 //$container-max-widths return $key tương ứng với key $grid-breakpoints
 //    >> breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    767.98px
@@ -60,7 +68,7 @@ root {
 @mixin containermb() {
   width: 100%;
   max-width: 100%;
-  // padding: 0 8px !important;
+  padding: 0 calc($container-padding-x + 6);
 }
 @mixin row-cols($count) {
   > * {
