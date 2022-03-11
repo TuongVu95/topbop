@@ -1,0 +1,25 @@
+
+%flex-center{
+    display: flex;
+    align-items: center;
+}
+.page__header{
+    &-top{
+        @extend %flex-center;
+        justify-content: space-between;
+        padding: 8px 0;
+    }
+
+    &-right{
+        @extend %flex-center;
+        flex: 1;
+        &-item{
+            &:not(:last-child){
+                margin-right: 24px;
+            }
+        }
+    }
+    .form-search{
+        max-width: 224px;
+    }
+}

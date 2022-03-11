@@ -1,0 +1,42 @@
+$background-input-text: #f4f4f4;
+$color-input: #ADADAD;
+
+.form {
+    &-group{
+        position: relative;
+        input[type="text"] {
+            background: $background-input-text;
+            &::placeholder {
+                opacity: .6
+            }
+        }
+    }
+    &-input {
+        @include fontSize(700, 16px, 18px);
+        color: $color-input;
+        width: 100%;
+        border: none;
+        &-search{
+            padding: 13px 20px 13px 60px;
+        }
+    }
+}
+.btn-form{
+    &-search{
+        position: absolute;
+        left:6px;
+        top:3px;
+
+        background: transparent !important;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: none;
+        outline: none;
+        @media(min-width: 992px){
+            &:focus,&:hover{
+                outline: none;
+            }
+        }
+    }
+}

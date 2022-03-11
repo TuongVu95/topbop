@@ -1,6 +1,7 @@
 
 .container {
     @include max-container();
+
     @include breakpoints('md'){
         padding: 0 16px;
     }
