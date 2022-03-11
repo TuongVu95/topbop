@@ -11,6 +11,13 @@ header.page__header
                 .form
                     .form-group
                         +inputType("text","form-input form-input-search","Tìm kiếm")
-                        button.btn.btn-search(type='submit')
+                        button.btn.btn-search.icon-search(type='submit')
+                            img(src="images/search.svg", alt="Search")
+
+                .list__social
+                    ul
+                        each val in ['icon-heart']
+                            li
+
 
         .page__header-nav
