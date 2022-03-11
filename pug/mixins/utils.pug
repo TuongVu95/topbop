@@ -9,11 +9,16 @@ mixin pictrue($src, $alt, $breakpoint, $srcset)
 mixin inputType($type, $class, $placeholder)
     input(type=$type, class=$class, placeholder=$placeholder)
 
-mixin navBar($name)
+mixin navBar($name, $nametitle, $namelv2)
     ul.page__nav-list
         li.page__nav-item
-            a= $name
+            a(href="http://")= $name
             ul.page__nav-lv1
+                .page__nav-lv1-title= $nametitle
                 li.page__nav-lv1--item
-                    a(href="")= $name
+                    ul.page__nav-lv2
+                        li.page__nav-lv2--item
+                            a(href="http://")= $namelv2
+
+
 
