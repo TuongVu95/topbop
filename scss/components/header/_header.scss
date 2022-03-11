@@ -3,6 +3,10 @@
     display: flex;
     align-items: center;
 }
+.f-w-700{
+    font-weight: 700;
+}
+
 .page__header{
     &-top{
         @extend %flex-center;
@@ -10,16 +14,65 @@
         padding: .8rem 0;
     }
 
+    &-left{
+        max-width: 19.4rem;
+    }
+
     &-right{
         @extend %flex-center;
         flex: 1;
-        &-item{
+        justify-content: flex-end;
+        &--item{
+            height: 100%;
             &:not(:last-child){
                 margin-right: 2.4rem;
             }
         }
+        .form__user{
+            @extend %flex-center;
+            .line-vertical{
+                display: block;
+                height: 16px;
+                width: 1px;
+                background: $black;
+                margin: auto 8px;
+            }
+            &-item a{
+                cursor: pointer;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
     }
+
     .form-search{
         max-width: 22.4rem;
+    }
+
+    .list__social{
+        ul{
+            @extend %flex-center;
+        }
+        .social-item{
+            &:not(:last-child){
+                margin-right: 1.6rem;
+            }
+        }
+        .social-icon{
+
+        }
+    }
+}
+.page__nav{
+    &-list{
+        @extend %flex-center;
+        padding: 2.1rem 0;
+        > a{
+
+        }
+    }
+    &-link{
+        @include fontSize(700, 18px, 20px);
+        @extend .txt-uppercase;
     }
 }
