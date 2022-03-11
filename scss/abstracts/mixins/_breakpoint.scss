@@ -14,3 +14,9 @@ $breakpoint:(
     }
   }
 }
+
+@include breakpoints('md'){
+  .hidden-mobile{
+    display: none !important;
+  }
+}

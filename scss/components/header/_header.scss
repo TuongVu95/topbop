@@ -9,6 +9,7 @@ $color-lv2: #757575;
 }
 
 .page__header {
+    padding-top: 4.2rem;
     &-top {
         @extend %flex-center;
         justify-content: space-between;
@@ -40,14 +41,26 @@ $color-lv2: #757575;
             }
             &-item a {
                 cursor: pointer;
-                font-size: 14px;
-                line-height: 18px;
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+            }
+            @include breakpoints('md'){
+                &-item, .line-vertical {
+                    @extend .hidden-mobile;
+                }
             }
         }
     }
 
     .form-search {
         max-width: 22.4rem;
+        @media(max-width: 992px){
+            .form-input{
+                &-search{
+                    display: none
+                }
+            }
+        }
     }
 
     .list__social {
@@ -59,12 +72,25 @@ $color-lv2: #757575;
                 margin-right: 1.6rem;
             }
         }
-        .social-icon {
+        @media(max-width: 992px){
+            .social-item {
+                &:first-child, &:last-child{
+                    display: none;
+                }
+            }
+        }
+    }
+    .btn-form-search{
+        @include breakpoints('md'){
+            position: relative;
+            top:0;
+            left:0;
         }
     }
 }
+
 .page__nav {
-    lv1: ".page__nav-dropdown";
+    $lv1: ".page__nav-dropdown";
     &-dropdown{
         position: absolute;
         left: 0;
@@ -76,6 +102,7 @@ $color-lv2: #757575;
         padding: 3.2rem 0 14.4rem;
 
         display: none;
+        overflow: hidden;
     }
     &-list {
         @extend %flex-center;
@@ -83,14 +110,14 @@ $color-lv2: #757575;
         padding: 2.1rem 0;
         margin: 0 -2.8rem;
         * {
-            @include fontSize(700, 18px, 20px);
+            @include fontSize(700, 1.8rem, 2.0rem);
         }
     }
     &-item {
         padding: 0 2.8rem;
         cursor: pointer;
         &:hover{
-            #{lv1}{
+            #{$lv1}{
                 display: block
             }
         }
@@ -103,6 +130,7 @@ $color-lv2: #757575;
     &-lv1 {
         max-width: 1128px;
         margin: auto;
+        padding: 0 2rem;
         &--item{
             display: flex;
             margin: 0 -1.6rem;
