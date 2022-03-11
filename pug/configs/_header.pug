@@ -3,9 +3,14 @@ include ../mixins/utils
 header.page__header
     .container
         .page__header-top
-            .page__header-left
+            .page__header-left.page__header--col
                 a(href="/", class="page__header-logo")
                     +pictrue('images/logo/logo.png',"Logo","992px",'images/logo/logomb.png')
 
-            .page__header-right
+            .page__header-right.page__header--col
+                .form
+                    .form-group
+                        +inputType("text","form-input form-input-search","Tìm kiếm")
+                        button.btn.btn-search(type='submit')
+
         .page__header-nav

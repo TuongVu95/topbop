@@ -6,6 +6,9 @@ mixin pictrue($src, $alt, $breakpoint, $srcset)
         source(media=`(max-width: ${$breakpoint} )`, srcset=$srcset)
         img(src=$src, alt=$alt)
 
+mixin inputType($type, $class, $placeholder)
+    input(type=$type, class=$class, placeholder=$placeholder)
+
 mixin list($name)
     ul
         li.page-nav= $name
