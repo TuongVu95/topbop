@@ -15,10 +15,10 @@ block content
           .topbop__swiper--top
             p.topbop__swiper--heading LỢI ÍCH THÀNH VIÊN
             .group-button-director
-              .swiper-button-next.slide-btn 
+              .swiper-button-prev.slide-btn 
                 i.icon-chevron-downp-left
 
-              .swiper-button-prev.slide-btn
+              .swiper-button-next.slide-btn
                 i.icon-chevron-down
           .swiper-wrapper 
             -for( var i = 0; i < 7; i++ )
@@ -35,17 +35,18 @@ block content
           .topbop__swiper--top
             p.topbop__swiper--heading KHÁM PHÁ THÊM
             .group-button-director
-              .swiper-button-next.slide-btn 
+              .swiper-button-prev.slide-btn 
                 i.icon-chevron-downp-left
 
-              .swiper-button-prev.slide-btn
+              .swiper-button-next.slide-btn
                 i.icon-chevron-down
           .swiper-wrapper 
             -for( var i = 0; i < 7; i++ )
               .swiper-slide.topbop__slide
                 .slide__image
-                  picture
-                    img(src="/images/slide-image/watch-slide.png")
+                  a(href="#")
+                    picture
+                      img(src="/images/slide-image/watch-slide.png")
                 .slide__text
                   .slide__text--heading WALDHOFF
                     span.slide__text--saleoff 25% Off
