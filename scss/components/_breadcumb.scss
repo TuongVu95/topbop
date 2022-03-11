@@ -1,0 +1,20 @@
+.breadcumb {
+  display: flex;
+  margin-bottom: 1.6rem;
+  &--item {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #161616;
+    &:not(:first-child) {
+      &::before {
+        content: "/";
+        display: inline-block;
+        color: inherit;
+        line-height: 100%;
+        padding: 0 8px;
+      }
+    }
+  }
+}

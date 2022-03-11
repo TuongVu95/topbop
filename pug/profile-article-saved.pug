@@ -1,0 +1,32 @@
+extends templates/_layout.pug
+
+block content
+  main.topbop__wrapper
+    .container  
+      ol.breadcumb 
+        -var list = ['Trang chủ','Trang cá nhân','Bài viết đã lưu']
+        each item in list
+          li.breadcumb--item
+            a(href='#')= item
+      
+      .topbop__article
+        h2.topbop__article--heading BÀI VIẾT ĐÃ LƯU
+        .topbop__article--inner
+          -for(var i = 0; i < 12; i++)
+            .topbop__article--item
+              .article__image
+                a(href="#")
+                  picture
+                    img(src="/images/article/aritcle-image.png", alt="")
+              .article__content
+                h4.article__content--head Công dụng của hộp đồng hồ Wolf.
+                p.article__content--decs Bạn hoàn toàn có thể tìm thấy cỗ máy thời gian chất lượng ở những thương hiệu dưới đây.
+                div.article__content--bookmark
+                  .author__datetime Bởi <span>Jenny Wilson</span> 10.12.2021
+                  .share__group
+                    a(href="#")
+                      img(src="/images/icons/share.svg", alt="")
+                    a(href="#")
+                      img(src="/images/icons/bookmark.svg", alt="")
+
+              
