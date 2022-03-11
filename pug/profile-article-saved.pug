@@ -2,13 +2,13 @@ extends templates/_layout.pug
 
 block content
   main.topbop__wrapper
-    .container  
-      ol.breadcumb 
+    .container
+      ol.breadcumb
         -var list = ['Trang chủ','Trang cá nhân','Bài viết đã lưu']
         each item in list
           li.breadcumb--item
             a(href='#')= item
-      
+
       .topbop__article
         h2.topbop__article--heading BÀI VIẾT ĐÃ LƯU
         .topbop__article--inner
@@ -29,4 +29,3 @@ block content
                     a(href="#")
                       img(src="/images/icons/bookmark.svg", alt="")
 
-              
