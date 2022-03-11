@@ -1,3 +1,35 @@
-header.page-header
+include ../mixins/utils
+
+header.page__header
     .container
+        .page__header-top
+            .page__header-left.page__header--col
+                a(href="/", class="page__header-logo")
+                    +pictrue('images/logo/logo.png',"Logo","992px",'images/logo/logomb.png')
+
+            .page__header-right.page__header--col
+                .form-search
+                    .form-group
+                        +inputType("text","form-input form-input-search","Tìm kiếm")
+                        button.btn.btn-search.icon-search(type='submit')
+                            img(src="images/search.svg", alt="Search")
+
+                .list__social
+                    ul
+                        each val in ['shopping-bag.svg','phone.svg']
+                            li
+                                a(href="")
+                                    img(src=`images/icons/${val}`, alt="alt")
+                .form__user
+                    .form__regist
+                        a.txt-uppercase ĐĂNG KÝ
+                    span.line-vertical
+                    .form__login
+                        a.txt-uppercase Đăng nhập
+
+        .page__header-nav
+           - var navJson = ["Đồng hồ nam","ĐỒNG HỒ NỮ","PHỤ KIỆN","VÒNG ĐEO"]
+            each val in navJson
+                +navBar(val, "Thương hiệu nổi tiếng", "Tonino Lamborghini")
+
 

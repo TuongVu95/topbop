@@ -7,12 +7,87 @@
     <title>TopBop</title>
     <link rel="stylesheet" href="css/libs/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/libs/swiper.min.js"> </script>
+    <script src="js/libs/swiper.min.js"></script>
     <script src="js/libs/jquery-3.1.0.min.js"></script>
   </head>
   <body>
-    <header class="page-header">
-      <div class="container"></div>
+    <header class="page__header">
+      <div class="container">
+        <div class="page__header-top">
+          <div class="page__header-left page__header--col"><a class="page__header-logo" href="/">
+                  <picture>
+                    <source media="(max-width: 992px )" srcset="images/logo/logomb.png"><img src="images/logo/logo.png" alt="Logo">
+                  </picture></a></div>
+          <div class="page__header-right page__header--col">
+            <div class="form-search">
+              <div class="form-group">
+                    <input class="form-input form-input-search" type="text" placeholder="Tìm kiếm">
+                <button class="btn btn-search icon-search" type="submit"><img src="images/search.svg" alt="Search"></button>
+              </div>
+            </div>
+            <div class="list__social">
+              <ul>
+                <li><a href=""><img src="images/icons/shopping-bag.svg" alt="alt"></a></li>
+                <li><a href=""><img src="images/icons/phone.svg" alt="alt"></a></li>
+              </ul>
+            </div>
+            <div class="form__user">
+              <div class="form__regist"><a class="txt-uppercase">ĐĂNG KÝ</a></div><span class="line-vertical"></span>
+              <div class="form__login"><a class="txt-uppercase">Đăng nhập</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="page__header-nav">
+              <ul class="page__nav-list">
+                <li class="page__nav-item"><a href="http://">Đồng hồ nam</a>
+                  <ul class="page__nav-lv1">
+                    <div class="page__nav-lv1-title">Thương hiệu nổi tiếng</div>
+                    <li class="page__nav-lv1--item">
+                      <ul class="page__nav-lv2">
+                        <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="page__nav-list">
+                <li class="page__nav-item"><a href="http://">ĐỒNG HỒ NỮ</a>
+                  <ul class="page__nav-lv1">
+                    <div class="page__nav-lv1-title">Thương hiệu nổi tiếng</div>
+                    <li class="page__nav-lv1--item">
+                      <ul class="page__nav-lv2">
+                        <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="page__nav-list">
+                <li class="page__nav-item"><a href="http://">PHỤ KIỆN</a>
+                  <ul class="page__nav-lv1">
+                    <div class="page__nav-lv1-title">Thương hiệu nổi tiếng</div>
+                    <li class="page__nav-lv1--item">
+                      <ul class="page__nav-lv2">
+                        <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="page__nav-list">
+                <li class="page__nav-item"><a href="http://">VÒNG ĐEO</a>
+                  <ul class="page__nav-lv1">
+                    <div class="page__nav-lv1-title">Thương hiệu nổi tiếng</div>
+                    <li class="page__nav-lv1--item">
+                      <ul class="page__nav-lv2">
+                        <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+        </div>
+      </div>
     </header>
     <main class="topbop__wrapper">
       <div class="container">
@@ -32,7 +107,7 @@
                 <div class="swiper-button-next slide-btn"><i class="icon-chevron-down"></i></div>
               </div>
             </div>
-            <div class="swiper-wrapper"> 
+            <div class="swiper-wrapper">
               <div class="swiper-slide topbop__slide">
                 <div class="slide__image"><a href="#">
                     <picture><img src="/images/slide-image/benefit-image.png"></picture></a></div>
@@ -94,14 +169,14 @@
                 <div class="swiper-button-next slide-btn"><i class="icon-chevron-down"></i></div>
               </div>
             </div>
-            <div class="swiper-wrapper"> 
+            <div class="swiper-wrapper">
               <div class="swiper-slide topbop__slide">
                 <div class="slide__image"><a href="#">
                     <picture><img src="/images/slide-image/watch-slide.png"></picture></a></div>
                 <div class="slide__text">
                   <div class="slide__text--heading">WALDHOFF<span class="slide__text--saleoff">25% Off</span></div>
                   <div class="slide__text--desc">BB-01 Automatic Mariachi Skull CT43ASPGD.24-1.11</div>
-                  <div class="slide__text--price"> 
+                  <div class="slide__text--price">
                     <p class="price-content main">37,746,000VNĐ</p>
                     <p class="price-content discount">41,940,000VNĐ</p>
                   </div>
@@ -113,7 +188,7 @@
                 <div class="slide__text">
                   <div class="slide__text--heading">WALDHOFF<span class="slide__text--saleoff">25% Off</span></div>
                   <div class="slide__text--desc">BB-01 Automatic Mariachi Skull CT43ASPGD.24-1.11</div>
-                  <div class="slide__text--price"> 
+                  <div class="slide__text--price">
                     <p class="price-content main">37,746,000VNĐ</p>
                     <p class="price-content discount">41,940,000VNĐ</p>
                   </div>
@@ -125,7 +200,7 @@
                 <div class="slide__text">
                   <div class="slide__text--heading">WALDHOFF<span class="slide__text--saleoff">25% Off</span></div>
                   <div class="slide__text--desc">BB-01 Automatic Mariachi Skull CT43ASPGD.24-1.11</div>
-                  <div class="slide__text--price"> 
+                  <div class="slide__text--price">
                     <p class="price-content main">37,746,000VNĐ</p>
                     <p class="price-content discount">41,940,000VNĐ</p>
                   </div>
@@ -137,7 +212,7 @@
                 <div class="slide__text">
                   <div class="slide__text--heading">WALDHOFF<span class="slide__text--saleoff">25% Off</span></div>
                   <div class="slide__text--desc">BB-01 Automatic Mariachi Skull CT43ASPGD.24-1.11</div>
-                  <div class="slide__text--price"> 
+                  <div class="slide__text--price">
                     <p class="price-content main">37,746,000VNĐ</p>
                     <p class="price-content discount">41,940,000VNĐ</p>
                   </div>
@@ -149,7 +224,7 @@
                 <div class="slide__text">
                   <div class="slide__text--heading">WALDHOFF<span class="slide__text--saleoff">25% Off</span></div>
                   <div class="slide__text--desc">BB-01 Automatic Mariachi Skull CT43ASPGD.24-1.11</div>
-                  <div class="slide__text--price"> 
+                  <div class="slide__text--price">
                     <p class="price-content main">37,746,000VNĐ</p>
                     <p class="price-content discount">41,940,000VNĐ</p>
                   </div>
@@ -161,7 +236,7 @@
                 <div class="slide__text">
                   <div class="slide__text--heading">WALDHOFF<span class="slide__text--saleoff">25% Off</span></div>
                   <div class="slide__text--desc">BB-01 Automatic Mariachi Skull CT43ASPGD.24-1.11</div>
-                  <div class="slide__text--price"> 
+                  <div class="slide__text--price">
                     <p class="price-content main">37,746,000VNĐ</p>
                     <p class="price-content discount">41,940,000VNĐ</p>
                   </div>
@@ -173,7 +248,7 @@
                 <div class="slide__text">
                   <div class="slide__text--heading">WALDHOFF<span class="slide__text--saleoff">25% Off</span></div>
                   <div class="slide__text--desc">BB-01 Automatic Mariachi Skull CT43ASPGD.24-1.11</div>
-                  <div class="slide__text--price"> 
+                  <div class="slide__text--price">
                     <p class="price-content main">37,746,000VNĐ</p>
                     <p class="price-content discount">41,940,000VNĐ</p>
                   </div>
@@ -189,6 +264,6 @@
         <p></p>&copy; 2016 |<i class="fa fa-value" aria-hidden="true">&nbsp;</i><a href="#">View Sourcesssssss</a>
       </div>
     </footer>
-    <script src="js/function.js"> </script>
+    <script src="js/function.js"></script>
   </body>
 </html>
