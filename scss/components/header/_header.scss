@@ -7,7 +7,7 @@
     &-top{
         @extend %flex-center;
         justify-content: space-between;
-        padding: 8px 0;
+        padding: .8rem 0;
     }
 
     &-right{
@@ -15,11 +15,11 @@
         flex: 1;
         &-item{
             &:not(:last-child){
-                margin-right: 24px;
+                margin-right: 2.4rem;
             }
         }
     }
     .form-search{
-        max-width: 224px;
+        max-width: 22.4rem;
     }
 }
