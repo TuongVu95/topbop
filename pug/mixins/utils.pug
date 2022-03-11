@@ -1,0 +1,11 @@
+mixin link($href, $name)
+    a(href=$href)&attributes(attributes)= $name
+
+mixin pictrue($src, $alt, $breakpoint, $srcset)
+    picture
+        source(media=`(max-width: ${$breakpoint} )`, srcset=$srcset)
+        img(src=$src, alt=$alt)
+
+mixin list($name)
+    ul
+        li.page-nav= $name
