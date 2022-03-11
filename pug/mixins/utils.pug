@@ -9,7 +9,11 @@ mixin pictrue($src, $alt, $breakpoint, $srcset)
 mixin inputType($type, $class, $placeholder)
     input(type=$type, class=$class, placeholder=$placeholder)
 
-mixin list($name)
+mixin navBar($name)
     ul.page__nav-list
         li.page__nav-item
             a= $name
+            ul.page__nav-lv1
+                li.page__nav-lv1--item
+                    a(href="")= $name
+

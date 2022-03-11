@@ -28,9 +28,8 @@ header.page__header
                         a.txt-uppercase Đăng nhập
 
         .page__header-nav
-            each val in ['']
-            +list(ĐỒNG HỒ NAM)
-            +list(ĐỒNG HỒ NỮ
-            +list(PHỤ KIỆN)
-            +list(VÒNG ĐEO)
+           - var navJson = ["Đồng hồ nam","ĐỒNG HỒ NỮ","PHỤ KIỆN","VÒNG ĐEO"]
+            each val in navJson
+                +navBar(val)
+
 
