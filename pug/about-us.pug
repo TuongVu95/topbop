@@ -1,0 +1,30 @@
+extends templates/_layout.pug
+
+block content 
+  main.topbop__wrapper
+    .topbop__aboutus
+      .topbop__aboutus--banner
+        picture
+          img(src="/images/banner/banner-aboutus.png" alt="")
+
+      .topbop__aboutus--history
+        -for(var i = 0; i < 3; i++)
+          .history__item
+            p.history__item--date 20.08.2020
+            p.history__item--desc Topbop  cung ứng đồng hồ chính hãng Ingersoll - Tinh Hoa Đồng Hồ Xứ Sở Cờ Hoa
+
+      .container
+        .tobop__aboutus--content
+          h2.topbop__aboutus--heading SỨ MỆNH & TẦM NHÌN
+          p.topbop__aboutus--desc Tất cả chúng ta được sinh ra để tạo nên khác biệt. Topbop tin rằng dù bạn là ai, bạn đến từ đâu, sẽ luôn có nơi để bạn thuộc về. Mỗi sản phẩm mà bạn chọn là một món quà tặng, tôn vinh cá tính của chính bạn. Vì vậy, chúng tôi luôn nỗ lực để trao đến bạn những sản phẩm phù hợp nhất.
+
+        .topbop__aboutus--article
+          h3 VỀ TOPBOP
+          .inner
+            -for(var i = 0; i < 6; i++)
+              .aboutus__item
+                .aboutus__item--image
+                  a(href="#")
+                    picture 
+                      img(src="/images/article/about-us.png" alt="")
+                .aboutus__item--text
