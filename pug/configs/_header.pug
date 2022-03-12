@@ -5,7 +5,7 @@ header.page__header
         .page__header-top
 
             .page__header-left.page__header--col
-                a(href="/" class="page__header-logo")
+                a(href="/", class="page__header-logo")
                     +pictrue('images/logo/logo.png',"Logo","992px",'images/logo/logo-mb.png')
 
             .page__header-right.page__header--col
@@ -13,7 +13,7 @@ header.page__header
                     .form-group
                         +inputType("text","form-input form-input-search","Tìm kiếm")
                         button.btn.btn-form-search.icon-search(type='submit')
-                            img(src="images/icons/ic-search.svg" alt="Search")
+                            img(src="images/icons/ic-search.svg", alt="Search")
 
                 .page__header-right--item.list__social
                     ul
@@ -29,24 +29,10 @@ header.page__header
                     .form__login.form__user-item
                         a.txt-uppercase.f-w-700 Đăng nhập
 
-        .page__header-nav.hidden-mobile
-            - var navJson = ["Đồng hồ nam","ĐỒNG HỒ NỮ","PHỤ KIỆN","VÒNG ĐEO","SALE"]
-            ul.page__nav-list
-                each val in navJson
-                    +navBar(val, "Thương hiệu nổi tiếng", "Tonino Lamborghini")
+        .page__header-nav
+            .page__header-nav--mobile
 
-        .nav__app.hide-show
-            .nav__app-inner
-                .nav__app-header
-                .nav__app-main
                 - var navJson = ["Đồng hồ nam","ĐỒNG HỒ NỮ","PHỤ KIỆN","VÒNG ĐEO","SALE"]
-                   ul.page__nav-list
-                        each val in navJson
-                            +navBar(val, "Thương hiệu nổi tiếng", "Tonino Lamborghini")
-
-
-
-
-
-
-
+                ul.page__nav-list
+                    each val in navJson
+                        +navBar(val, "Thương hiệu nổi tiếng", "Tonino Lamborghini")

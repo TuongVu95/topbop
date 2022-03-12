@@ -10,23 +10,13 @@ mixin inputType($type, $class, $placeholder)
     input(type=$type, class=$class, placeholder=$placeholder)
 
 mixin navBar($name, $nametitle, $namelv2)
-        li.page__nav-item
-            a(href="http://", class="page__nav-link link-hover")= $name
-            .page__nav-dropdown
-                ul.page__nav-lv1
-                    li.page__nav-lv1--item
-                        -for( var i = 0; i < 4; i++ )
-                            ul.page__nav-lv2
-                                li.page__nav-lv2--title= $nametstle
-                                    li.page__nav-lv2--item
-                                        a(href="http://", class="")= $namelv2
-
-mixin navApp($name, $nametitle, $namelv2)
-        li.nav__app-item
-            a(href="http://", class="app__nav-link txt-uppercase")= $name
-            .nav__app-dropdown
-                ul.nav__app-lv1
-                    li.nav__app-lv1--item
-
-
-
+    li.page__nav-item
+        a(href="http://" class="page__nav-link link-hover")= $name
+        .page__nav-dropdown
+            ul.page__nav-lv1
+                li.page__nav-lv1--item
+                    -for( var i = 0; i < 4; i++ )
+                        ul.page__nav-lv2
+                            li.page__nav-lv2--title= $nametitle
+                                li.page__nav-lv2--item
+                                    a(href="http://" class="")= $namelv2
