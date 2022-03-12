@@ -1,3 +1,15 @@
+const featureHeader = () => {
+  const buttonBurger = $('#burger');
+  const navMobile = $('.nav-mobile');
+
+  buttonBurger.click(function(){
+      const $that = $(this);
+      $that.toggleClass('is-open');
+      navMobile.toggleClass('is-expand');
+  });
+}
+
+
 const topbopSwiper = new Swiper('.topbop__swiper', {
   slidesPerView: 3.1,
   spaceBetween: 16,
@@ -9,5 +21,6 @@ const topbopSwiper = new Swiper('.topbop__swiper', {
 })
 
 const init = () => {
+  featureHeader();
 }
 init();

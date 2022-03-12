@@ -11,7 +11,9 @@ mixin inputType($type, $class, $placeholder)
 
 mixin navBar($name, $nametitle, $namelv2)
     li.page__nav-item
-        a(href="http://" class="page__nav-link link-hover")= $name
+        a(href="http://" class="page__nav-link")= $name
+        span.page__nav-icon
+            i.icon-chevron-down
         .page__nav-dropdown
             ul.page__nav-lv1
                 li.page__nav-lv1--item

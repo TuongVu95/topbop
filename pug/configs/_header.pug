@@ -28,11 +28,13 @@ header.page__header
                     span.line-vertical
                     .form__login.form__user-item
                         a.txt-uppercase.f-w-700 Đăng nhập
+                button.open-main-nav#burger
+                    span.burger
 
-        .page__header-nav
+        .page__header-nav.nav-mobile
             .page__header-nav--mobile
 
-                - var navJson = ["Đồng hồ nam","ĐỒNG HỒ NỮ","PHỤ KIỆN","VÒNG ĐEO","SALE"]
-                ul.page__nav-list
-                    each val in navJson
-                        +navBar(val, "Thương hiệu nổi tiếng", "Tonino Lamborghini")
+            - var navJson = ["Đồng hồ nam","ĐỒNG HỒ NỮ","PHỤ KIỆN","VÒNG ĐEO","SALE"]
+            ul.page__nav-list
+                each val in navJson
+                    +navBar(val, "Thương hiệu nổi tiếng", "Tonino Lamborghini")
