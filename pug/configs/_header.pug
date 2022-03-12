@@ -3,6 +3,9 @@ include ../mixins/utils
 header.page__header
     .container
         .page__header-top
+            .page__header-left--mobile
+                button.open-main-nav.jsOpenNav
+                    span.burger
 
             .page__header-left.page__header--col
                 a(href="/", class="page__header-logo")
@@ -28,13 +31,15 @@ header.page__header
                     span.line-vertical
                     .form__login.form__user-item
                         a.txt-uppercase.f-w-700 Đăng nhập
-                button.open-main-nav#burger
-                    span.burger
+
 
         .page__header-nav.nav-mobile
-            .page__header-nav--mobile
+            .page__header-nav--inner
+                .page__header-burger
+                    button.open-main-nav.jsOpenNav
+                        span.burger
 
-            - var navJson = ["Đồng hồ nam","ĐỒNG HỒ NỮ","PHỤ KIỆN","VÒNG ĐEO","SALE"]
-            ul.page__nav-list
-                each val in navJson
-                    +navBar(val, "Thương hiệu nổi tiếng", "Tonino Lamborghini")
+                - var navJson = ["Đồng hồ nam","ĐỒNG HỒ NỮ","PHỤ KIỆN","VÒNG ĐEO","SALE"]
+                ul.page__nav-list
+                    each val in navJson
+                        +navBar(val, "Thương hiệu nổi tiếng", "Tonino Lamborghini")

@@ -10,9 +10,10 @@ mixin inputType($type, $class, $placeholder)
     input(type=$type, class=$class, placeholder=$placeholder)
 
 mixin navBar($name, $nametitle, $namelv2)
-    li.page__nav-item
+    li.page__nav-item.jsActionExpand
         a(href="http://" class="page__nav-link")= $name
-        span.page__nav-icon
+        div.page__nav-icon
+            span.back All
             i.icon-chevron-down
         .page__nav-dropdown
             ul.page__nav-lv1
