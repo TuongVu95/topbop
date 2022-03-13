@@ -9,6 +9,7 @@ const featureHeader = () => {
 
   $jsOpenNav.click(function () {
     const $that = $(this);
+
     $jsOpenNav.toggleClass('is-open');
     $navMobile.toggleClass('is-expand');
     $purger.toggleClass('is-open');
@@ -23,6 +24,7 @@ const featureHeader = () => {
   $document.click(function (e) {
     const elTarget = e.target;
     const isNavMobile = $navMobile.is(elTarget);
+
     if(isNavMobile){
       $navMobile.removeClass('is-expand');
       $jsOpenNav.removeClass('is-open');

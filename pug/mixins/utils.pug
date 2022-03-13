@@ -12,7 +12,7 @@ mixin inputType($type, $class, $placeholder)
 mixin navBar($name, $nametitle, $namelv2)
     li.page__nav-item.jsActionExpand
         a(href="http://" class="page__nav-link")= $name
-        div.page__nav-icon
+        .page__nav-icon.hide-show
             span.back All
             i.icon-chevron-down
         .page__nav-dropdown
