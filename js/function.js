@@ -59,6 +59,15 @@ const aboutUsSwiper = new Swiper('.about-us-swiper', {
   },
 });
 
+const saleSwiper = new Swiper('.sale-swiper', {
+  slidesPerGroup: 1,
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 const init = () => {
   featureHeader();
 }
