@@ -3,10 +3,44 @@ include mixins/utils
 
 block content
     main.page__wrap.home__page
-        +banner('images/home/banner1.webp','/',"SALE END YEAR", "Ưu Đãi Khách Mới Giảm Ngay 500.000VNĐ")
-        +banner('images/home/BOMBERG.webp','/',"BOMBERG", "Đồng Hồ Đức Sang Trọng  &  Đẳng Cấp")
+        +banner(1,'images/home/banner1.webp','images/home/banner1-mb.webp',"SALE END YEAR", "Ưu Đãi Khách Mới Giảm Ngay 500.000VNĐ")
+        +banner(2,'images/home/BOMBERG.webp','images/home/BOMBERG-mb.webp',"BOMBERG", "Đồng Hồ Đức Sang Trọng  &  Đẳng Cấp")
 
-        +banner('images/home/WALDHOFF.webp','/',"WALDHOFF", "Thể Hiện Cá Tính Vì Bomberg Là Khác Biệt")
+        section.section__page.section__module.section3
+            .container
+                .section_page-inner
+                    .row
+                        .col-6.col-sm-12
+                            .section__module-left
+                                +moduleProduct('images/home/module1.png','images/home/module1-mb.png',"TONINO LAMBORGHINI", "Siêu Phẩm Đồng Hồ Thể Thao Từ Italia")
+
+                        .col-6.col-sm-12
+                            .section__module-right
+                                +moduleProduct('images/home/module2.png','images/home/module2-mb.png',"ARMAND NICOLET", "Thanh Lịch & Cổ Điển Từ Tramelan Thụy Sỹ")
+
+        +banner(4,'images/home/WALDHOFF.webp','images/home/WALDHOFF-mb.webp',"WALDHOFF", "Thể Hiện Cá Tính Vì Bomberg Là Khác Biệt")
+
+        section.section__page.section__trending.section5
+            .container
+                .topbop__profile--benefit
+                    .topbop__swiper.swiper.benefit__swiper
+                        .topbop__swiper--top
+                            p.topbop__swiper--heading TRENDING BRANDS
+                            .group-button-director
+                            .swiper-button-prev.slide-btn
+                                i.icon-chevron-downp-left
+
+                            .swiper-button-next.slide-btn
+                                i.icon-chevron-down
+                        .swiper-wrapper
+                            -for( var i = 0; i < 7; i++ )
+                            .swiper-slide.topbop__slide
+                                .slide__image
+                                a(href="#")
+                                    picture
+                                    img(src="/images/slide-image/benefit-image.png")
+                                .slide__text
+                                div.slide__text--heading Giảm 10% với thành viên Top Bop
 
 block script
     script(src="js/function.js")

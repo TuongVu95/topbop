@@ -3,7 +3,7 @@ root {
 }
 //Grid Columns
 $grid-columns: 12 !default; //12 column desktop
-$grid-gutter-width: 24px !default;
+$grid-gutter-width: 16px !default;
 $grid-row-columns: 6 !default; //6 column mobile
 
 //Container padding
@@ -97,6 +97,11 @@ $container-padding-x: ($grid-gutter-width / 2) !default;
   flex: 0 0 percentage($size / $columns);
   max-width: percentage($size / $columns);
 }
+
+.row{
+  @include make-row();
+}
+
 @mixin make-grid-columns(
   $columns: $grid-columns,
   $gutter: $grid-gutter-width,
@@ -169,3 +174,4 @@ $container-padding-x: ($grid-gutter-width / 2) !default;
     }
   }
 }
+@include make-grid-columns();

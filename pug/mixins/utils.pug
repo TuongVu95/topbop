@@ -2,7 +2,7 @@ mixin link($href, $name)
     a(href=$href)&attributes(attributes)= $name
 
 mixin pictrue($src, $alt, $breakpoint, $srcset)
-    picture
+    picture&attributes(attributes)= name
         source(media=`(max-width: ${$breakpoint} )`, srcset=$srcset)
         img(src=$src, alt=$alt)
 
@@ -23,13 +23,23 @@ mixin navBar($name, $nametitle, $namelv2)
                             li.page__nav-lv2--title= $nametitle
                                 li.page__nav-lv2--item
                                     a(href="http://" class="")= $namelv2
-mixin banner($src,$srcset, $title, $sub)
-    section.section__page.section__banner
+
+mixin banner($number, $src, $srcset, $title, $sub)
+    section.section__page.section__banner(class=`section${$number}`)
         .container
             .section__page-inner
                 a(href="http://")
-                    +pictrue($src, "Banner", "768px",$srcset)
+                    +pictrue($src, "Banner", "768px",$srcset)(class="section__page-picture")
                 p.section__page-heading.heading-title= $title
                 p.section__page-sub.sub-title= $sub
                 .block__btn
+                    a.btn.btn-buy Mua ngay
+
+
+mixin moduleProduct($src, $srcset, $title, $sub)
+    .module-product
+        +pictrue($src, "Banner", "768px",$srcset)(class="section__page-picture")
+        p.section__page-heading.heading-title= $title
+        p.section__page-sub.sub-title= $sub
+        .block__btn
                     a.btn.btn-buy Mua ngay

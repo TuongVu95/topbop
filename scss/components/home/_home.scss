@@ -2,16 +2,65 @@ $font-title: 4.2rem;
 $sub-title: 2rem;
 $section-title: 2.4rem;
 $title-product: 1.8rem;
+$color-heading: #111111;
+$color-sub: #161616;
 
-.heading-title{
-    @include fontSize(800,$font-title,5rem);
+.heading-title {
+    @include fontSize(800, $font-title, 5rem);
+    color: $color-heading;
 }
-.section-title{
-    @include fontSize(700,$section-title,3.2rem);
+.section-title {
+    @include fontSize(700, $section-title, 3.2rem);
 }
-.title-product{
-    @include fontSize(700,$title-product,2rem);
+.title-product {
+    @include fontSize(700, $title-product, 2rem);
 }
-.sub-title{
-    @include fontSize(500,$sub-title,2.8rem);
+.sub-title {
+    @include fontSize(500, $sub-title, 2.8rem);
+}
+.section {
+    &__spacing {
+
+    }
+    &__page{
+        padding-bottom: 10rem;
+        &-picture{
+            margin-bottom: 1.6rem;
+        }
+        .sub-title{
+            margin-bottom: 3.2rem;
+        }
+    }
+    &__banner {
+        text-align: center;
+        picture {
+            @include aspect-ratio(1312, 500, 0);
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+            }
+            @include breakpoints('sm'){
+                @include aspect-ratio(768, 900, 0);
+            }
+        }
+    }
+}
+.section__banner {
+    $s: ".section__page";
+    // @debug #{$this};
+    #{$s}{
+        &-heading{
+            margin-bottom: 1.6rem;
+        }
+    }
+}
+.section__module{
+    .section__page-heading{
+        margin-bottom: 2.4rem;
+    }
 }
