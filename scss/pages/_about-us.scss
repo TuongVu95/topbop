@@ -33,11 +33,15 @@
     margin-top: -8rem;
     margin-bottom: 4.8rem;
     max-width: 108.8rem;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 1.6rem;
+    margin-left: 1.6rem;
     border-top: 0.5rem solid rgba(255, 255, 255, 0.5);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    @media (max-width: 992px) {
+      border-width: 0.4rem;
+      margin-bottom: 3.8rem;
+    }
     .history__item {
       flex-basis: 364px;
       max-width: 364px;
@@ -58,9 +62,17 @@
     .inner {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
     .aboutus__item {
-      flex-basis: calc(100% / 3);
+      flex-basis: calc((100% / 3) - 1.4rem);
+      margin-bottom: 4.8rem;
+      &--text {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.0016em;
+        margin-top: 2rem;
+      }
     }
     h3 {
       font-weight: 700;
