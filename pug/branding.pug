@@ -1,0 +1,23 @@
+extends templates/_layout.pug
+
+
+block content  
+    main.topbop__wrapper 
+      .topbop__branding
+        .topbop__saleSlide
+          .topbop__saleSlide--inner 
+            .swiper.sale-swiper
+              .swiper-wrapper   
+                -for( let i = 0; i < 4; i++)
+                  .swiper-slide.sale__slide
+                    p.sale__slide--head SALE UP TO 50%
+                    p.sale__slide--markdown Shop All Our New Markdowns
+              .swiper-button-prev.slide-btn.non-border.non-hover 
+                  i.icon-chevron-downp-left
+
+              .swiper-button-next.slide-btn.non-border.non-hover
+                  i.icon-chevron-down
+
+
+block script 
+  script(src="/js/function.js") 

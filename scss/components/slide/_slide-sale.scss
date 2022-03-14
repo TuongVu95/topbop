@@ -1,0 +1,22 @@
+.topbop__saleSlide {
+  background: #f4f4f4;
+  padding: 1.2rem 0;
+  &--inner {
+    max-width: 343px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .sale__slide {
+    text-align: center;
+    &--head {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+    }
+    &--markdown {
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      margin-top: 0.4rem;
+    }
+  }
+}

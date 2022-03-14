@@ -8,11 +8,13 @@ block content
           source(media="(max-width:992px )", srcset="/images/banner/banner-aboutus-mb.png")
           img(src="/images/banner/banner-aboutus.png" alt="")
 
-      .topbop__aboutus--history
-        -for(var i = 0; i < 3; i++)
-          .history__item
-            p.history__item--date 20.08.2020
-            p.history__item--desc Topbop  cung ứng đồng hồ chính hãng Ingersoll - Tinh Hoa Đồng Hồ Xứ Sở Cờ Hoa
+      .topbop__aboutus--history.swiper.about-us-swiper 
+        .swiper-pagination
+        .swiper-wrapper
+          -for(var i = 0; i < 3; i++)
+            .history__item.swiper-slide
+              p.history__item--date 20.08.2020
+              p.history__item--desc Topbop cung ứng đồng hồ chính hãng Ingersoll - Tinh Hoa Đồng Hồ Xứ Sở Cờ Hoa
 
       .container
         .tobop__aboutus--content
@@ -31,4 +33,5 @@ block content
                 .aboutus__item--text 
                   a(href='#') Là nhà bán lẻ đồng hồ có uy tín trên thị trường Việt.
 
-                  
+block script 
+  script(src="/js/function.js") 

@@ -72,10 +72,14 @@
       }
     }
   }
+  .slide-btn {
+    position: initial;
+    margin-top: 0;
+  }
 }
 
 .slide-btn {
-  position: initial;
+  $this: &;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -84,12 +88,21 @@
   font-size: 1.8rem;
   line-height: 100%;
   border: 0.1rem solid #ccc;
-  margin-top: 0;
   color: #161616;
   transition: all 0.3s ease-in-out;
-  &:not(:last-child) {
-    margin-right: 16px;
+
+  &.non-border {
+    border: none;
   }
+  &.non-hover {
+    &:hover {
+      background: inherit;
+    }
+    &:active {
+      background: inherit;
+    }
+  }
+
   &::after {
     content: "";
   }

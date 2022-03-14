@@ -1,5 +1,7 @@
 const $document = $(document);
 const $htmlBody = $('html,body');
+const $windowWidth = $($(window).width());
+
 
 const featureHeader = () => {
   const $jsOpenNav = $('.jsOpenNav');
@@ -25,7 +27,7 @@ const featureHeader = () => {
     const elTarget = e.target;
     const isNavMobile = $navMobile.is(elTarget);
 
-    if(isNavMobile){
+    if (isNavMobile) {
       $navMobile.removeClass('is-expand');
       $jsOpenNav.removeClass('is-open');
     }
@@ -39,11 +41,32 @@ const topbopSwiper = new Swiper('.topbop__swiper', {
   slidesPerView: 3.1,
   spaceBetween: 16,
   slidesPerGroup: 3,
+  cssMode: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-})
+});
+
+console.log($windowWidth < 992);
+
+const aboutUsSwiper = new Swiper('.about-us-swiper', {
+  slidesPerGroup: 1,
+  cssMode: true,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+});
+
+const saleSwiper = new Swiper('.sale-swiper', {
+  slidesPerGroup: 1,
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 const init = () => {
   featureHeader();
