@@ -1,0 +1,17 @@
+$font-title: 4.2rem;
+$sub-title: 2rem;
+$section-title: 2.4rem;
+$title-product: 1.8rem;
+
+.heading-title{
+    @include fontSize(800,$font-title,5rem);
+}
+.section-title{
+    @include fontSize(700,$section-title,3.2rem);
+}
+.title-product{
+    @include fontSize(700,$title-product,2rem);
+}
+.sub-title{
+    @include fontSize(500,$sub-title,2.8rem);
+}

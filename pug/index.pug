@@ -1,7 +1,12 @@
 extends templates/_layout.pug
+include mixins/utils
 
 block content
     main.page__wrap.home__page
+        +banner('images/home/banner1.webp','/',"SALE END YEAR", "Ưu Đãi Khách Mới Giảm Ngay 500.000VNĐ")
+        +banner('images/home/BOMBERG.webp','/',"BOMBERG", "Đồng Hồ Đức Sang Trọng  &  Đẳng Cấp")
+
+        +banner('images/home/WALDHOFF.webp','/',"WALDHOFF", "Thể Hiện Cá Tính Vì Bomberg Là Khác Biệt")
 
 block script
     script(src="js/function.js")

@@ -23,3 +23,13 @@ mixin navBar($name, $nametitle, $namelv2)
                             li.page__nav-lv2--title= $nametitle
                                 li.page__nav-lv2--item
                                     a(href="http://" class="")= $namelv2
+mixin banner($src,$srcset, $title, $sub)
+    section.section__page.section__banner
+        .container
+            .section__page-inner
+                a(href="http://")
+                    +pictrue($src, "Banner", "768px",$srcset)
+                p.section__page-heading.heading-title= $title
+                p.section__page-sub.sub-title= $sub
+                .block__btn
+                    a.btn.btn-buy Mua ngay
