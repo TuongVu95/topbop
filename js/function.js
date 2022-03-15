@@ -58,9 +58,7 @@ const topbopSwiper = new Swiper('.benefit__swiper', {
 
 
 const productSwiper = new Swiper('.product__swiper', {
-  slidesPerView: 3.1,
-  spaceBetween: 16,
-  slidesPerGroup: 3,
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -70,6 +68,11 @@ const productSwiper = new Swiper('.product__swiper', {
       slidesPerView: 1.1,
       spaceBetween: 12,
       slidesPerGroup: 1,
+    },
+    '992': {
+      slidesPerView: 3.1,
+      spaceBetween: 16,
+      slidesPerGroup: 3,
     }
   }
 });
