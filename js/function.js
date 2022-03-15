@@ -48,7 +48,7 @@ const topbopSwiper = new Swiper('.topbop__swiper', {
   },
 });
 
-console.log($windowWidth < 992);
+// console.log($windowWidth < 992);
 
 const aboutUsSwiper = new Swiper('.about-us-swiper', {
   slidesPerGroup: 1,
