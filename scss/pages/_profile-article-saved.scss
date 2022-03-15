@@ -18,6 +18,11 @@
     padding: 1.6rem;
     margin-bottom: 7.2rem;
     .article {
+      &__image {
+        picture {
+          @include aspect-ratio(396, 248, 0);
+        }
+      }
       &__content {
         margin-top: 1.6rem;
         &--head {

@@ -9,6 +9,9 @@
     display: flex;
     align-items: center;
     padding: 176px 0 72px;
+    @include breakpoints("md") {
+      padding: 4.9rem 0;
+    }
   }
   &--icon {
     display: inline-flex;
@@ -18,19 +21,38 @@
     height: 100px;
     background-color: $gray-200;
     border-radius: 50%;
+    @include breakpoints("md") {
+      width: 5.6rem;
+      height: 5.6rem;
+      img {
+        max-width: 30px;
+      }
+    }
   }
   &--name {
-    margin-left: 32px;
+    margin-left: 3.2rem;
     h2 {
-      font-size: 32px;
-      line-height: 38px;
-      margin-bottom: 8px;
+      font-size: 3.2rem;
+      line-height: 3.8rem;
+      margin-bottom: 0.8rem;
     }
     p {
-      font-size: 18px;
-      line-height: 20px;
+      font-size: 1.8rem;
+      line-height: 2rem;
       color: #898989;
       font-weight: 700;
+    }
+    @include breakpoints("md") {
+      margin-left: 1.6rem;
+      h2 {
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+        margin-bottom: 0.4rem;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
     }
   }
 }

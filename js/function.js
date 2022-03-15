@@ -31,24 +31,48 @@ const featureHeader = () => {
       $navMobile.removeClass('is-expand');
       $jsOpenNav.removeClass('is-open');
     }
-
   });
 
 }
 
 
-const topbopSwiper = new Swiper('.topbop__swiper', {
-  slidesPerView: 3.1,
-  spaceBetween: 16,
-  slidesPerGroup: 3,
-  cssMode: true,
+const topbopSwiper = new Swiper('.benefit__swiper', {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    '360': {
+      slidesPerView: 2.1,
+      spaceBetween: 12,
+      slidesPerGroup: 2,
+    },
+    '992': {
+      slidesPerView: 3.1,
+      spaceBetween: 16,
+      slidesPerGroup: 3,
+    }
+
+  }
 });
 
-// console.log($windowWidth < 992);
+
+const productSwiper = new Swiper('.product__swiper', {
+  slidesPerView: 3.1,
+  spaceBetween: 16,
+  slidesPerGroup: 3,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    '360': {
+      slidesPerView: 1.1,
+      spaceBetween: 12,
+      slidesPerGroup: 1,
+    }
+  }
+});
 
 const aboutUsSwiper = new Swiper('.about-us-swiper', {
   slidesPerGroup: 1,
