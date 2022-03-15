@@ -27,11 +27,11 @@ block content
                         .topbop__swiper--top
                             p.topbop__swiper--heading TRENDING BRANDS
                             .group-button-director
-                            .swiper-button-prev.slide-btn
-                                i.icon-chevron-downp-left
+                                .swiper-button-prev.slide-btn
+                                    i.icon-chevron-downp-left
 
-                            .swiper-button-next.slide-btn
-                                i.icon-chevron-down
+                                .swiper-button-next.slide-btn
+                                    i.icon-chevron-down
                         .swiper-wrapper
                             -for( var i = 0; i < 7; i++ )
                                 .swiper-slide.topbop__slide
@@ -41,6 +41,24 @@ block content
                                         img(src="/images/slide-image/benefit-image.png")
                                     .slide__text
                                     div.slide__text--heading Giảm 10% với thành viên Top Bop
+
+        section.section__page.section__cate.section6
+            .container
+                .section__page-inner
+                    .row
+                        .col-6
+                            ul.block__list
+                                li.block__list-item
+                                    a(href="http://", class="block__list-link")
+                                        .block__list-name ĐỒNG HỒ NAM
+                                        +pictrue('images/img-list-cate1.png', "Banner", "768px",'/')(class="section__page-picture")
+                                li.block__list-item
+                                    a(href="http://", class="block__list-link")
+                                        .block__list-name ĐỒNG HỒ NAM
+                                        +pictrue('images/img-list-cate1.png', "Banner", "768px",'/')(class="section__page-picture")
+
+
+
 
 block script
     script(src="js/function.js")
