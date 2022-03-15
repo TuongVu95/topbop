@@ -2,26 +2,81 @@ extends templates/_layout.pug
 
 
 block content  
-    main.topbop__wrapper 
-      .topbop__branding
-        .topbop__saleSlide
-          .topbop__saleSlide--inner 
-            .swiper.sale-swiper
-              .swiper-wrapper   
-                -for( let i = 0; i < 4; i++)
-                  .swiper-slide.sale__slide
-                    p.sale__slide--head SALE UP TO 50%
-                    p.sale__slide--markdown Shop All Our New Markdowns
-              .swiper-button-prev.slide-btn.non-border.non-hover 
+  main.topbop__wrapper 
+    .topbop__branding
+      .topbop__saleSlide
+        .topbop__saleSlide--inner 
+          .swiper.sale-swiper
+            .swiper-wrapper   
+              -for( let i = 0; i < 4; i++)
+                .swiper-slide.sale__slide
+                  p.sale__slide--head SALE UP TO 50%
+                  p.sale__slide--markdown Shop All Our New Markdowns
+            .swiper-button-prev.slide-btn.non-border.non-hover 
+              i.icon-chevron-downp-left
+
+            .swiper-button-next.slide-btn.non-border.non-hover
+              i.icon-chevron-down
+
+      .topbop__branding--banner
+        picture 
+          source(media="(max-width: 992px)",srcset="/images/banner/branding-banner.png")
+          img(src="/images/banner/branding-banner.png", alt="")
+
+      .topbop__branding--introduction
+        .container
+          .introduction__inner
+            .introduction__logo 
+              picture
+                img(src="/images/branding/branding-logo.png", alt="", srcset="")
+            .introduction__name THƯƠNG HIỆU SWISS ĐỘC LẬP
+            .introduction__desc BOMBERG đang vượt khỏi lối mòn của chế tác đồng hồ truyền thống, tạo ra những chiếc đồng hồ dành cho những người sành điệu, sáng tạo và tự tin, trên khắp thế giới ở Mỹ Latinh (các thị trường dẫn dắt của nó, đặc biệt là Mexico, nơi thương hiệu đã là đồng hồ phong cách số 5 thương hiệu), Hoa Kỳ, Châu Á và Châu Âu. Thương hiệu Thụy Sĩ, độc lập, nhanh nhẹn.
+            .introduction__image 
+              picture 
+                img(src="/images/branding/branding-product.png", alt="", srcset="")
+
+      .topbop__branding--collection 
+        .container
+          .collection__head BỘ SƯU TẬP BOMBERG
+          .collection__inner 
+            -for(var i = 0; i < 6; i++ )
+              .collection__item
+                .collection__item--image
+                  a(href='#')
+                    picture 
+                      img(src="/images/branding/collection-image.png", alt="")
+                .collection__item--detail 
+                  .detail__brandname Bomberg
+                  .detail__name BB - 01 AUTOMATIC
+                  .detail__desc "Calavera" mang ý nghĩa quan trọng ở Mexico.
+                  .detail__btn 
+                    a.btn MUA NGAY
+
+
+      .topbop__branding--highlight
+        .container 
+          .topbop__swiper.swiper.product__swiper
+            .topbop__swiper--top
+              p.topbop__swiper--heading BOMBERG NỔI BẬT
+              .group-button-director
+                .swiper-button-prev.slide-btn
                   i.icon-chevron-downp-left
 
-              .swiper-button-next.slide-btn.non-border.non-hover
+                .swiper-button-next.slide-btn
                   i.icon-chevron-down
-
-        .topbop__branding--banner 
-          picture 
-            img(src="/images/banner/branding-banner.png", alt="")
-
-        .topbop__branding--introduction
-block script 
+          .swiper-wrapper
+              -for( var i = 0; i < 7; i++ )
+                .swiper-slide.topbop__slide
+                  .slide__image
+                    a(href="#")
+                      picture
+                        img(src="/images/slide-image/watch-slide.png")
+                  .slide__text
+                      .slide__text--heading WALDHOFF
+                        span.slide__text--saleoff 25% Off
+                      .slide__text--desc BB-01 Automatic Mariachi Skull CT43ASPGD.24-1.11
+                      .slide__text--price
+                        p.price-content.main 37,746,000VNĐ
+                        p.price-content.discount 41,940,000VNĐ
+  block script 
   script(src="/js/function.js") 

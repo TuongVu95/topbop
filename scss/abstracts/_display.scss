@@ -1,0 +1,27 @@
+.block-none {
+  display: block !important;
+  @include breakpoints("md") {
+    display: none !important;
+  }
+}
+
+.none-block {
+  display: none !important;
+  @include breakpoints("md") {
+    display: block !important;
+  }
+}
+
+.flex-none {
+  display: flex !important;
+  @include breakpoints("md") {
+    display: none !important;
+  }
+}
+
+.none-flex {
+  display: none !important;
+  @include breakpoints("md") {
+    display: flex !important;
+  }
+}
