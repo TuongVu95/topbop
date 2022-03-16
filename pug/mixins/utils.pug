@@ -42,4 +42,10 @@ mixin moduleProduct($src, $srcset, $title, $sub)
         p.section__page-heading.heading-title= $title
         p.section__page-sub.sub-title= $sub
         .block__btn
-                    a.btn.btn-buy Mua ngay
+            a.btn.btn-buy Mua ngay
+
+mixin moduleSectionCate($listCateName,$src, $srcset)
+    li.block__list-item
+        a(href="http://", class="block__list-link")
+            .block__list-name.title-product= $listCateName
+            +pictrue($src, "Banner", "768px", $srcset)(class="section__page-picture")

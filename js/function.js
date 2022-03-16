@@ -95,6 +95,12 @@ const saleSwiper = new Swiper('.sale-swiper', {
   },
 });
 
+const pageCate = () => {
+
+
+
+}
+
 const init = () => {
   featureHeader();
 }

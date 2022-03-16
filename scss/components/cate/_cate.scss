@@ -1,0 +1,207 @@
+.ic-circle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    border-radius: 100%;
+    width: 19px;
+    height: 19px;
+}
+
+.stroke{
+    text-decoration: line-through;
+}
+.breadcrumb {
+    $this: &;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+    &-item {
+        &:not(:first-child) {
+            &:before {
+                content: "/";
+                display: inline-block;
+                color: $black;
+                @include fontSize(400, 1.4rem, 1.9rem);
+                padding: 0 1.2rem;
+            }
+        }
+        * {
+            @include fontSize(400, 1.4rem, 1.9rem);
+        }
+    }
+}
+.cate__page {
+    .section1 {
+        padding-bottom: 2.4rem;
+        picture {
+            margin-bottom: 0;
+            @include aspect-ratio(1920, 300, 0);
+            img {
+            }
+        }
+    }
+}
+.module__product {
+    &-head {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.module__product-filter {
+    .list__filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-option {
+            &:not(:last-child) {
+                margin-right: 2.4rem;
+            }
+            span {
+                @include fontSize(700, 1.6rem, 1.8rem);
+                margin-right: 0.8rem;
+            }
+        }
+        &-icon {
+        }
+        .filter-arrange {
+            &-icon {
+                transition: all 0.3s;
+                transform: rotate(90deg);
+            }
+        }
+        [class*="toggle-"] {
+            @extend %flex-center;
+        }
+        .active {
+            .filter-arrange-icon {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
+.module__product-row{
+    .col-auto{
+        padding: 0;
+    }
+    .col-sidebar{
+        max-width: 24.3rem;
+        flex-basis: 24.3rem;
+        margin-right: 3.2rem;
+    }
+    .col-product{
+        flex: 1;
+    }
+}
+.option {
+    position: relative;
+    &-dropdown {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: max-content;
+        filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.05));
+        border-radius: 8px;
+    }
+
+    &-item {
+        padding: 0.8rem 1.6rem;
+        label {
+            display: flex;
+            @include fontSize(400, 1.6rem, 1.8rem);
+            color: #898989;
+        }
+    }
+
+    &-label {
+        @include fontSize(400, 1.6rem, 1.8rem);
+        color: #131313;
+    }
+}
+.sidebar{
+    &-filter{
+
+    }
+}
+.sidebar-filter{
+    &-label{
+        .tit{
+            @include fontSize(700, 1.6rem, 1.8rem);
+        }
+        .icon{
+
+        }
+    }
+}
+
+.product{
+    position: relative;
+    &__img{
+        background: #F4F4F4;
+        margin-bottom: 1.6rem;
+        @extend .txt-center;
+    }
+    &__label{
+        position: absolute;
+        top: 1.3rem;
+        right: 1.9rem;
+        * {
+            color: #898989;
+            font-size: 1rem;
+        }
+    }
+    &__picture{
+        padding: 50px 0;
+        @include aspect-ratio(340,340,0);
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__info{
+        * {
+            @include fontSize(400, 1.6rem, 1.8rem);
+            word-break: break-word;
+        }
+        > *:not(:last-child){
+            margin-bottom: 1.2rem;
+        }
+    }
+    &__name{
+        color: #131313;
+        @extend .f-w-700;
+        position: relative;
+        padding-right: 9.5rem;
+        .sale-off{
+            @include fontSize(700, 1.4rem, 1.8rem);
+            color: #6BA139;
+            position: absolute;
+            right:0;
+            top:0;
+        }
+    }
+    &__desc{
+        color: #757575;
+        padding-right: 9.5rem;
+    }
+    &__prices{
+        @extend %flex-center;
+        .price{
+            @extend .f-w-700;
+            color: #131313;
+            margin-right: 1.6rem;
+        }
+        .stroke-price{
+            color: #757575;
+        }
+    }
+}
+.f-w-700{
+    font-weight: 700;
+}

@@ -23,7 +23,7 @@ block content
         section.section__page.section__trending.section5
             .container
                 .topbop__profile--benefit
-                    .topbop__swiper.swiper.benefit__swiper
+                    .topbop__swiper.swiper.swiper-brands
                         .topbop__swiper--top
                             p.topbop__swiper--heading TRENDING BRANDS
                             .group-button-director
@@ -45,17 +45,43 @@ block content
         section.section__page.section__cate.section6
             .container
                 .section__page-inner
+                    h2.section-title CÁC DÒNG SẢN PHẨM
                     .row
                         .col-6
                             ul.block__list
-                                li.block__list-item
-                                    a(href="http://", class="block__list-link")
-                                        .block__list-name ĐỒNG HỒ NAM
-                                        +pictrue('images/img-list-cate1.png', "Banner", "768px",'/')(class="section__page-picture")
-                                li.block__list-item
-                                    a(href="http://", class="block__list-link")
-                                        .block__list-name ĐỒNG HỒ NAM
-                                        +pictrue('images/img-list-cate1.png', "Banner", "768px",'/')(class="section__page-picture")
+                                +moduleSectionCate('ĐỒNG HỒ NAM','images/home/img-list-cate1.webp')
+                                +moduleSectionCate('ĐỒNG HỒ Nữ','images/home/img-list-cate2.webp')
+                                +moduleSectionCate('PHỤ KIỆN','images/home/img-list-cate3.webp')
+                                +moduleSectionCate('VÒNG ĐEO','images/home/img-list-cate4.webp')
+                        .col-6
+                            a(href="http://", class="pic-link")
+                                +pictrue('images/home/img-list-cate.png', "Banner", "768px",$srcset)(class="section__page-picture")
+
+        section.section__page.section__trending.section7
+            .container
+                .section__Page-inner
+                    .topbop__swiper.swiper.benefit__swiper
+                        .topbop__swiper--top
+                            p.topbop__swiper--heading SẢN PHẨM MỚI
+                            .group-button-director
+                                .swiper-button-prev.slide-btn
+                                    i.icon-chevron-downp-left
+
+                                .swiper-button-next.slide-btn
+                                    i.icon-chevron-down
+                        .swiper-wrapper
+                            -for( var i = 0; i < 7; i++ )
+                                .swiper-slide.topbop__slide
+                                    .slide__image
+                                    a(href="#")
+                                        picture
+                                        img(src="/images/slide-image/benefit-image.png")
+                                    .slide__text
+                                    div.slide__text--heading Giảm 10% với thành viên Top Bop
+
+        section.section__page.section__hightlight
+            .container
+                .section_page-inner
 
 
 
