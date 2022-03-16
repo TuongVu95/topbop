@@ -1,7 +1,7 @@
 mixin link($href, $name)
     a(href=$href)&attributes(attributes)= $name
 
-mixin pictrue($src, $alt, $breakpoint, $srcset)
+mixin picture($src, $alt, $breakpoint, $srcset)
     picture&attributes(attributes)= name
         source(media=`(max-width: ${$breakpoint} )`, srcset=$srcset)
         img(src=$src, alt=$alt)
@@ -29,7 +29,7 @@ mixin banner($number, $src, $srcset, $title, $sub)
         .container
             .section__page-inner
                 a(href="http://")
-                    +pictrue($src, "Banner", "768px",$srcset)(class="section__page-picture")
+                    +picture($src, "Banner", "768px",$srcset)(class="section__page-picture")
                 p.section__page-heading.heading-title= $title
                 p.section__page-sub.sub-title= $sub
                 .block__btn
@@ -38,8 +38,33 @@ mixin banner($number, $src, $srcset, $title, $sub)
 
 mixin moduleProduct($src, $srcset, $title, $sub)
     .module-product
-        +pictrue($src, "Banner", "768px",$srcset)(class="section__page-picture")
+        +picture($src, "Banner", "768px",$srcset)(class="section__page-picture")
         p.section__page-heading.heading-title= $title
         p.section__page-sub.sub-title= $sub
         .block__btn
                     a.btn.btn-buy Mua ngay
+
+
+mixin breadcumb($list)
+    .topbop__breadcumb
+        .container
+            ol.breadcumb
+                each item in $list   
+                    li.breadcumb--item
+                        a(href='#')= item
+
+mixin saleSlide($numberSlide)
+     .topbop__saleSlide
+      .topbop__saleSlide--inner 
+        .swiper.sale-swiper
+          .swiper-wrapper   
+            -for( let i = 0; i < $numberSlide; i++)
+              .swiper-slide.sale__slide
+                a(href='#')
+                  p.sale__slide--head SALE UP TO 50%
+                  p.sale__slide--markdown Shop All Our New Markdowns
+          .swiper-button-prev.slide-btn.non-border.non-hover 
+            i.icon-chevron-downp-left
+
+          .swiper-button-next.slide-btn.non-border.non-hover
+            i.icon-chevron-down 
