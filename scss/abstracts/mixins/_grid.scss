@@ -33,14 +33,11 @@ $container-padding-x: ($grid-gutter-width / 2) !default;
 //    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    "-sm"
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-max($name, $breakpoints) == null, '', '-#{$name}');
+  @return if(breakpoint-max($name, $breakpoints) == null, "", "-#{$name}");
 }
 
 //mixin max-width container
-@mixin make-container-max-widths(
-  $max-widths: $container-max-widths,
-  $breakpoints: $grid-breakpoints
-) {
+@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
   // @debug $max-widths;
   // @debug $breakpoints;
   @each $breakpoint, $value-max-width in $max-widths {
@@ -58,7 +55,7 @@ $container-padding-x: ($grid-gutter-width / 2) !default;
 
 @mixin max-container() {
   width: 100%;
-  max-width: 1336px;
+  max-width: 133.6rem;
   padding-right: $container-padding-x;
   padding-left: $container-padding-x;
   margin-right: auto;
@@ -98,7 +95,7 @@ $container-padding-x: ($grid-gutter-width / 2) !default;
   max-width: percentage($size / $columns);
 }
 
-.row{
+.row {
   @include make-row();
 }
 
@@ -132,7 +129,7 @@ $container-padding-x: ($grid-gutter-width / 2) !default;
 
     .col#{$infix},
     .col#{$infix}-auto,
-    [class*="col-"]{
+    [class*="col-"] {
       @extend %grid-column;
     }
     //responsove col

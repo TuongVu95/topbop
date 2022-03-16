@@ -25,9 +25,9 @@ block content
       .topbop__branding--collection 
         .container
           .collection__head BỘ SƯU TẬP BOMBERG
-          .collection__inner 
+          .collection__inner.row
             -for(var i = 0; i < 6; i++ )
-              .collection__item
+              .collection__item.col-6.col-md-12
                 .collection__item--image
                   a(href='#')
                     picture 
@@ -41,7 +41,7 @@ block content
 
 
       .topbop__branding--highlight
-          +slideProduct
+          +slideProduct('BOMBERG NỔI BẬT')
 
       +otherProduct  
 block script 

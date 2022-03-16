@@ -67,11 +67,11 @@
       text-align: center;
       margin-bottom: 6.4rem;
     }
-    .collection__inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+    // .collection__inner {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   justify-content: space-between;
+    // }
     @include breakpoints("md") {
       .collection__head {
         font-size: 2rem;
@@ -80,11 +80,11 @@
       }
     }
     .collection__item {
-      flex-basis: calc((100% / 2) - 0.8rem);
+      // flex-basis: calc((100% / 2) - 0.8rem);
       color: #000;
       margin-bottom: 10rem;
       @include breakpoints("md") {
-        flex-basis: 100%;
+        // flex-basis: 100%;
         margin-bottom: 4.8rem;
         text-align: center;
       }
