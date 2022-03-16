@@ -1,0 +1,37 @@
+.topbop__otherProduct {
+  margin-top: 10rem;
+  &--head {
+    @include fontSize(700, 2.4rem, 3.2rem);
+    margin-bottom: 3.2rem;
+  }
+  &--inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--item {
+    flex-basis: calc((100% / 3) - 0.8rem);
+  }
+  &--content {
+    position: absolute;
+    bottom: 2.4rem;
+    left: 2.4rem;
+    p {
+      @include fontSize(700, 2rem, 2.2rem);
+      color: #fff;
+    }
+    a {
+      margin-top: 2.4rem;
+      display: none;
+      transition: all 0.2s ease-outs;
+    }
+  }
+  &--image {
+    position: relative;
+    &:hover {
+      a {
+        display: block;
+      }
+    }
+  }
+}

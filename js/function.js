@@ -76,12 +76,17 @@ const productSwiper = new Swiper('.product__swiper', {
 });
 
 const aboutUsSwiper = new Swiper('.about-us-swiper', {
-  slidesPerGroup: 1,
   cssMode: true,
   pagination: {
     el: ".swiper-pagination",
     type: "progressbar",
   },
+  breakpoints: {
+    '360': {
+      slidesPerGroup: 1,
+      slidesPerView: 1,
+    }
+  }
 });
 
 const saleSwiper = new Swiper('.sale-swiper', {

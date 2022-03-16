@@ -2,12 +2,15 @@ $padding-y: 1.1rem;
 $padding-x: 2.4rem;
 
 $background-btn: $black;
+$background-white: $white;
 $background-hover: linear-gradient(0deg, #919191, #919191), #0c2641;
 
 $color: $white;
+$color-black: $black;
 $font-size: 1.4rem;
 
 .btn {
+    $this: &;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -31,5 +34,10 @@ $font-size: 1.4rem;
         &:hover {
             background: $background-hover;
         }
+    }
+
+    &-white {
+        background: $background-white;
+        color: $color-black;
     }
 }

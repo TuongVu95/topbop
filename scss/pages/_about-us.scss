@@ -73,14 +73,28 @@
       flex-basis: 364px;
       max-width: 364px;
       padding: 2.7rem 3.5rem 4.4rem 1.6rem;
+      @include breakpoints("md") {
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 2.4rem 1.6rem 3.9rem;
+      }
       &--date {
         font-size: 1.6rem;
         line-height: 1.8rem;
         margin-bottom: 2rem;
+        @include breakpoints("md") {
+          margin-bottom: 1.6rem;
+          font-size: 1.4rem;
+          line-height: 1.9rem;
+        }
       }
       &--desc {
         font-size: 1.6rem;
         line-height: 2.2rem;
+        @include breakpoints("md") {
+          font-size: 1.4rem;
+          line-height: 1.9rem;
+        }
       }
     }
   }
