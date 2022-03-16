@@ -82,3 +82,30 @@ mixin otherProduct($number = 3)
                             .topbop__otherProduct--content 
                                 p DÂY CHUYỀN 
                                 a(href="#").btn.btn-white XEM THÊM 
+
+
+mixin slideProduct($textHeading,$number = 7)
+    .container 
+          .topbop__swiper.swiper.product__swiper
+            .topbop__swiper--top
+              p.topbop__swiper--heading= $textHeading
+              .group-button-director
+                .swiper-button-prev.slide-btn
+                  i.icon-chevron-downp-left
+
+                .swiper-button-next.slide-btn
+                  i.icon-chevron-down
+            .swiper-wrapper
+                -for( var i = 0; i < $number; i++ )
+                  .swiper-slide.topbop__slide
+                    .slide__image
+                      a(href="#")
+                        picture
+                          img(src="/images/slide-image/watch-slide.png")
+                    .slide__text
+                        .slide__text--heading WALDHOFF
+                          span.slide__text--saleoff 25% Off
+                        .slide__text--desc BB-01 Automatic Mariachi Skull CT43ASPGD.24-1.11
+                        .slide__text--price
+                          p.price-content.main 37,746,000VNĐ
+                          p.price-content.discount 41,940,000VNĐ
