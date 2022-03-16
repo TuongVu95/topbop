@@ -68,3 +68,17 @@ mixin saleSlide($numberSlide = 4)
 
           .swiper-button-next.slide-btn.non-border.non-hover
             i.icon-chevron-down 
+
+mixin otherProduct($number = 3) 
+    .topbop__otherProduct 
+        .container
+            .topbop__otherProduct--head SẢN PHẨM KHÁC CỦA BOMBERG
+            .topbop__otherProduct--inner
+                -for(let i = 0; i < $number; i++)
+                    .topbop__otherProduct--item 
+                        .topbop__otherProduct--image
+                            picture
+                                img(src="/images/branding/otherProduct-image.png", alt="")    
+                            .topbop__otherProduct--content 
+                                p DÂY CHUYỀN 
+                                a(href="#").btn.btn-white XEM THÊM 
