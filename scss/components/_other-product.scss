@@ -22,18 +22,15 @@
     }
     a {
       margin-top: 2.4rem;
-      transition: opacity 1s ease-out;
-      opacity: 0;
-      height: 0;
-      overflow: hidden;
+      display: none;
+      transition: all 0.2s ease-outs;
     }
   }
   &--image {
     position: relative;
     &:hover {
       a {
-        opacity: 1;
-        height: auto;
+        display: block;
       }
     }
   }
