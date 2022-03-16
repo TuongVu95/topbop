@@ -1,14 +1,11 @@
 extends templates/_layout.pug
+include mixins/utils
 
 block content
   main.topbop__wrapper
-    .container
-      ol.breadcumb
-        -var list = ['Trang chủ','Trang cá nhân','Bài viết đã lưu']
-        each item in list
-          li.breadcumb--item
-            a(href='#')= item
+    +breadcumb(['Trang chủ','Trang cá nhân','Bài viết đã lưu'])
 
+    .container
       .topbop__article
         h2.topbop__article--heading BÀI VIẾT ĐÃ LƯU
         .topbop__article--inner

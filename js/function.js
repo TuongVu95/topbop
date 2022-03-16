@@ -52,13 +52,11 @@ const topbopSwiper = new Swiper('.benefit__swiper', {
       spaceBetween: 16,
       slidesPerGroup: 3,
     }
-
   }
 });
 
 
 const productSwiper = new Swiper('.product__swiper', {
-
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
