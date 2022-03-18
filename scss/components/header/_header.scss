@@ -21,7 +21,7 @@ $color-lv2: #757575;
 
     &-left {
         max-width: 19.4rem;
-        &--mobile{
+        &--mobile {
             display: none;
         }
         @include breakpoints("md") {
@@ -31,7 +31,7 @@ $color-lv2: #757575;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            &--mobile{
+            &--mobile {
                 display: block;
             }
         }
@@ -116,6 +116,36 @@ $color-lv2: #757575;
                     margin-right: 0;
                 }
             }
+
+            &.list__social-mb {
+                margin: 2.3rem 0 5rem;
+                ul {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .social-item {
+                    margin-right: 0;
+                    width: 100%;
+                    max-width: 100%;
+                    &:not(:last-child) {
+                        margin-bottom: 1.2rem;
+                    }
+                    &:last-child {
+                        display: block;
+                    }
+                    .ic-picture {
+                        margin-right: 0.8rem;
+                        max-width: 24px;
+                    }
+                    .ic-label {
+                        @include fontSize(700, 1.4rem, 1.8rem);
+                    }
+                    a {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
         }
     }
     .btn-form-search {
@@ -179,11 +209,14 @@ $color-lv2: #757575;
         position: absolute;
         right: 0;
         top: 0;
-        @include breakpoints('md'){
-            .back{
+        @include breakpoints("md") {
+            z-index: 2;
+            width: 3rem;
+            text-align: right;
+            .back {
                 display: none;
             }
-            .icon-chevron-down{
+            .icon-chevron-down {
                 @include fontSize(normal, 2rem, 1);
             }
         }
@@ -229,6 +262,10 @@ $color-lv2: #757575;
             &:hover {
                 #{$lv1} {
                     display: block;
+                    z-index: 1;
+                }
+                .page__nav-link {
+                    background-size: 100% 100%;
                 }
             }
         }
@@ -241,13 +278,19 @@ $color-lv2: #757575;
     &-link {
         @extend .txt-uppercase;
         padding-bottom: 1.9rem;
+
+        background-image: linear-gradient(transparent calc(100% - 2px), #161616 2px);
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: all 0.6s ease, -webkit-transform 0.6s ease;
+        position: relative;
+        z-index: 2;
         @include breakpoints("md") {
             padding: 0 3rem 2.5rem 0;
             display: block;
             font-size: 20px;
             line-height: 22px;
             letter-spacing: 0.0015em;
-
         }
     }
     &-lv1 {
@@ -301,7 +344,7 @@ $color-lv2: #757575;
         display: block;
         width: 2rem;
         height: 2rem;
-        top: -.4rem;
+        top: -0.4rem;
         .burger {
             position: absolute;
             display: block;
@@ -368,17 +411,17 @@ $color-lv2: #757575;
     }
 }
 .nav-mobile {
-   @include breakpoints('md'){
-    transition: all 0.375s;
-    transform: translateX(-100%);
-    opacity: 0;
-    visibility: hidden;
-    &.is-expand {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0);
+    @include breakpoints("md") {
+        transition: all 0.375s;
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        &.is-expand {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
     }
-   }
 }
 .page__header-burger {
     @extend .hide;
@@ -390,72 +433,114 @@ $color-lv2: #757575;
         }
     }
 }
-.page__nav-item{
-    @include breakpoints('md'){
-        &.expand{
+.page__nav-item {
+    @include breakpoints("md") {
+        &.expand {
             position: absolute;
             left: 0;
-            top:0;
+            top: 0;
             background: $white;
-            z-index: 1;
+            z-index: 10;
             height: 100%;
             overflow: auto;
             // padding-top: 8.4rem;
-            .page__nav-dropdown{
+            .page__nav-dropdown {
                 display: block;
                 padding: 0;
                 // height: inherit;
                 // overflow: inherit;
             }
-            .page__nav-icon{
+            .page__nav-icon {
                 display: flex;
                 align-items: center;
                 padding: 2.4rem 1.6rem 0 0;
                 z-index: 3;
                 position: fixed;
                 right: 8.5rem;
-                .back{
+                width: auto;
+                .back {
                     display: block;
                     padding-right: 1.5rem;
-                    @include fontSize(inherit, 1.4rem,1.8rem);
+                    @include fontSize(inherit, 1.4rem, 1.8rem);
                 }
-                .icon-chevron-down{
+                .icon-chevron-down {
                     font-size: 12px;
                 }
             }
-            .page__nav-link{
+            .page__nav-link {
                 padding: 8.4rem 1.6rem 3.2rem;
                 position: sticky;
-                top:0;
+                top: 0;
                 background: $white;
                 z-index: 1;
             }
-            .page__nav-lv1{
-                &--item{
+            .page__nav-lv1 {
+                &--item {
                     margin: 0;
                     padding-bottom: 3.2rem;
                 }
             }
-            .page__nav-lv2{
+            .page__nav-lv2 {
                 padding: 0;
-                &:not(:last-child){
+                &:not(:last-child) {
                     margin-bottom: 32px;
                 }
-                &--title{
+                &--title {
                     font-size: 16px;
                     line-height: 18px;
                     margin-bottom: 2rem;
                 }
-                &--item{
-                    a{
+                &--item {
+                    a {
                         font-size: 14px;
-line-height: 20px;
+                        line-height: 20px;
                     }
                 }
             }
         }
     }
 }
-.disable-scroll{
+.disable-scroll {
     overflow: hidden;
+}
+.header__desc-mb,.header__login-mb{
+    display: none;
+    @include breakpoints("md") {
+        display: block;
+    }
+}
+.header__desc-mb {
+    @include breakpoints("md") {
+        margin-bottom: 2.4rem;
+        p {
+            @include fontSize(700, 1.4rem, 1.8rem);
+            color: #898989;
+        }
+    }
+}
+.header__login-mb{
+    @include breakpoints("md") {
+        .btn{
+            border: none;
+            background: #161616;
+            padding: .8rem 1.6rem;
+            border: 1px solid #161616;
+
+            span{
+                @include fontSize(600, 1.2rem,1.65rem);
+                text-transform: capitalize;
+                font-family: "Manrope", Arial, Helvetica, sans-serif;
+            }
+
+            &-regist{
+                margin-right: 0.8rem;
+            }
+            &-login{
+                background: transparent;
+                span{
+                    color: #161616;
+                }
+            }
+        }
+    }
 }
