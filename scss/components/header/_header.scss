@@ -99,6 +99,9 @@ $color-lv2: #757575;
                 margin-right: 1.6rem;
             }
         }
+        &-mb {
+            display: none;
+        }
         @media (max-width: 992px) {
             .social-item {
                 // &:first-child,
@@ -118,6 +121,7 @@ $color-lv2: #757575;
             }
 
             &.list__social-mb {
+                display: block;
                 margin: 2.3rem 0 5rem;
                 ul {
                     flex-direction: column;
@@ -383,7 +387,7 @@ $color-lv2: #757575;
             border-radius: 1000px;
 
             .burger {
-                transform: skew(0) translate(-50%, -50%) rotate(-45deg);
+                transform: skew(0) translate(-50%, -50%) rotate(-44deg);
                 width: 21px;
                 top: 50%;
                 left: 50%;
@@ -394,6 +398,10 @@ $color-lv2: #757575;
                 &:before {
                     transform: translateY(0px) skew(-10deg) rotate(75deg);
                 }
+            }
+
+            &.block-profile{
+                z-index: 11;
             }
         }
     }
@@ -411,6 +419,9 @@ $color-lv2: #757575;
     }
 }
 .nav-mobile {
+    .page__profile {
+        display: none;
+    }
     @include breakpoints("md") {
         transition: all 0.375s;
         transform: translateX(-100%);
@@ -420,6 +431,20 @@ $color-lv2: #757575;
             opacity: 1;
             visibility: visible;
             transform: translateX(0);
+        }
+        .page__profile {
+            display: block;
+            a {
+                display: flex;
+                align-items: center;
+            }
+            picture {
+                margin-right: 0.8rem;
+            }
+            .label-name {
+                @include fontSize(700, 1.4rem, 1.8rem);
+                text-transform: capitalize;
+            }
         }
     }
 }
@@ -503,7 +528,8 @@ $color-lv2: #757575;
 .disable-scroll {
     overflow: hidden;
 }
-.header__desc-mb,.header__login-mb{
+.header__desc-mb,
+.header__login-mb {
     display: none;
     @include breakpoints("md") {
         display: block;
@@ -518,27 +544,70 @@ $color-lv2: #757575;
         }
     }
 }
-.header__login-mb{
+.header__login-mb {
     @include breakpoints("md") {
-        .btn{
+        .btn {
             border: none;
             background: #161616;
-            padding: .8rem 1.6rem;
+            padding: 0.8rem 1.6rem;
             border: 1px solid #161616;
 
-            span{
-                @include fontSize(600, 1.2rem,1.65rem);
+            span {
+                @include fontSize(600, 1.2rem, 1.65rem);
                 text-transform: capitalize;
                 font-family: "Manrope", Arial, Helvetica, sans-serif;
             }
 
-            &-regist{
+            &-regist {
                 margin-right: 0.8rem;
             }
-            &-login{
+            &-login {
                 background: transparent;
-                span{
+                span {
                     color: #161616;
+                }
+            }
+        }
+    }
+}
+@include breakpoints("md") {
+    .page__profile {
+        $nav: ".page__nav";
+        .page__nav {
+
+            &-lv1 {
+                padding: 0 !important;
+                &--item {
+                    padding: 0 !important;
+                }
+                #{$nav} {
+                    &-link {
+                        padding: 1.6rem;
+                        @include fontSize(700, 1.6rem, 1.8rem);
+                        width: 100%;
+                        color: #898989;
+                        text-transform: initial;
+                    }
+                }
+            }
+            &-icon {
+                top: 0.8rem;
+            }
+            &-item {
+            }
+        }
+        &.expand {
+            @debug #{$nav}-icon;
+            #{$nav}-icon {
+                position: absolute;
+                padding-top: 8.4rem;
+                right:0;
+                .back{
+                    display: none;
+                }
+                i.icon-chevron-down{
+                    font-size: 1.8rem;
+                    line-height: 2rem;
                 }
             }
         }

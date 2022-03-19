@@ -2,12 +2,12 @@ const $document = $(document);
 const $htmlBody = $('html,body');
 const $windowWidth = $($(window).width());
 
-
 const featureHeader = () => {
   const $jsOpenNav = $('.jsOpenNav');
   const $navMobile = $('.nav-mobile');
   const $purger = $('.page__header-burger');
   const $actionExpand = $('.jsActionExpand');
+  const $profile = $('.page__profile');
 
   $jsOpenNav.click(function () {
     const $that = $(this);
@@ -20,7 +20,14 @@ const featureHeader = () => {
 
   $actionExpand.click(function () {
     const $that = $(this);
+
     $that.toggleClass('expand');
+    // $jsOpenNav.removeClass('block-profile');
+
+    if($that.is($profile)){
+      $jsOpenNav.toggleClass('block-profile');
+    }
+
   });
 
   $document.click(function (e) {
@@ -31,6 +38,7 @@ const featureHeader = () => {
       $navMobile.removeClass('is-expand');
       $jsOpenNav.removeClass('is-open');
     }
+
   });
 
 }
