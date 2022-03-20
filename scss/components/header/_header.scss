@@ -185,8 +185,6 @@ $color-lv2: #757575;
         }
     }
     &-logo {
-        picture {
-        }
         @include breakpoints("md") {
             picture {
                 @include aspect-ratio(165, 31, 0);
@@ -592,8 +590,6 @@ $color-lv2: #757575;
             }
             &-icon {
                 top: 0.8rem;
-            }
-            &-item {
             }
         }
         &.expand {
