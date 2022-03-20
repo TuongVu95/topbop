@@ -108,11 +108,45 @@ const saleSwiper = new Swiper('.sale-swiper', {
 
 const pageCate = () => {
 
-
-
 }
+
 
 const init = () => {
   featureHeader();
+
 }
 init();
+
+$(document).ready(function(){
+  const btnExpand = $('.js-action-expand');
+  btnExpand.accordion();
+});
+
+jQuery.fn.extend({
+  accordion: function () {
+      return this.each(function () {
+          const $that = $(this);
+          const btnExpand = $('.js-action-expand');
+          const listWrap = $('.js-list');
+
+          $that.click(function(){
+            const isActive = $that.is('.active');
+            const jsListDropdown = $('.js-list');
+            const listDropdown = $that.next('.js-list');
+
+            if(isActive){
+              btnExpand.removeClass('active');
+              listDropdown.slideUp();
+
+            }else{
+              btnExpand.removeClass('active');
+              $that.addClass('active');
+              jsListDropdown.slideUp();
+              listDropdown.slideDown();
+            }
+
+          });
+
+      });
+  }
+});
