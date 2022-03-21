@@ -1,0 +1,43 @@
+.topbop__detail {
+  &--inner {
+    display: flex;
+  }
+  &--right {
+    flex-basis: 416px;
+  }
+  &--left {
+    flex: 1;
+  }
+  &--heading {
+    @include fontSize(700, 2.8rem, 3.6rem);
+    margin-bottom: 2.4rem;
+  }
+  &--infomation {
+    @include fontSize(500, 1.6rem, 1.8rem);
+    color: #898989;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+  &--price {
+    margin-top: 1.6rem;
+    @include fontSize(700, 1.6rem, 1.8rem);
+    .price__block {
+      display: flex;
+      .main-price {
+        color: #131313;
+      }
+      .discount-price {
+        color: #898989;
+        margin-left: 1.6rem;
+        text-decoration: line-through;
+      }
+    }
+    .discount__percent {
+      color: #6ba139;
+      margin-top: 0.8rem;
+    }
+  }
+}

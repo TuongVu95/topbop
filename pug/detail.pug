@@ -1,0 +1,31 @@
+extends templates/_layout.pug
+
+block content 
+  main.topbop__wrapper 
+    .topbop__detail 
+      +saleSlide 
+      .topbop__detail--product 
+          .container
+            .topbop__detail--inner
+              .topbop__detail--left 
+                .topbop__detail--slide.swiper 
+                  .swiper-wrapper 
+                    -for(let i = 0; i < 6; i++)
+                      .swiper-slide 
+                        picture 
+                          img(src="/images/detail/detail-product.png", alt="", srcset="")
+                  
+              .topbop__detail--right
+                +breadcumb(['Trang chủ','Thương hiệu','Bomberg','Multimatic Diamond Silver 03A'],false)
+                .topbop__detail--heading Bomberg Multimatic Diamond Silver 03A 
+                .topbop__detail--infomation 
+                  p.desc__model Loại: Nam
+                  p.desc__numberProduct Mã Sản Phẩm: 900081
+                
+                .topbop__detail--price 
+                  .price__block 
+                    p.main-price 37,746,000VNĐ
+                    p.discount-price 41,940,000VNĐ
+                  .discount__percent 25% Off
+block script 
+  script(src="/js/function.js") 

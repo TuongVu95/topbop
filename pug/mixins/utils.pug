@@ -48,16 +48,22 @@ mixin moduleSectionCate($listCateName,$src, $srcset)
     li.block__list-item
         a(href="http://", class="block__list-link")
             .block__list-name.title-product= $listCateName
-            +pictrue($src, "Banner", "768px", $srcset)(class="section__page-picture")
+            +picture($src, "Banner", "768px", $srcset)(class="section__page-picture")
 
-mixin breadcumb($list)
+mixin breadcumb($list,$isContainer=true)
     .topbop__breadcumb
-        .container
-            ol.breadcumb
-                each item in $list
-                    li.breadcumb--item
-                        a(href='#')= item
-
+        if $isContainer
+            .container
+                ol.breadcumb
+                    each item in $list
+                        li.breadcumb--item
+                            a(href='#')= item
+        else 
+             ol.breadcumb
+                 each item in $list
+                     li.breadcumb--item
+                          a(href='#')= item    
+                              
 mixin saleSlide($numberSlide = 4)
      .topbop__saleSlide
       .topbop__saleSlide--inner
