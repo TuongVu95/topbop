@@ -17,6 +17,10 @@ $color-sub: #161616;
 }
 .section-title {
     @include fontSize(700, $section-title, 3.2rem);
+    @extend .txt-uppercase;
+    @include breakpoints('sm'){
+        @include fontSize(700, 2rem, 2.2rem);
+    }
 }
 .title-product {
     @include fontSize(700, $title-product, 2rem);
@@ -28,9 +32,6 @@ $color-sub: #161616;
     }
 }
 .section {
-    &__spacing {
-
-    }
     &__page{
         padding-bottom: 10rem;
         .section-title{
@@ -42,7 +43,7 @@ $color-sub: #161616;
         .sub-title{
             margin-bottom: 3.2rem;
         }
-        @include breakpoints('sm'){
+        @include breakpoints('md'){
             padding-bottom: 4.8rem;
             &-picture{
                 margin-bottom: 2rem;
@@ -70,10 +71,30 @@ $color-sub: #161616;
             }
         }
     }
+    &__trending{
+        .section-title{
+            margin-bottom: 0;
+        }
+        .swiper-button-prev{
+            margin-right: 1.6rem;
+        }
+        .block__swiper-head{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include breakpoints('md'){
+            .block__swiper-head{
+                margin-bottom: 1.6rem;
+            }
+            .group-button-director{
+                display:none;
+            }
+        }
+    }
 }
 .section__banner {
     $s: ".section__page";
-    // @debug #{$this};
     #{$s}{
         &-heading{
             margin-bottom: 1.6rem;
@@ -81,6 +102,9 @@ $color-sub: #161616;
                 margin-bottom: .4rem;
             }
         }
+    }
+    @include breakpoints('md'){
+
     }
 }
 .section1{
@@ -116,5 +140,83 @@ $color-sub: #161616;
         padding-left: 4.8rem;
         max-width: 257px;
         width: 100%;
+        @extend .txt-uppercase;
+    }
+}
+.section__trending{
+    .block__slide{
+        max-width: calc(100%/5.7);
+        // flex:1 1 calc(100%/5);
+    }
+    @include breakpoints('md'){
+        .swiper-wrapper{
+            flex-wrap: wrap;
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                border-bottom: 1px solid $white;
+            }
+        }
+        .block__slide{
+            max-width: calc(100%/3);
+            flex:1 1 calc(100%/3);
+            border: 1px solid #F5F5F5;
+            height: auto;
+            border-top: 0;
+            border-left: 0;
+            &:nth-child(3n+3), &:last-child{
+                border-right: 0;
+            }
+
+        }
+    }
+}
+.section__cate{
+    .block{
+        &__content{
+            padding: 4rem 0 0 4.8rem;
+            position: relative;
+            z-index: 1;
+            * {
+                @include fontSize(400, 2rem, 2.8rem);
+                color: $white;
+            }
+            p{
+
+            }
+            .prices{
+                margin-bottom: 3.2rem;
+            }
+            .strong{
+                margin-bottom: .8rem;
+                @extend .txt-uppercase;
+                strong{
+                    @include fontSize(700, 3.2rem, 3.8rem);
+
+                }
+            }
+            strong{
+                font-weight: 700;
+            }
+            .btn{
+                span{
+                    @include fontSize(700, 1.6rem, 1.8rem);
+                }
+            }
+        }
+        &__wrap{
+            @extend .block;
+            background: linear-gradient(90deg, #F27C65 0%, rgba(236, 143, 125, 0.73) 100%);
+            height: 100%;
+        }
+        &__pic{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            max-width: 57.1rem;
+            margin-bottom: 0;
+        }
     }
 }

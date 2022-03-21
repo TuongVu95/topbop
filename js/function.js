@@ -1,6 +1,10 @@
 const $document = $(document);
 const $htmlBody = $('html,body');
-const $windowWidth = $($(window).width());
+const $window = $(window);
+
+const $windowWidth = $window.width();
+const $mobile = $windowWidth < 992;
+const $desktop = $windowWidth > 992;
 
 const featureHeader = () => {
   const $jsOpenNav = $('.jsOpenNav');
@@ -42,7 +46,6 @@ const featureHeader = () => {
   });
 
 }
-
 
 const topbopSwiper = new Swiper('.benefit__swiper', {
   navigation: {
@@ -106,6 +109,30 @@ const saleSwiper = new Swiper('.sale-swiper', {
   },
 });
 
+const pageHome = () => {
+  console.log("$desktop", $desktop);
+  if($desktop){
+    var swiper = new Swiper(".swiper-trending", {
+      slidesPerView:"auto",
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        992: {
+          spaceBetween: 0,
+          slidesPerGroup: 5,
+        },
+      },
+    });
+  }
+
+}
+
 const pageCate = () => {
 
 }
@@ -113,7 +140,7 @@ const pageCate = () => {
 
 const init = () => {
   featureHeader();
-
+  pageHome();
 }
 init();
 
