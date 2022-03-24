@@ -8,42 +8,64 @@ block content
           .container
             .topbop__detail--inner
               .topbop__detail--left 
-                .topbop__detail--slide.swiper 
-                  .swiper-wrapper 
+                .topbop__detail--slide.swiper.detail-swiper 
+                  .swiper-wrapper.row 
                     -for(let i = 0; i < 6; i++)
-                      .swiper-slide 
+                      .swiper-slide.col-6
                         picture 
                           img(src="/images/detail/detail-product.png", alt="", srcset="")
-                  
+                  .swiper-pagination
+
               .topbop__detail--right
-                +breadcumb(['Trang chủ','Thương hiệu','Bomberg','Multimatic Diamond Silver 03A'],false)
-                .topbop__detail--heading Bomberg Multimatic Diamond Silver 03A 
-                .topbop__detail--infomation 
-                  p.desc__model Loại: Nam
-                  p.desc__numberProduct Mã Sản Phẩm: 900081
-                
-                .topbop__detail--price 
-                  .price__block 
-                    p.main-price 37,746,000VNĐ
-                    p.discount-price 41,940,000VNĐ
-                  .discount__percent 25% Off
+                  .detail--right__wrapper
+                    +breadcumb(['Trang chủ','Bomberg','Multimatic Diamond Silver 03A'],false)
+                    .topbop__detail--heading Bomberg Multimatic Diamond Silver 03A 
+                    .topbop__detail--infomation 
+                      p.desc__model Loại: Nam
+                      p.desc__numberProduct Mã Sản Phẩm: 900081
+                    
+                    .topbop__detail--price 
+                      .price__block 
+                        p.main-price 37,746,000VNĐ
+                        p.discount-price 41,940,000VNĐ
+                      .discount__percent 25% Off
 
-                .topbop__detail--option 
-                  .option__head Size
-                  .option__group 
-                    span.option__button 42 mm  
-                
-                .topbop__detail--promotion 
-                  .promotion__inner 
-                    .promotion__head 
-                      h3 Khuyến mãi trị giá 500.000đ 
-                      p Giá và khuyến mãi dự kiến áp dụng đến 23:00 28/02 
-                    .promotion__body 
-                      .promotion__item Chọn 1 trong các khuyến mãi:
-                      .promotion__item Giảm giá 50% gói bảo hành mở rộng thêm 1 năm (chính hãng) 
-                      .promotion__item Giảm đến 1,500,000đ khi tham gia thu cũ đổi mới (Không áp dụng kèm giảm giá qua VNPay, Moca)
+                    .topbop__detail--option 
+                      .option__head Size
+                      .option__group 
+                        span.option__button 42 mm  
+                    
+                    .topbop__detail--promotion 
+                      .promotion__inner 
+                        .promotion__head 
+                          h3 Khuyến mãi trị giá 500.000đ 
+                          p Giá và khuyến mãi dự kiến áp dụng đến 23:00 28/02 
+                        .promotion__body 
+                          .promotion__item Chọn 1 trong các khuyến mãi:
+                            .promotion__item--option
+                              .radio
+                                label(for="ex1")
+                                  input(type="radio", name="" id="ex1") 
+                                  span.radio-text Giảm giá 500,000đ
 
+                              .radio
+                                label(for="ex2")
+                                  input(type="radio", name="" id="ex2") 
+                                  span.radio-text Phiếu mua hàng 1000,000đ
+                          .promotion__item Giảm giá 50% gói bảo hành mở rộng thêm 1 năm (chính hãng) 
+                          .promotion__item Giảm đến 1,500,000đ khi tham gia thu cũ đổi mới (Không áp dụng kèm giảm giá qua VNPay, Moca)
 
+                    .topbop__detail--button 
+                      a(href="#").btn.w-100 THÊM VÀO GIỎ HÀNG
+                      a(href="#").btn.btn-white.btn--half THANH TOÁN COD
+                      a(href="#").btn.btn-white.btn--half TRẢ GÓP 0% 
+                      a(href="#").btn.btn-white.w-100 YÊU THÍCH   
 
+                    .topbop__detail--description 
+                      h2 MÔ TẢ SẢN PHẨM
+                      -for(let i= 0; i < 3; i++)
+                        .detail--description__item 
+                          h4 Mặt sau đồng hồ
+                          p.js-more Mặt sau của đồng hồ Capital với cửa sổ bằng sapphire trong suốt. Bộ chuyển động và rôto được trau chuốt đẹp mắt là duy nhất trong loại giá này Mặt sau đồng hồ Mặt sau của đồng hồ Capital với cửa sổ bằng sapphire trong suốt. Bộ chuyển động và rôto được trau chuốt đẹp mắt là duy nhất trong loại giá này
 block script  
   script(src="/js/function.js") 

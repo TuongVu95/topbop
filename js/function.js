@@ -28,7 +28,7 @@ const featureHeader = () => {
     $that.toggleClass('expand');
     // $jsOpenNav.removeClass('block-profile');
 
-    if($that.is($profile)){
+    if ($that.is($profile)) {
       $jsOpenNav.toggleClass('block-profile');
     }
 
@@ -109,11 +109,23 @@ const saleSwiper = new Swiper('.sale-swiper', {
   },
 });
 
+const detailSwiper = new Swiper('.detail-swiper', {
+  breakpoints: {
+    '992': {
+      slidesPerGroup: 1,
+      navigation: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+    }
+  }
+})
+
 const pageHome = () => {
   console.log("$desktop", $desktop);
-  if($desktop){
+  if ($desktop) {
     var swiper = new Swiper(".swiper-trending", {
-      slidesPerView:"auto",
+      slidesPerView: "auto",
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -144,36 +156,60 @@ const init = () => {
 }
 init();
 
-$(document).ready(function(){
+$(document).ready(function () {
   const btnExpand = $('.js-action-expand');
   btnExpand.accordion();
 });
 
+$('.js-more').each(function () {
+  var show_char,
+    ellipsestext = "...",
+    more_text = 'Xem thêm',
+    width = $(window).width();
+  content = $(this).html();
+
+  show_char = 200;
+
+  console.log(content.length);
+  if (content.length > show_char) {
+    var c = content.substr(0, show_char);
+    var h = content.substr(show_char, content.length - show_char);
+    var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="link morelink">' + more_text + '</a></span>';
+    $(this).html(html);
+  }
+});
+$('.morelink').click(function (e) {
+  e.preventDefault();
+  $(this).parent().prev().toggle();
+  $(this).prev().toggle();
+  $(this).hide();
+})
+
 jQuery.fn.extend({
   accordion: function () {
-      return this.each(function () {
-          const $that = $(this);
-          const btnExpand = $('.js-action-expand');
-          const listWrap = $('.js-list');
+    return this.each(function () {
+      const $that = $(this);
+      const btnExpand = $('.js-action-expand');
+      const listWrap = $('.js-list');
 
-          $that.click(function(){
-            const isActive = $that.is('.active');
-            const jsListDropdown = $('.js-list');
-            const listDropdown = $that.next('.js-list');
+      $that.click(function () {
+        const isActive = $that.is('.active');
+        const jsListDropdown = $('.js-list');
+        const listDropdown = $that.next('.js-list');
 
-            if(isActive){
-              btnExpand.removeClass('active');
-              listDropdown.slideUp();
+        if (isActive) {
+          btnExpand.removeClass('active');
+          listDropdown.slideUp();
 
-            }else{
-              btnExpand.removeClass('active');
-              $that.addClass('active');
-              jsListDropdown.slideUp();
-              listDropdown.slideDown();
-            }
-
-          });
+        } else {
+          btnExpand.removeClass('active');
+          $that.addClass('active');
+          jsListDropdown.slideUp();
+          listDropdown.slideDown();
+        }
 
       });
+
+    });
   }
 });
