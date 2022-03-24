@@ -40,4 +40,14 @@
       margin-top: 0.8rem;
     }
   }
+  &--option {
+    margin-top: 1.6rem;
+    .option__head {
+      @include fontSize(500, 1.6rem, 1.8rem);
+      margin-bottom: 0.8rem;
+    }
+  }
+  &--promotion {
+    margin-top: 2.4rem;
+  }
 }

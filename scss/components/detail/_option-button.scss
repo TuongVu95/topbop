@@ -1,0 +1,12 @@
+.option__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  @include fontSize(500, 1.6rem, 1.8rem);
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 0.8rem;
+  padding: 0 1.6rem;
+  height: 5rem;
+  cursor: pointer;
+}
