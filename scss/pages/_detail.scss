@@ -129,6 +129,61 @@
       }
     }
   }
+  &--body {
+    margin-top: 4rem;
+  }
+  &--benefit {
+    .benefit__item {
+      background: #fff;
+      border: 1px solid #f4f4f4;
+      padding: 1.5rem 2rem;
+      &--image {
+        margin-bottom: 2rem;
+        height: 3.2rem;
+      }
+      &--text {
+        h4 {
+          @include fontSize(700, 1.6rem, 1.8rem);
+          margin-bottom: 0.8rem;
+        }
+        p {
+          @include fontSize(400, 1.4rem, 1.9rem);
+        }
+      }
+      @include breakpoints("md") {
+        padding: 1.6rem;
+        &--image {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+
+  &--policy {
+    margin-top: 4rem;
+    .policy {
+      &__menu {
+        margin-bottom: 3.2rem;
+        ul {
+          display: flex;
+          li {
+            @include fontSize(500, 2rem, 2.8rem);
+            color: #898989;
+            cursor: pointer;
+            padding-bottom: 0.8rem;
+            transition: all 0.3s ease-in-out;
+            &:not(:last-child) {
+              margin-right: 2.8rem;
+            }
+            &.active {
+              box-shadow: inset 0px -2px 0px #131313;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .morecontent span {

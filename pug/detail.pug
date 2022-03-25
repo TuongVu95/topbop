@@ -5,67 +5,120 @@ block content
     .topbop__detail 
       +saleSlide 
       .topbop__detail--product 
-          .container
-            .topbop__detail--inner
-              .topbop__detail--left 
-                .topbop__detail--slide.swiper.detail-swiper 
-                  .swiper-wrapper.row 
-                    -for(let i = 0; i < 6; i++)
-                      .swiper-slide.col-6
-                        picture 
-                          img(src="/images/detail/detail-product.png", alt="", srcset="")
-                  .swiper-pagination
+        .container
+          .topbop__detail--inner
+            .topbop__detail--left 
+              .topbop__detail--slide.swiper.detail-swiper 
+                .swiper-wrapper.row 
+                  -for(let i = 0; i < 6; i++)
+                    .swiper-slide.col-6
+                      picture 
+                        img(src="/images/detail/detail-product.png", alt="", srcset="")
+                .swiper-pagination
 
-              .topbop__detail--right
-                  .detail--right__wrapper
-                    +breadcumb(['Trang chủ','Bomberg','Multimatic Diamond Silver 03A'],false)
-                    .topbop__detail--heading Bomberg Multimatic Diamond Silver 03A 
-                    .topbop__detail--infomation 
-                      p.desc__model Loại: Nam
-                      p.desc__numberProduct Mã Sản Phẩm: 900081
-                    
-                    .topbop__detail--price 
-                      .price__block 
-                        p.main-price 37,746,000VNĐ
-                        p.discount-price 41,940,000VNĐ
-                      .discount__percent 25% Off
+            .topbop__detail--right
+              .detail--right__wrapper
+                +breadcumb(['Trang chủ','Bomberg','Multimatic Diamond Silver 03A'],false)
+                .topbop__detail--heading Bomberg Multimatic Diamond Silver 03A 
+                .topbop__detail--infomation 
+                  p.desc__model Loại: Nam
+                  p.desc__numberProduct Mã Sản Phẩm: 900081
 
-                    .topbop__detail--option 
-                      .option__head Size
-                      .option__group 
-                        span.option__button 42 mm  
-                    
-                    .topbop__detail--promotion 
-                      .promotion__inner 
-                        .promotion__head 
-                          h3 Khuyến mãi trị giá 500.000đ 
-                          p Giá và khuyến mãi dự kiến áp dụng đến 23:00 28/02 
-                        .promotion__body 
-                          .promotion__item Chọn 1 trong các khuyến mãi:
-                            .promotion__item--option
-                              .radio
-                                label(for="ex1")
-                                  input(type="radio", name="" id="ex1") 
-                                  span.radio-text Giảm giá 500,000đ
+                .topbop__detail--price 
+                  .price__block 
+                    p.main-price 37,746,000VNĐ
+                    p.discount-price 41,940,000VNĐ
+                  .discount__percent 25% Off
 
-                              .radio
-                                label(for="ex2")
-                                  input(type="radio", name="" id="ex2") 
-                                  span.radio-text Phiếu mua hàng 1000,000đ
-                          .promotion__item Giảm giá 50% gói bảo hành mở rộng thêm 1 năm (chính hãng) 
-                          .promotion__item Giảm đến 1,500,000đ khi tham gia thu cũ đổi mới (Không áp dụng kèm giảm giá qua VNPay, Moca)
+                .topbop__detail--option 
+                  .option__head Size
+                  .option__group 
+                    span.option__button 42 mm  
 
-                    .topbop__detail--button 
-                      a(href="#").btn.w-100 THÊM VÀO GIỎ HÀNG
-                      a(href="#").btn.btn-white.btn--half THANH TOÁN COD
-                      a(href="#").btn.btn-white.btn--half TRẢ GÓP 0% 
-                      a(href="#").btn.btn-white.w-100 YÊU THÍCH   
+                .topbop__detail--promotion 
+                  .promotion__inner 
+                    .promotion__head 
+                      h3 Khuyến mãi trị giá 500.000đ 
+                      p Giá và khuyến mãi dự kiến áp dụng đến 23:00 28/02 
+                    .promotion__body 
+                      .promotion__item Chọn 1 trong các khuyến mãi:
+                        .promotion__item--option
+                          .radio
+                            label(for="ex1")
+                              input(type="radio", name="" id="ex1") 
+                              span.radio-text Giảm giá 500,000đ
 
-                    .topbop__detail--description 
-                      h2 MÔ TẢ SẢN PHẨM
-                      -for(let i= 0; i < 3; i++)
-                        .detail--description__item 
-                          h4 Mặt sau đồng hồ
-                          p.js-more Mặt sau của đồng hồ Capital với cửa sổ bằng sapphire trong suốt. Bộ chuyển động và rôto được trau chuốt đẹp mắt là duy nhất trong loại giá này Mặt sau đồng hồ Mặt sau của đồng hồ Capital với cửa sổ bằng sapphire trong suốt. Bộ chuyển động và rôto được trau chuốt đẹp mắt là duy nhất trong loại giá này
-block script  
+                          .radio
+                            label(for="ex2")
+                              input(type="radio", name="" id="ex2") 
+                              span.radio-text Phiếu mua hàng 1000,000đ
+                      .promotion__item Giảm giá 50% gói bảo hành mở rộng thêm 1 năm (chính hãng) 
+                      .promotion__item Giảm đến 1,500,000đ khi tham gia thu cũ đổi mới (Không áp dụng kèm giảm giá qua VNPay, Moca)
+
+                .topbop__detail--button 
+                  a(href="#").btn.w-100 THÊM VÀO GIỎ HÀNG
+                  a(href="#").btn.btn-white.btn--half THANH TOÁN COD
+                  a(href="#").btn.btn-white.btn--half TRẢ GÓP 0% 
+                  a(href="#").btn.btn-white.w-100 YÊU THÍCH   
+
+                .topbop__detail--description 
+                  h2 MÔ TẢ SẢN PHẨM
+                  -for(let i= 0; i < 3; i++)
+                    .detail--description__item 
+                      h4 Mặt sau đồng hồ
+                      p.js-more Mặt sau của đồng hồ Capital với cửa sổ bằng sapphire trong suốt. Bộ chuyển động và rôto được trau chuốt đẹp mắt là duy nhất trong loại giá này Mặt sau đồng hồ Mặt sau của đồng hồ Capital với cửa sổ bằng sapphire trong suốt. Bộ chuyển động và rôto được trau chuốt đẹp mắt là duy nhất trong loại giá này
+
+          .topbop__detail--body 
+            .topbop__detail--benefit.row
+              .col-3.col-md-12
+                .benefit__item
+                  .benefit__item--image 
+                    picture 
+                      img(src="/images/detail/insurance.svg", alt="")
+                  .benefit__item--text
+                    h4 BẢO HÀNH 5 NĂM 
+                    p Các gói bảo hành ưu Việt
+              
+              .col-3.col-md-12
+                .benefit__item
+                  .benefit__item--image 
+                    picture 
+                      img(src="/images/detail/service.svg", alt="")
+                  .benefit__item--text
+                    h4 ĐỒNG HỒ CHÍNH HÃNG
+                    p 100% sản xuất tại Thụy Sỹ
+             
+              .col-3.col-md-12
+                .benefit__item
+                  .benefit__item--image 
+                    picture 
+                      img(src="/images/detail/gift.svg", alt="")
+                  .benefit__item--text
+                    h4 ĐÓNG GÓI CAO CẤP
+                    p Bao bì đóng gói cao cấp chính hãng
+              
+              .col-3.col-md-12
+                .benefit__item
+                  .benefit__item--image 
+                    picture 
+                      img(src="/images/detail/delivery.svg", alt="")
+                  .benefit__item--text
+                    h4 GIAO HÀNG MIỄN PHÍ
+                    p Giao hàng miễn phí 100% trên toàn quốc
+
+            .topbop__detail--policy 
+              .policy__menu 
+                ul 
+                  li.js-tab.active CHI TIẾT SẢN PHẨM 
+                  li.js-tab CHÍNH SÁCH ƯU ĐÃI 
+                  li.js-tab CHÍNH SÁCH BẢO HÀNH 
+                  li.js-tab ĐÁNH GIÁ (20)
+
+              .policy__body 
+                .policy__body--item 
+                  
+
+
+
+block script   
   script(src="/js/function.js") 

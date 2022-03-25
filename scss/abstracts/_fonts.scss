@@ -1,4 +1,4 @@
-@mixin fontSize($fw, $fs, $lh){
+@mixin fontSize($fw, $fs, $lh) {
   font-weight: $fw;
   font-size: $fs;
   line-height: $lh;
@@ -137,7 +137,7 @@
   content: "\e908";
   color: rgb(255, 255, 255);
 }
-.icon-heart-black .path2:before {
+.icon-heart-black.path2:before {
   content: "\e909";
   margin-left: -1em;
   color: rgb(22, 22, 22);
@@ -177,27 +177,26 @@
   margin-left: -1em;
   color: rgb(255, 255, 255);
 }
-.txt-uppercase{text-transform: uppercase;}
-
-
-
-
+.txt-uppercase {
+  text-transform: uppercase;
+}
 
 @font-face {
-  font-family: 'ic-social';
-  src:  url('../fonts/icons/ic-social.eot?jnzfe0');
-  src:  url('../fonts/icons/ic-social.eot?jnzfe0#iefix') format('embedded-opentype'),
-    url('../fonts/icons/ic-social.ttf?jnzfe0') format('truetype'),
-    url('../fonts/icons/ic-social.woff?jnzfe0') format('woff'),
-    url('../fonts/icons/ic-social.svg?jnzfe0#ic-social') format('svg');
+  font-family: "ic-social";
+  src: url("../fonts/icons/ic-social.eot?jnzfe0");
+  src: url("../fonts/icons/ic-social.eot?jnzfe0#iefix") format("embedded-opentype"),
+    url("../fonts/icons/ic-social.ttf?jnzfe0") format("truetype"),
+    url("../fonts/icons/ic-social.woff?jnzfe0") format("woff"),
+    url("../fonts/icons/ic-social.svg?jnzfe0#ic-social") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="social-"], [class*=" social-"] {
+[class^="social-"],
+[class*=" social-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'ic-social';
+  font-family: "ic-social";
   // speak: never;
   font-style: normal;
   font-weight: normal;
@@ -238,4 +237,3 @@
 .social-youtube:before {
   content: "\e906";
 }
-
