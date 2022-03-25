@@ -41,5 +41,6 @@ $font-size: 1.4rem;
     &-white {
         background: $background-white;
         color: $color-black;
+        border: 1px solid #ccc;
     }
 }

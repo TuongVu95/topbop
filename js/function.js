@@ -109,9 +109,20 @@ const saleSwiper = new Swiper('.sale-swiper', {
   },
 });
 
+const detailSwiper = new Swiper('.detail-swiper', {
+  breakpoints: {
+    '992': {
+      slidesPerGroup: 1,
+      navigation: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+    }
+  }
+})
+
 const pageHome = () => {
   console.log("$desktop", $desktop);
-
   if ($desktop) {
     var swiper = new Swiper(".swiper-trending", {
       slidesPerView: "auto",
@@ -187,6 +198,30 @@ $(document).ready(function () {
   const btnExpand = $('.js-action-expand');
   btnExpand.accordion();
 });
+
+$('.js-more').each(function () {
+  var show_char,
+    ellipsestext = "...",
+    more_text = 'Xem thêm',
+    width = $(window).width();
+  content = $(this).html();
+
+  show_char = 200;
+
+  console.log(content.length);
+  if (content.length > show_char) {
+    var c = content.substr(0, show_char);
+    var h = content.substr(show_char, content.length - show_char);
+    var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="link morelink">' + more_text + '</a></span>';
+    $(this).html(html);
+  }
+});
+$('.morelink').click(function (e) {
+  e.preventDefault();
+  $(this).parent().prev().toggle();
+  $(this).prev().toggle();
+  $(this).hide();
+})
 
 jQuery.fn.extend({
   accordion: function () {
