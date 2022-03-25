@@ -187,10 +187,17 @@ const pageCate = () => {
 
 }
 
+const detailPolicy = () => {
+  $('.js-tab').click(function () {
+    $(this).addClass('active').siblings().removeClass('active')
+  })
+}
+
 
 const init = () => {
   featureHeader();
   pageHome();
+  detailPolicy();
 }
 init();
 
@@ -222,6 +229,8 @@ $('.morelink').click(function (e) {
   $(this).prev().toggle();
   $(this).hide();
 })
+
+
 
 jQuery.fn.extend({
   accordion: function () {
