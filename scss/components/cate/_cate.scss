@@ -155,10 +155,15 @@
             margin-bottom: 3.2rem;
         }
     }
+    &__picture{
+        // max-width: 41.6rem;
+        margin: auto;
+    }
     &__img{
         background: #F4F4F4;
         margin-bottom: 1.6rem;
         @extend .txt-center;
+        // @include aspect-ratio(416,416,0);
     }
     &__label{
         position: absolute;

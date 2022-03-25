@@ -9,6 +9,8 @@ $color-lv2: #757575;
 }
 
 .page__header {
+    position: relative;
+    z-index: 11;
     padding-top: 4.2rem;
     &-top {
         @extend %flex-center;
@@ -235,6 +237,7 @@ $color-lv2: #757575;
 
         display: none;
         overflow: hidden;
+        z-index: 10;
         @include breakpoints("md") {
             position: relative;
         }

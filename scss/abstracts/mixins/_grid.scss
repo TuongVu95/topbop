@@ -97,6 +97,12 @@ $container-padding-x: ($grid-gutter-width / 2) !default;
 
 .row {
   @include make-row();
+  &.no-gutters{
+    margin: 0;
+    [class*="col"]{
+      padding: 0;
+    }
+  }
 }
 
 @mixin make-grid-columns(

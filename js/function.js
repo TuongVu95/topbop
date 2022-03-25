@@ -28,7 +28,7 @@ const featureHeader = () => {
     $that.toggleClass('expand');
     // $jsOpenNav.removeClass('block-profile');
 
-    if($that.is($profile)){
+    if ($that.is($profile)) {
       $jsOpenNav.toggleClass('block-profile');
     }
 
@@ -111,9 +111,10 @@ const saleSwiper = new Swiper('.sale-swiper', {
 
 const pageHome = () => {
   console.log("$desktop", $desktop);
-  if($desktop){
+
+  if ($desktop) {
     var swiper = new Swiper(".swiper-trending", {
-      slidesPerView:"auto",
+      slidesPerView: "auto",
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -131,6 +132,44 @@ const pageHome = () => {
     });
   }
 
+  const topbopSwiper = new Swiper('.swiper-product', {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      '360': {
+        slidesPerView: 2.1,
+        spaceBetween: 12,
+        slidesPerGroup: 2,
+      },
+      '768': {
+        slidesPerView: 3.1,
+        spaceBetween: 16,
+        slidesPerGroup: 3.1,
+      }
+    }
+  });
+
+  const blog = new Swiper('.swiper-blogs', {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      '360': {
+        slidesPerView: 2.1,
+        spaceBetween: 0,
+        slidesPerGroup: 2,
+      },
+      '768': {
+        slidesPerView: 3.15,
+        spaceBetween: 0,
+        slidesPerGroup: 3,
+      }
+    }
+  });
+
 }
 
 const pageCate = () => {
@@ -144,36 +183,36 @@ const init = () => {
 }
 init();
 
-$(document).ready(function(){
+$(document).ready(function () {
   const btnExpand = $('.js-action-expand');
   btnExpand.accordion();
 });
 
 jQuery.fn.extend({
   accordion: function () {
-      return this.each(function () {
-          const $that = $(this);
-          const btnExpand = $('.js-action-expand');
-          const listWrap = $('.js-list');
+    return this.each(function () {
+      const $that = $(this);
+      const btnExpand = $('.js-action-expand');
+      const listWrap = $('.js-list');
 
-          $that.click(function(){
-            const isActive = $that.is('.active');
-            const jsListDropdown = $('.js-list');
-            const listDropdown = $that.next('.js-list');
+      $that.click(function () {
+        const isActive = $that.is('.active');
+        const jsListDropdown = $('.js-list');
+        const listDropdown = $that.next('.js-list');
 
-            if(isActive){
-              btnExpand.removeClass('active');
-              listDropdown.slideUp();
+        if (isActive) {
+          btnExpand.removeClass('active');
+          listDropdown.slideUp();
 
-            }else{
-              btnExpand.removeClass('active');
-              $that.addClass('active');
-              jsListDropdown.slideUp();
-              listDropdown.slideDown();
-            }
-
-          });
+        } else {
+          btnExpand.removeClass('active');
+          $that.addClass('active');
+          jsListDropdown.slideUp();
+          listDropdown.slideDown();
+        }
 
       });
+
+    });
   }
 });
