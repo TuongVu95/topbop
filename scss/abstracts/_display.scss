@@ -25,6 +25,20 @@
     display: flex !important;
   }
 }
-.txt-center{
+
+.inline-flex-none {
+  display: inline-flex !important;
+  @include breakpoints("md") {
+    display: none !important;
+  }
+}
+
+.none-inline-flex {
+  display: none !important;
+  @include breakpoints("md") {
+    display: inline-flex !important;
+  }
+}
+.txt-center {
   text-align: center;
 }

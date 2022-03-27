@@ -152,6 +152,7 @@
       }
       @include breakpoints("md") {
         padding: 1.6rem;
+        margin-bottom: 1.6rem;
         &--image {
           margin-bottom: 1.6rem;
         }
@@ -164,6 +165,10 @@
     .card__inner {
       display: flex;
       flex-wrap: wrap;
+      gap: 3.6rem 0;
+      @include breakpoints("md") {
+        gap: 2.4rem 0;
+      }
     }
     .policy {
       &__menu {
@@ -185,16 +190,32 @@
             }
           }
         }
+        @include breakpoints("md") {
+          white-space: nowrap;
+          overflow-x: scroll;
+          margin-bottom: 2.4rem;
+          ul {
+            li {
+              @include fontSize(400, 1.4rem, 1.9rem);
+              &:not(:last-child) {
+                margin-right: 2rem;
+              }
+            }
+          }
+        }
       }
       &__item {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         flex-basis: calc((100% / 2) - 2rem);
-        margin-bottom: 3.6rem;
         &.full-w {
           flex-basis: 100%;
           margin-bottom: 1.2rem;
           align-items: baseline;
+          @include breakpoints("md") {
+            // align-items: center;
+          }
         }
         &--title {
           flex-basis: 22.8rem;
@@ -215,6 +236,20 @@
             @include fontSize(700, 1.6rem, 1.8rem);
             margin-left: 1.2rem;
           }
+          @include breakpoints("md") {
+            flex-basis: initial;
+            margin-right: 1.2rem;
+            .number-icon {
+              height: 1.5rem;
+              width: 1.5rem;
+              font-size: 1rem;
+              line-height: 4rem;
+            }
+            span {
+              @include fontSize(700, 1.4rem, 1.9rem);
+              margin-left: 0.8rem;
+            }
+          }
         }
         &--text {
           display: flex;
@@ -228,16 +263,36 @@
             &:not(:last-child) {
               margin-bottom: 0.8rem;
             }
+            @include breakpoints("md") {
+              @include fontSize(400, 1.4rem, 1.9rem);
+            }
           }
+        }
+        @include breakpoints("md") {
+          flex-basis: 100%;
         }
       }
       &--card {
         background: #fff;
         border: 1px solid #f4f4f4;
-        padding: 4rem 2.4rem 2.4rem;
+        padding: 4rem 2.4rem 4.8rem;
+        &:nth-child(2) {
+          padding: 2.4rem 4rem;
+        }
         &:nth-child(3) {
           .policy__item--title {
             flex-basis: 31.2rem;
+          }
+        }
+        @include breakpoints("md") {
+          padding: 2rem;
+          &:nth-child(2) {
+            padding: 2rem;
+          }
+          &:nth-child(3) {
+            .policy__item--title {
+              flex-basis: initial;
+            }
           }
         }
       }
