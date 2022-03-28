@@ -150,7 +150,7 @@ const pageHome = () => {
     },
     breakpoints: {
       '360': {
-        slidesPerView: 2.1,
+        slidesPerView: 1.2,
         spaceBetween: 12,
         slidesPerGroup: 2,
       },
@@ -160,6 +160,27 @@ const pageHome = () => {
         slidesPerGroup: 3.1,
       }
     }
+  });
+
+  const social = new Swiper('.swiper-social', {
+    slidesPerView: "auto",
+    spaceBetween: 16,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    // breakpoints: {
+    //   '360': {
+    //     slidesPerView: 2.1,
+    //     spaceBetween: 12,
+    //     slidesPerGroup: 2,
+    //   },
+    //   '768': {
+
+    //     spaceBetween: 16,
+    //     slidesPerGroup: 3.1,
+    //   }
+    // }
   });
 
   const blog = new Swiper('.swiper-blogs', {

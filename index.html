@@ -280,6 +280,32 @@
     </div>
   </header>
   <main class="page__wrap home__page">
+    <div class="topbop__saleSlide">
+      <div class="topbop__saleSlide--inner">
+        <div class="swiper sale-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide sale__slide"><a href="#">
+                <p class="sale__slide--head">SALE UP TO 50%</p>
+                <p class="sale__slide--markdown">Shop All Our New Markdowns</p>
+              </a></div>
+            <div class="swiper-slide sale__slide"><a href="#">
+                <p class="sale__slide--head">SALE UP TO 50%</p>
+                <p class="sale__slide--markdown">Shop All Our New Markdowns</p>
+              </a></div>
+            <div class="swiper-slide sale__slide"><a href="#">
+                <p class="sale__slide--head">SALE UP TO 50%</p>
+                <p class="sale__slide--markdown">Shop All Our New Markdowns</p>
+              </a></div>
+            <div class="swiper-slide sale__slide"><a href="#">
+                <p class="sale__slide--head">SALE UP TO 50%</p>
+                <p class="sale__slide--markdown">Shop All Our New Markdowns</p>
+              </a></div>
+          </div>
+          <div class="swiper-button-prev slide-btn non-border non-hover"><i class="icon-chevron-downp-left"></i></div>
+          <div class="swiper-button-next slide-btn non-border non-hover"><i class="icon-chevron-down"></i></div>
+        </div>
+      </div>
+    </div>
     <!-- section1 -->
     <section class="section__page section__banner section1">
       <div class="container">
@@ -430,6 +456,11 @@
               </div>
             </div>
           </div>
+          <p class="block__action block__view none-block">
+            <a href="http://" class="block__action-link">
+              Xem tất cả
+            </a>
+          </p>
         </div>
       </div>
     </section>
@@ -443,43 +474,50 @@
             <div class="col-6 col-md-12">
               <ul class="block__list">
                 <li class="block__list-item"><a class="block__list-link" href="http://">
-                    <div class="block__list-name title-product">ĐỒNG HỒ NAM</div>
-                    <picture class="section__page-picture">
-                      <source media="(max-width: 768px )"><img src="images/home/img-list-cate1.webp" alt="Banner">
+                    <p class="block__list-name title-product">ĐỒNG HỒ NAM</p>
+                    <picture class="section__page-picture block__picture">
+                      <source media="(max-width: 768px )" srcset="images/home/img-list-cate1-mb.webp">
+                      <img src="images/home/img-list-cate1.webp" alt="Banner">
                     </picture>
                   </a></li>
                 <li class="block__list-item"><a class="block__list-link" href="http://">
-                    <div class="block__list-name title-product">ĐỒNG HỒ Nữ</div>
-                    <picture class="section__page-picture">
-                      <source media="(max-width: 768px )"><img src="images/home/img-list-cate2.webp" alt="Banner">
+                    <p class="block__list-name title-product">ĐỒNG HỒ Nữ</p>
+                    <picture class="section__page-picture" >
+                      <source media="(max-width: 768px )" srcset="images/home/img-list-cate2-mb.webp">
+                        <img src="images/home/img-list-cate2.webp" alt="Banner">
                     </picture>
                   </a></li>
                 <li class="block__list-item"><a class="block__list-link" href="http://">
-                    <div class="block__list-name title-product">PHỤ KIỆN</div>
-                    <picture class="section__page-picture">
+                    <p class="block__list-name title-product">PHỤ KIỆN</p>
+                    <picture class="section__page-picture" srcset="images/home/img-list-cate3-mb.webp">
                       <source media="(max-width: 768px )"><img src="images/home/img-list-cate3.webp" alt="Banner">
                     </picture>
                   </a></li>
                 <li class="block__list-item"><a class="block__list-link" href="http://">
-                    <div class="block__list-name title-product">VÒNG ĐEO</div>
+                    <p class="block__list-name title-product">VÒNG ĐEO</p>
                     <picture class="section__page-picture">
-                      <source media="(max-width: 768px )"><img src="images/home/img-list-cate4.webp" alt="Banner">
+                      <source media="(max-width: 768px )" srcset="images/home/img-list-cate4-mb.webp">
+                      <img src="images/home/img-list-cate4.webp" alt="Banner">
                     </picture>
                   </a></li>
               </ul>
             </div>
             <div class="col-6 col-md-12">
               <div class="block__wrap">
-                <div class="block__content">
+                <div class="block__content block-none">
                   <p>INGERSOLL</p>
                   <p class="strong"><strong>THE GRAFTON</strong></p>
                   <p class="prices">Giá chỉ từ <strong>20.000.000VNĐ</strong></p>
-                  <button class="btn btn-buy">
+                  <button class="btn btn-buy ">
                     <span>MUA NGAY</span>
                   </button>
                 </div>
+                <p class="block__content-mobile txt-uppercase none-block">
+                  sale
+                </p>
                 <picture class="section__page-picture block__pic">
-                  <source media="(max-width: 992px )"><img src="images/home/img-list-cate.webp" alt="Banner">
+                  <source media="(max-width: 992px )" srcset="images/home/section6-mb.png">
+                  <img src="images/home/img-list-cate.webp" alt="Banner">
                 </picture>
               </div>
             </div>
@@ -669,7 +707,7 @@
     </section>
 
     <!-- section8 -->
-    <section class="section__page section__hightlight">
+    <section class="section__page section__hightlight section8">
       <div class="container">
         <div class="section_page-inner">
           <h2 class="section-title">SẢN PHẨM NỔI BẬT</h2>
@@ -692,15 +730,16 @@
                     <a href="" class="product__link">
                       <picture class="product__picture">
                         <source media="(max-width: 768px)" srcset="">
-                        <img src="images/cate/product.png" alt="product">
+                        <img src="images/home/product-highlight.png" alt="product">
                       </picture>
                     </a>
-                  </div>
-                  <div class="product__label">
-                    <div class="product__label-item">
-                      <i class="icon-heart ic-circle"></i>
+                    <div class="product__label">
+                      <div class="product__label-item">
+                        <i class="icon-heart ic-circle"></i>
+                      </div>
                     </div>
                   </div>
+
                   <div class="product__info">
                     <h3 class="product__name">
                       <a href="http://" class="product__name-tit">
@@ -739,7 +778,7 @@
                     <a href="" class="product__link">
                       <picture class="product__picture">
                         <source media="(max-width: 768px)" srcset="">
-                        <img src="images/cate/product.png" alt="product">
+                          <img src="images/home/product-highlight.png" alt="product">
                       </picture>
                     </a>
                   </div>
@@ -865,8 +904,125 @@
       </div>
     </section>
 
-     <!-- section7 -->
-     <section class="section__page section__blogs section9">
+    <!-- section9 -->
+    <section class="section__page section__social section9">
+      <div class="container">
+        <div class="section__page-inner">
+          <div class="topbop__swiper swiper swiper-social">
+            <div class="block__swiper-head">
+              <h2 class="section-title  block__swiper-head--heading">social</h2>
+              <div class="group-button-director">
+                <div class="swiper-button-prev slide-btn"><i class="icon-chevron-downp-left"></i></div>
+                <div class="swiper-button-next slide-btn"><i class="icon-chevron-down"></i></div>
+              </div>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide block__slide">
+                <div class="mansory-layout">
+                  <div class="mansory-line mansory-line-top">
+                    <div class="mansory-line-item">
+                      <picture>
+                        <source media="(max-width: )" srcset="">
+                        <img src="images/home/SOCIAL1.webp" alt="Grid">
+                      </picture>
+                    </div>
+
+                    <div class="mansory-line-item">
+                      <picture>
+                        <source media="(max-width: )" srcset="">
+                          <img src="images/home/SOCIAL1.webp" alt="Grid">
+                      </picture>
+                    </div>
+
+                    <div class="mansory-line-item">
+                      <picture>
+                        <source media="(max-width: )" srcset="">
+                        <img src="images/home/SOCIAL1.webp" alt="Grid">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="mansory-line mansory-line-bot">
+                    <div class="mansory-line-item">
+                      <picture>
+                        <source media="(max-width: )" srcset="">
+                        <img src="images/home/grid1.png" alt="Grid">
+                      </picture>
+                    </div>
+
+                    <div class="mansory-line-item">
+                      <span class="mansory-line-col">
+                        <picture>
+                          <source media="(max-width: )" srcset="">
+                          <img src="images/home/SOCIAL1.webp" alt="Grid">
+                        </picture>
+                      </span>
+                      <span class="mansory-line-col">
+                        <picture>
+                          <source media="(max-width: )" srcset="">
+                          <img src="images/home/SOCIAL1.webp" alt="Grid">
+                        </picture>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide block__slide">
+                <div class="mansory-layout">
+                  <div class="mansory-line mansory-line-top">
+                    <div class="mansory-line-item">
+                      <picture>
+                        <source media="(max-width: )" srcset="">
+                        <img src="images/home/SOCIAL1.webp" alt="Grid">
+                      </picture>
+                    </div>
+
+                    <div class="mansory-line-item">
+                      <picture>
+                        <source media="(max-width: )" srcset="">
+                          <img src="images/home/SOCIAL1.webp" alt="Grid">
+                      </picture>
+                    </div>
+
+                    <div class="mansory-line-item">
+                      <picture>
+                        <source media="(max-width: )" srcset="">
+                        <img src="images/home/SOCIAL1.webp" alt="Grid">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="mansory-line mansory-line-bot">
+                    <div class="mansory-line-item">
+                      <picture>
+                        <source media="(max-width: )" srcset="">
+                        <img src="images/home/grid1.png" alt="Grid">
+                      </picture>
+                    </div>
+
+                    <div class="mansory-line-item">
+                      <span class="mansory-line-col">
+                        <picture>
+                          <source media="(max-width: )" srcset="">
+                          <img src="images/home/SOCIAL1.webp" alt="Grid">
+                        </picture>
+                      </span>
+                      <span class="mansory-line-col">
+                        <picture>
+                          <source media="(max-width: )" srcset="">
+                          <img src="images/home/SOCIAL1.webp" alt="Grid">
+                        </picture>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section10 -->
+    <section class="section__page section__blogs section10">
       <div class="container">
         <div class="section__page-inner">
           <div class="topbop__swiper swiper swiper-blogs">
@@ -890,7 +1046,7 @@
                   </div>
                   <div class="blog__info">
                     <h3 class="blog__name">
-                     <a href="http://" class="blog__link">
+                      <a href="http://" class="blog__link">
                         Top 4 thương hiệu đồng hồ.
                       </a>
                     </h3>
@@ -916,7 +1072,7 @@
                   </div>
                   <div class="blog__info">
                     <h3 class="blog__name">
-                     <a href="http://" class="blog__link">
+                      <a href="http://" class="blog__link">
                         Top 4 thương hiệu đồng hồ.
                       </a>
                     </h3>
@@ -942,7 +1098,7 @@
                   </div>
                   <div class="blog__info">
                     <h3 class="blog__name">
-                     <a href="http://" class="blog__link">
+                      <a href="http://" class="blog__link">
                         Top 4 thương hiệu đồng hồ.
                       </a>
                     </h3>
@@ -968,7 +1124,7 @@
                   </div>
                   <div class="blog__info">
                     <h3 class="blog__name">
-                     <a href="http://" class="blog__link">
+                      <a href="http://" class="blog__link">
                         Top 4 thương hiệu đồng hồ.
                       </a>
                     </h3>
@@ -994,7 +1150,7 @@
                   </div>
                   <div class="blog__info">
                     <h3 class="blog__name">
-                     <a href="http://" class="blog__link">
+                      <a href="http://" class="blog__link">
                         Top 4 thương hiệu đồng hồ.
                       </a>
                     </h3>
@@ -1020,7 +1176,7 @@
                   </div>
                   <div class="blog__info">
                     <h3 class="blog__name">
-                     <a href="http://" class="blog__link">
+                      <a href="http://" class="blog__link">
                         Top 4 thương hiệu đồng hồ.
                       </a>
                     </h3>
@@ -1046,7 +1202,7 @@
                   </div>
                   <div class="blog__info">
                     <h3 class="blog__name">
-                     <a href="http://" class="blog__link">
+                      <a href="http://" class="blog__link">
                         Top 4 thương hiệu đồng hồ.
                       </a>
                     </h3>
@@ -1066,13 +1222,63 @@
       </div>
     </section>
 
-    <section class="section__page section__question section10">
+    <!-- section11 -->
+    <section class="section__page section__question section11">
       <div class="container">
         <div class="section__page-inner">
-
+          <h2 class="section-title">
+            VÌ SAO CHỌN TOPBOP ?
+          </h2>
+          <div class="topbop__detail--benefit row">
+            <div class="col-3 col-md-12">
+              <div class="benefit__item">
+                <div class="benefit__item--image custom-setting">
+                  <picture> <img src="images/icons/ibm-security--services.png" alt="security services"></picture>
+                </div>
+                <div class="benefit__item--text">
+                  <h4>ĐỒNG HỒ CHÍNH HÃNG</h4>
+                  <p>100% sản xuất tại Thụy Sỹ</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3 col-md-12">
+              <div class="benefit__item">
+                <div class="benefit__item--image custom-setting">
+                  <picture> <img src="images/icons/settings--check.png" alt="settings check"></picture>
+                </div>
+                <div class="benefit__item--text">
+                  <h4>BẢO HÀNH TOÀN CẦU</h4>
+                  <p>Các gói bảo hành ưu việt</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3 col-md-12">
+              <div class="benefit__item">
+                <div class="benefit__item--image custom-setting">
+                  <picture> <img src="images/icons/doi-tra.png" alt="doi tra"></picture>
+                </div>
+                <div class="benefit__item--text">
+                  <h4>ĐỔI TRẢ SẢN PHẨM</h4>
+                  <p>Chính sách đổi trả hoàn toàn miễn phí</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3 col-md-12">
+              <div class="benefit__item">
+                <div class="benefit__item--image custom-setting">
+                  <picture> <img src="images/icons/delivery--parcel.png" alt="delivery parcel"></picture>
+                </div>
+                <div class="benefit__item--text">
+                  <h4>GIAO HÀNG MIỄN PHÍ</h4>
+                  <p>Giao hàng miễn phí 100% trên toàn quốc</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
   <footer class="page__footer">
     <div class="container">
