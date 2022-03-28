@@ -13,7 +13,7 @@ block content
                   -for(let i = 0; i < 6; i++)
                     .swiper-slide.col-6
                       picture 
-                        img(src="/images/detail/detail-product.png", alt="", srcset="")
+                        img(src="/images/detail/detail-product.png" alt="" srcset="")
                 .swiper-pagination
 
             .topbop__detail--right
@@ -45,12 +45,12 @@ block content
                         .promotion__item--option
                           .radio
                             label(for="ex1")
-                              input(type="radio", name="" id="ex1") 
+                              input(type="radio" name="" id="ex1") 
                               span.radio-text Giảm giá 500,000đ
 
                           .radio
                             label(for="ex2")
-                              input(type="radio", name="" id="ex2") 
+                              input(type="radio" name="" id="ex2") 
                               span.radio-text Phiếu mua hàng 1000,000đ
                       .promotion__item Giảm giá 50% gói bảo hành mở rộng thêm 1 năm (chính hãng) 
                       .promotion__item Giảm đến 1,500,000đ khi tham gia thu cũ đổi mới (Không áp dụng kèm giảm giá qua VNPay, Moca)
@@ -74,34 +74,34 @@ block content
                 .benefit__item
                   .benefit__item--image 
                     picture 
-                      img(src="/images/detail/insurance.svg", alt="")
+                      img(src="/images/detail/insurance.svg" alt="")
                   .benefit__item--text
                     h4 BẢO HÀNH 5 NĂM 
                     p Các gói bảo hành ưu Việt
-              
+
               .col-3.col-md-12
                 .benefit__item
                   .benefit__item--image 
                     picture 
-                      img(src="/images/detail/service.svg", alt="")
+                      img(src="/images/detail/service.svg" alt="")
                   .benefit__item--text
                     h4 ĐỒNG HỒ CHÍNH HÃNG
                     p 100% sản xuất tại Thụy Sỹ
-             
+
               .col-3.col-md-12
                 .benefit__item
                   .benefit__item--image 
                     picture 
-                      img(src="/images/detail/gift.svg", alt="")
+                      img(src="/images/detail/gift.svg" alt="")
                   .benefit__item--text
                     h4 ĐÓNG GÓI CAO CẤP
                     p Bao bì đóng gói cao cấp chính hãng
-              
+
               .col-3.col-md-12
                 .benefit__item
                   .benefit__item--image 
                     picture 
-                      img(src="/images/detail/delivery.svg", alt="")
+                      img(src="/images/detail/delivery.svg" alt="")
                   .benefit__item--text
                     h4 GIAO HÀNG MIỄN PHÍ
                     p Giao hàng miễn phí 100% trên toàn quốc
@@ -109,16 +109,136 @@ block content
             .topbop__detail--policy 
               .policy__menu 
                 ul 
-                  li.js-tab.active CHI TIẾT SẢN PHẨM 
-                  li.js-tab CHÍNH SÁCH ƯU ĐÃI 
-                  li.js-tab CHÍNH SÁCH BẢO HÀNH 
+                  li.js-tab.active(data-tab="chi-tiet-san-pham") CHI TIẾT SẢN PHẨM 
+                  li.js-tab(data-tab="chinh-sach-uu-dai") CHÍNH SÁCH ƯU ĐÃI 
+                  li.js-tab(data-tab='chinh-sach-bao-hanh') CHÍNH SÁCH BẢO HÀNH 
                   li.js-tab ĐÁNH GIÁ (20)
 
               .policy__body 
-                .policy__body--item 
-                  
+                .policy--card(id="chi-tiet-san-pham") 
+                  .card__inner
+                    .policy__item 
+                      .policy__item--title 
+                        .number-icon.none-inline-flex 1            
+                        img(src="/images/detail/icon-surface.svg" alt="" class='block-none')             
+                        span Kích thước mặt
+                      .policy__item--text 
+                        p 42.5mm   
+
+                    .policy__item 
+                      .policy__item--title 
+                        .number-icon.none-inline-flex 2   
+                        img(src="/images/detail/icon-backface.svg" alt="" class='block-none')             
+                        span Nắp lưng
+                      .policy__item--text
+                        p Trong suốt 
+
+                    .policy__item 
+                      .policy__item--title 
+                        .number-icon.none-inline-flex 3 
+                        img(src="/images/detail/icon-thickness.svg" alt="" class='block-none')             
+                        span Độ dày vỏ
+                      .policy__item--text 
+                        p 14mm
+
+                    .policy__item 
+                      .policy__item--title 
+                        .number-icon.none-inline-flex 4  
+                        img(src="/images/detail/icon-engine-model.svg" alt="" class='block-none')             
+                        span Bộ máy
+                      .policy__item--text 
+                        p Miyota 9100
+
+                    .policy__item 
+                      .policy__item--title 
+                        .number-icon.none-inline-flex 5  
+                        img(src="/images/detail/icon-engine.svg" alt="" class='block-none')             
+                        span Bộ máy
+                      .policy__item--text 
+                        p Máy cơ
+
+                    .policy__item 
+                      .policy__item--title
+                        .number-icon.none-inline-flex 6 
+                        img(src="/images/detail/icon-glass-material.svg" alt="" class='block-none')             
+                        span Chất liệu mặt kính
+                      .policy__item--text 
+                        p Kính Sapphire
+
+                    .policy__item 
+                      .policy__item--title 
+                        .number-icon.none-inline-flex 7
+                        img(src="/images/detail/icon-thicker-color.svg" alt="" class='block-none')             
+                        span Màu sắc vỏ
+                      .policy__item--text 
+                        p Bạc
+
+                    .policy__item 
+                      .policy__item--title
+                        .number-icon.none-inline-flex 8 
+                        img(src="/images/detail/icon-vanh.svg" alt="" class='block-none')             
+                        span Chất liệu vành đồng hồ
+                      .policy__item--text 
+                        p Thép không gỉ 
+
+                    .policy__item 
+                      .policy__item--title 
+                        .number-icon.none-inline-flex 9
+                        img(src="/images/detail/icon-strap.svg" alt="" class='block-none')             
+                        span Dây đeo
+                      .policy__item--text 
+                        p Da bê cao cấp 
+
+                    .policy__item 
+                      .policy__item--title 
+                        .number-icon.none-inline-flex 10
+                        img(src="/images/detail/icon-feature.svg" alt="" class='block-none')             
+                        span Chức năng
+                      .policy__item--text 
+                        p Giờ, phút, giây, chỉ số dự trữ năng lượng, ngày, tháng
+
+                .policy--card(id="chinh-sach-uu-dai")
+                  .policy__item.full-w 
+                    .policy__item--title 
+                      .number-icon 1            
+                      span Giảm giá
+                    .policy__item--text 
+                      p 1.000.000VNĐ
 
 
+                  .policy__item.full-w 
+                    .policy__item--title 
+                      .number-icon 2            
+                      span Gói dịch vụ
+                    .policy__item--text 
+                      p Ưu tiên cao cấp và phòng chờ 
 
-block script   
+                  .policy__item.full-w 
+                    .policy__item--title 
+                      .number-icon 3           
+                      span Trả góp
+                    .policy__item--text 
+                      p 0% qua thẻ tín dụng
+
+                .policy--card(id="chinh-sach-bao-hanh")
+                  .policy__item.full-w 
+                    .policy__item--title 
+                      .number-icon 1            
+                      span Được hưởng 2 chế độ bảo hành
+                    .policy__item--text
+                      p Chế độ bảo hành chính hãng kết hợp.
+                      p Chế độ bảo hành toàn diện của Topbop với tổng thời gian bảo hành lên đến 5 năm.
+
+
+                  .policy__item.full-w 
+                    .policy__item--title 
+                      .number-icon 2            
+                      span Miễn phí thay pin trọn đời
+
+                  .policy__item.full-w 
+                    .policy__item--title 
+                      .number-icon 3           
+                      span Miễn phí vệ sinh sản phẩm trọn đời.
+
+block script    
   script(src="/js/function.js") 

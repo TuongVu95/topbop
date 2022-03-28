@@ -209,8 +209,15 @@ const pageCate = () => {
 }
 
 const detailPolicy = () => {
+  let cardShow = $('.policy--card');
+  cardShow.hide().first().show();
   $('.js-tab').click(function () {
-    $(this).addClass('active').siblings().removeClass('active')
+    let attr = $(this).attr('data-tab');
+    console.log(attr);
+    $(this).addClass('active').siblings().removeClass('active');
+
+    cardShow.hide();
+    $(`#${attr}`).fadeIn();
   })
 }
 
