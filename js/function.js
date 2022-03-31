@@ -109,12 +109,26 @@ const saleSwiper = new Swiper('.sale-swiper', {
   },
 });
 
-const detailSwiper = new Swiper('.detail-swiper', {
-  slidesPerGroup: 1,
-  slidesPerView: 1,
+function detailSwiper() {
+  if ($(window).width() < 992) {
 
-  // cssMode: true,
-})
+    const galleryThumbs = new Swiper('.thumb-detail', {
+      spaceBetween: 4,
+      slidesPerView: 3.1,
+      freeMode: true,
+    });
+
+    const detailSwiper = new Swiper('.detail-swiper', {
+      slidesPerGroup: 1,
+      slidesPerView: 1,
+      centeredSlides: true,
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+  }
+}
+
 
 const pageHome = () => {
   console.log("$desktop", $desktop);
@@ -221,6 +235,7 @@ const init = () => {
   featureHeader();
   pageHome();
   detailPolicy();
+  detailSwiper();
 }
 init();
 

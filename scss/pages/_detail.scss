@@ -3,6 +3,10 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 2.4rem;
+    @include breakpoints("md") {
+      display: block;
+      padding-top: 0;
+    }
   }
   &--slide {
     .swiper-wrapper {
@@ -11,6 +15,11 @@
       gap: 1.6rem 0;
       .swiper-slide {
         width: calc((100% / 2) - 0.8rem);
+      }
+    }
+    @include breakpoints("md") {
+      .swiper-wrapper {
+        flex-wrap: nowrap;
       }
     }
   }
@@ -32,6 +41,8 @@
     @include breakpoints("md") {
       flex-basis: 100%;
       margin-right: 0;
+      text-align: center;
+      padding-top: 0;
     }
   }
   &--heading {
