@@ -109,17 +109,9 @@ const saleSwiper = new Swiper('.sale-swiper', {
   },
 });
 
-const detailSwiper = new Swiper('.detail-swiper', {
-  breakpoints: {
-    '992': {
-      slidesPerGroup: 1,
-      navigation: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-      },
-    }
-  }
-})
+// const detailSwiper = new Swiper('.detail-swiper', {
+
+// })
 
 const pageHome = () => {
   console.log("$desktop", $desktop);

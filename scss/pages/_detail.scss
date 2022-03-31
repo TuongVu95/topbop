@@ -6,8 +6,11 @@
   }
   &--slide {
     .swiper-wrapper {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.6rem 0;
       .swiper-slide {
-        margin-bottom: 1.6rem;
+        width: calc((100% / 2) - 0.8rem);
       }
     }
   }
@@ -23,6 +26,7 @@
   }
   &--left {
     flex-basis: 84.8rem;
+    max-width: 84.8rem;
     margin-right: 4.8rem;
     padding-top: 2.4rem;
     @include breakpoints("md") {
@@ -209,10 +213,11 @@
         align-items: center;
         flex-wrap: wrap;
         flex-basis: calc((100% / 2) - 2rem);
+        gap: 1.2rem 0;
         &.full-w {
           flex-basis: 100%;
           margin-bottom: 1.2rem;
-          align-items: baseline;
+          align-items: flex-start;
           @include breakpoints("md") {
             // align-items: center;
           }
@@ -254,7 +259,6 @@
         &--text {
           display: flex;
           flex-direction: column;
-          flex: 1;
           flex-grow: 1;
           flex-shrink: 1;
           p {
