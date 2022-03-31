@@ -109,9 +109,12 @@ const saleSwiper = new Swiper('.sale-swiper', {
   },
 });
 
-// const detailSwiper = new Swiper('.detail-swiper', {
+const detailSwiper = new Swiper('.detail-swiper', {
+  slidesPerGroup: 1,
+  slidesPerView: 1,
 
-// })
+  // cssMode: true,
+})
 
 const pageHome = () => {
   console.log("$desktop", $desktop);
