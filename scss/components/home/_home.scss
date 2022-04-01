@@ -259,20 +259,9 @@ $color-sub: #161616;
 .custom {
     .product {
         &__picture {
-            // @include aspect-ratio(416,416,0);
             display: flex;
             justify-content: center;
             align-items: center;
-
-            img {
-                // position: absolute;
-                // top: 0;
-                // left: 0;
-                // right: 0;
-                // bottom: 0;
-                // width: 100%;
-                // height: 100%;
-            }
         }
         &__name {
             &-tit {
@@ -310,6 +299,8 @@ $color-sub: #161616;
             }
         }
         &__label {
+            top: 1.6rem;
+            right: 2.4rem;
             i {
                 font-size: 1.4rem;
             }
@@ -325,6 +316,11 @@ $color-sub: #161616;
         box-shadow: inset 0px 0px 4.8rem rgba(0, 0, 0, 0.08);
         &:not(:last-child) {
             margin-bottom: 3.2rem;
+        }
+        @include breakpoints('md'){
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
         }
     }
     &-picture {
@@ -345,6 +341,11 @@ $color-sub: #161616;
         }
         &__picture {
             padding: 5.5rem 0;
+        }
+        @include breakpoints('md'){
+            &__picture {
+                padding: 0;
+            }
         }
     }
 }

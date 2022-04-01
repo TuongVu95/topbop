@@ -19,3 +19,5 @@ bin-release/
 node_modules/
 .DS_Store
 .DS_Store
+scss/.DS_Store
+images/.DS_Store
