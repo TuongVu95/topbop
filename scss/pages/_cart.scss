@@ -1,0 +1,116 @@
+.topbop__cart {
+  &--inner {
+    display: flex;
+  }
+  &--left {
+    flex-basis: 86.4rem;
+    max-width: 86.4rem;
+    margin-right: 3.2rem;
+  }
+  &--right {
+    flex: 1;
+    .cart__cta {
+      &--heading {
+        @include fontSize(700, 2.4rem, 3.2rem);
+        margin-bottom: 2rem;
+      }
+      &--counting {
+        padding-bottom: 2.4rem;
+        border-bottom: 1px solid #f4f4f4;
+        .counting__item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            @include fontSize(400, 1.6rem, 1.8rem);
+          }
+          &:not(:last-child) {
+            margin-bottom: 1.2rem;
+          }
+        }
+      }
+      &--final {
+        padding: 1.6rem 0;
+        border-bottom: 1px solid #f4f4f4;
+
+        @include fontSize(400, 1.6rem, 1.8rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          &:nth-child(2) {
+            color: #42882b;
+          }
+        }
+      }
+    }
+  }
+
+  &--detail {
+    margin-top: 4.8rem;
+    .cart__body {
+      &--title {
+        @include fontSize(700, 2.4rem, 3.2rem);
+        margin-bottom: 3.2rem;
+      }
+    }
+    .cart__product {
+      display: flex;
+      padding-bottom: 4.8rem;
+      border-bottom: 1px solid #f4f4f4;
+      margin-bottom: 3.2rem;
+      &--image {
+        padding: 2rem 0;
+        background: #f6f6f6;
+        flex-basis: 19.2rem;
+        max-width: 19.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &--desc {
+        flex: 1;
+        margin-left: 3.2rem;
+        @include fontSize(700, 1.6rem, 1.8rem);
+        h4 {
+          margin-bottom: 1.2rem;
+        }
+        .product-type,
+        .product-sku,
+        .product-group-select {
+          color: #898989;
+          margin-bottom: 1.2rem;
+        }
+        .product-group-select {
+        }
+      }
+      &--price {
+        display: flex;
+        .price__reality {
+          @include fontSize(500, 1.6rem, 1.8rem);
+          color: #898989;
+          text-decoration: line-through;
+          margin-right: 1.6rem;
+        }
+        .price__discount {
+          @include fontSize(700, 1.6rem, 1.8rem);
+          color: #161616;
+        }
+      }
+    }
+  }
+  .cart__noficationDelivery {
+    padding: 1.6rem 2.4rem;
+    background: #f4f4f4;
+    h3 {
+      @include fontSize(700, 1.4rem, 1.8rem);
+      margin-bottom: 0.4rem;
+    }
+    &-detail {
+      display: flex;
+      p {
+        margin-right: 2.4rem;
+      }
+    }
+  }
+}

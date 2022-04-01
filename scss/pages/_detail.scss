@@ -352,15 +352,15 @@
 
 .comment__btn {
   padding-bottom: 3.2rem;
-  .btn-compliment {
-    text-decoration: underline;
-    @include fontSize(700, 1.6rem, 1.8rem);
-  }
   @include breakpoints("md") {
     margin-bottom: 1.6rem;
     padding-bottom: 1.6rem;
     border-bottom: 1px solid #cecece;
   }
+}
+.btn-compliment {
+  text-decoration: underline;
+  @include fontSize(700, 1.6rem, 1.8rem);
 }
 .comment__item {
   max-width: 84rem;
