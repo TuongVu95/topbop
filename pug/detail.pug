@@ -9,13 +9,20 @@ block content
           .topbop__detail--inner
             .topbop__detail--left 
               .topbop__detail--slide.swiper.detail-swiper 
-                .swiper-wrapper.row 
+                .swiper-wrapper 
                   -for(let i = 0; i < 6; i++)
-                    .swiper-slide.col-6
+                    .swiper-slide
                       picture 
-                        img(src="/images/detail/detail-product.png" alt="" srcset="")
+                        source(media="(max-width:992px )" srcset="images/detail/detail-product-mb.png")
+                        img(src="images/detail/detail-product.png" alt="" srcset="")
                 .swiper-pagination
-
+              .gallery__thumb.none-block
+                .swiper.thumb-detail
+                  .swiper-wrapper 
+                    -for(let i = 0; i < 6; i++)
+                      .swiper-slide
+                        picture 
+                          img(src="images/detail/detail-product-mb.png" alt="")
             .topbop__detail--right
               .detail--right__wrapper
                 +breadcumb(['Trang chủ','Bomberg','Multimatic Diamond Silver 03A'],false)

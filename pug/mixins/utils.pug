@@ -84,9 +84,9 @@ mixin otherProduct($number = 3)
     .topbop__otherProduct
         .container
             .topbop__otherProduct--head SẢN PHẨM KHÁC CỦA BOMBERG
-            .topbop__otherProduct--inner
+            .topbop__otherProduct--inner.row.row-cols-3
                 -for(let i = 0; i < $number; i++)
-                    .topbop__otherProduct--item
+                    .topbop__otherProduct--item.col
                         .topbop__otherProduct--image
                             picture
                                 img(src="/images/branding/otherProduct-image.png", alt="")
