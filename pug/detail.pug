@@ -21,8 +21,9 @@ block content
                   .swiper-wrapper 
                     -for(let i = 0; i < 6; i++)
                       .swiper-slide
-                        picture 
-                          img(src="images/detail/detail-product-mb.png" alt="")
+                        .thumb__img
+                          picture 
+                            img(src="images/detail/detail-product-mb.png" alt="")
             .topbop__detail--right
               .detail--right__wrapper
                 +breadcumb(['Trang chủ','Bomberg','Multimatic Diamond Silver 03A'],false)
@@ -119,7 +120,7 @@ block content
                   li.js-tab.active(data-tab="chi-tiet-san-pham") CHI TIẾT SẢN PHẨM 
                   li.js-tab(data-tab="chinh-sach-uu-dai") CHÍNH SÁCH ƯU ĐÃI 
                   li.js-tab(data-tab='chinh-sach-bao-hanh') CHÍNH SÁCH BẢO HÀNH 
-                  li.js-tab ĐÁNH GIÁ (20)
+                  li.js-tab(data-tab='danh-gia') ĐÁNH GIÁ (20)
 
               .policy__body 
                 .policy--card(id="chi-tiet-san-pham") 
@@ -247,5 +248,30 @@ block content
                       .number-icon 3           
                       span Miễn phí vệ sinh sản phẩm trọn đời.
 
+                .policy--card(id="danh-gia")
+                  .comment__btn
+                    a(href='#').btn-compliment Viết Đánh Giá
+
+                  .comment__wrapper 
+                    -for(let i = 0; i < 2; i++)
+                      .comment__item 
+                        .comment__item-title Supportive yet fun
+                        .comment__item-rating 
+                          .rating-star
+                            -for(let i = 0 ; i < 5 ; i++)
+                              .star__item 
+                                picture 
+                                  img(src="images/detail/rating-star.svg", alt="")
+                          .rating-infomation Nguyễn Văn A - 10/08/2021
+                        
+                        .comment__item-description My wife has a few running shoes and these ones are one of her favorites. Very comfortable and the colors are eye popping.
+                        .comment__item-image
+                          -for(let i = 0; i < 3; i ++)
+                            .compliment__img
+                              picture 
+                                img(src="images/detail/image-comment.png", alt="")
+    
+    .topbop__detail--slideProduct
+            +slideProduct('KHÁM PHÁ THÊM')
 block script    
   script(src="/js/function.js") 

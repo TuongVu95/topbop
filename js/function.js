@@ -103,6 +103,10 @@ const aboutUsSwiper = new Swiper('.about-us-swiper', {
 const saleSwiper = new Swiper('.sale-swiper', {
   slidesPerGroup: 1,
   cssMode: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -114,7 +118,7 @@ function detailSwiper() {
 
     const galleryThumbs = new Swiper('.thumb-detail', {
       spaceBetween: 4,
-      slidesPerView: 3.1,
+      slidesPerView: 3.5,
       freeMode: true,
     });
 
@@ -124,7 +128,11 @@ function detailSwiper() {
       centeredSlides: true,
       thumbs: {
         swiper: galleryThumbs
-      }
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
     });
   }
 }
