@@ -37,7 +37,7 @@ $color-input: #adadad;
 
         content: "";
         display: block;
-        border-radius: 50%;
+        // border-radius: 50%;
         transition: all 0.3s ease-in-out;
     }
 }
@@ -45,6 +45,10 @@ $color-input: #adadad;
 .radio {
     input {
         padding-right: 1.2rem;
+        &:before,
+        &:after {
+            border-radius: 50%;
+        }
         &:before {
             position: absolute;
             left: 0;
@@ -60,7 +64,7 @@ $color-input: #adadad;
         }
         &:checked {
             &:before {
-                transform: scale(0.625);
+                transform: scale(0.5);
                 z-index: 2;
                 background: #161616;
             }
@@ -70,15 +74,20 @@ $color-input: #adadad;
 
 .checkbox {
     .label {
+        display: flex;
+        align-items: center;
         &-text {
             @include fontSize(400, 1.4rem, 1.9rem);
         }
     }
     input[type="checkbox"] {
         margin-right: 0.8rem;
+        &:before,
+        &:after {
+            width: 24px;
+            height: 24px;
+        }
         &:before {
-            // content: "\e9aa";
-            // font-family: "icon-system";
             position: absolute;
             top: 0;
             right: 0;
@@ -86,6 +95,18 @@ $color-input: #adadad;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            top: .4rem;
+            left: .9rem;
+            width: .7rem;
+
+            height: 1.2rem;
+            border: .2rem solid #fff;
+            border-top-width: 0;
+            border-left-width: 0;
+            transform: rotate(45deg);
+            opacity: 0;
+            visibility: hidden;
         }
         &:after {
             content: "";
@@ -98,16 +119,14 @@ $color-input: #adadad;
         &:disabled {
             cursor: not-allowed;
         }
-        // &:disabled::after {
-        // 	background: $gray-200;
-        // }
-        // &:disabled::before {
-        // 	color: $gray-200;
-        // }
         &:checked::after {
             background-color: #1d48ba;
             border-color: #1d48ba;
             outline: none;
+        }
+        &:checked::before {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }

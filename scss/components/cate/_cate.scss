@@ -38,16 +38,16 @@
         picture {
             margin-bottom: 0;
             @include aspect-ratio(1920, 300, 0);
-            img {
-            }
         }
     }
 }
 .module__product {
     &-head {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         margin-bottom: 1.2rem;
+        // padding: 1.3rem 0;
     }
 }
 .module__product-filter {
@@ -56,6 +56,8 @@
         align-items: center;
         justify-content: space-between;
         &-option {
+            padding: 1.5rem 2.4rem;
+            cursor: pointer;
             &:not(:last-child) {
                 margin-right: 2.4rem;
             }
@@ -63,8 +65,6 @@
                 @include fontSize(700, 1.6rem, 1.8rem);
                 margin-right: 0.8rem;
             }
-        }
-        &-icon {
         }
         .filter-arrange {
             &-icon {
@@ -93,6 +93,9 @@
         max-width: 24.3rem;
         flex-basis: 24.3rem;
         margin-right: 3.2rem;
+        &.show{
+            display: block;
+        }
     }
     .col-product{
         flex: 1;
@@ -103,12 +106,20 @@
     &-dropdown {
         position: absolute;
         z-index: 1;
-        right: 0;
-        top: 100%;
+        right: -2.4rem;
+        top: calc(100% + 3.5rem);
         width: max-content;
         filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.05));
         border-radius: 8px;
         background: $white;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s;
+        &.open{
+            top: calc(100% + 2.5rem);
+            opacity: 1;
+        visibility: visible;
+        }
     }
 
     &-item {
@@ -124,6 +135,17 @@
         @include fontSize(400, 1.6rem, 1.8rem);
         color: #131313;
     }
+    &-icon{
+        display: inline-block;
+        transition: all .3s;
+    }
+    &-button{
+        &.active{
+            .option-icon{
+                transform: rotate(90deg);
+            }
+        }
+    }
 }
 .sidebar{
     &-filter{
@@ -131,8 +153,33 @@
     }
 }
 .sidebar-filter{
+    height: 48.2rem;
+    overflow-y: auto;
+    padding-top: .8rem;
+
+  /* Firefox */
+  & {
+    scrollbar-width: auto;
+    scrollbar-color: #898989;
+  }
+
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 1.6rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #898989;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
     &-label{
         position: relative;
+        cursor: pointer;
         .tit{
             @include fontSize(700, 1.6rem, 1.8rem);
         }
@@ -144,6 +191,29 @@
             right:0;
             top:.2rem;
             font-size: 12px;
+            cursor: pointer;
+            transition: all .3s;
+        }
+        &.active{
+            .icon{
+                transform: rotate(90deg);
+            }
+        }
+    }
+    &-checkbox{
+        margin-top: 2.7rem;
+        display: none;
+    }
+    .checkbox{
+        &:not(:last-child){
+            margin-bottom: 1.2rem;
+        }
+    }
+    &-row{
+        &:not(:last-child){
+            margin-bottom: 2.4rem;
+            padding-bottom: 2.6rem;
+            border-bottom: 1px solid #F6F6F6;
         }
     }
 }

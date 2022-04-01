@@ -199,7 +199,7 @@ const pageHome = () => {
     },
     breakpoints: {
       '360': {
-        slidesPerView: 2.1,
+        slidesPerView: 1,
         spaceBetween: 0,
         slidesPerGroup: 2,
       },
@@ -214,6 +214,49 @@ const pageHome = () => {
 }
 
 const pageCate = () => {
+  const btnToggleFilter = $('.toggle-filter');
+  const colSidebar = $('.col-sidebar');
+  const contenPara = $('.toggle-filter-para');
+  const btnOption = $('.option-button'), optionDropdown = $('.option-dropdown');
+  const optionItem = $('.option-item'), $radio = $('.radio input[type="radio"]');
+  const groupCheckbox = $('.group-checkbox'), $checkbox = $('.checkbox');
+
+
+  btnToggleFilter.click(function(){
+    const $that = $(this);
+    $that.toggleClass('active');
+
+    const para = $('.toggle-filter.active').length ? "Hiện lọc" : "Ẩn lọc";
+
+    colSidebar.toggleClass('hide');
+    contenPara.text(para);
+  });
+
+  btnOption.click(function(){
+    const $that = $(this);
+    $that.toggleClass('active');
+    optionDropdown.toggleClass('open');
+  });
+
+  $radio.change(function (e) {
+    e.preventDefault();
+
+    const that = $(this);
+    $radio.prop('checked', false);
+    that.prop('checked', true);
+
+    btnOption.removeClass('active');
+    optionDropdown.removeClass('open');
+  });
+
+  groupCheckbox.each(function(){
+    const that = $(this), $radioChild = that.find('.checkbox').not('.checkboxAll');
+
+    $radioChild.change(function(){
+      console.log(1);
+
+    });
+  });
 
 }
 
@@ -230,12 +273,26 @@ const detailPolicy = () => {
   })
 }
 
+const radio = () => {
+  var $checkbox = $('.checkbox'),
+  input = $checkbox.find('input[type="checkbox"]'),
+  label = $checkbox.find('label');
+
+input.attr('id', function (i) {
+  return 'ex' + i;
+});
+label.attr('for', function (i) {
+  return 'ex' + i;
+});
+}
 
 const init = () => {
   featureHeader();
   pageHome();
+  pageCate();
   detailPolicy();
   detailSwiper();
+  radio();
 }
 init();
 
@@ -268,8 +325,6 @@ $('.morelink').click(function (e) {
   $(this).hide();
 })
 
-
-
 jQuery.fn.extend({
   accordion: function () {
     return this.each(function () {
@@ -283,13 +338,13 @@ jQuery.fn.extend({
         const listDropdown = $that.next('.js-list');
 
         if (isActive) {
-          btnExpand.removeClass('active');
+          $that.removeClass('active');
           listDropdown.slideUp();
 
         } else {
-          btnExpand.removeClass('active');
+          // btnExpand.removeClass('active');
           $that.addClass('active');
-          jsListDropdown.slideUp();
+          // jsListDropdown.slideUp();
           listDropdown.slideDown();
         }
 

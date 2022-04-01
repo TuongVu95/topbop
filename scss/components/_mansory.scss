@@ -10,8 +10,21 @@
     &-top{
         margin-bottom: 1.6rem;
     }
-    &-bot{
+    @include breakpoints('sm'){
+        &-item{
+            max-width: 50%;
+            flex-basis: 50%;
+            margin-bottom: .5rem;
+            margin-right: 0 !important;
+            padding: 0 .25rem;
 
+            &:not(:last-child), &:not(:nth-child(2n)){
+                // margin-right: .5rem;
+            }
+            &:nth-child(2n){
+                margin-right: 0;
+            }
+        }
     }
 }
 .mansory-line-bot{
@@ -31,5 +44,33 @@
                 margin-bottom: 1.6rem;
             }
         }
+    }
+}
+.mansory-layout{
+    display: block;
+    &-mb{
+        display: none;
+    }
+    @include breakpoints('sm'){
+        display: none;
+        &-mb{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -.5rem;
+        }
+    }
+}
+
+.desktop{
+    @extend .block;
+    @include breakpoints('md'){
+        @extend .hidden-mobile;
+    }
+}
+
+.mobile{
+    @extend .hide;
+    @include breakpoints('md'){
+        @extend .show-mb;
     }
 }
