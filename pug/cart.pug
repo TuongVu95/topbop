@@ -1,0 +1,51 @@
+extends templates/_layout.pug
+
+block content
+  main.topbop__wrapper 
+    +breadcumb(['Trang chủ','Giỏ hàng'])
+    .topbop__cart 
+      .container
+        .topbop__cart--inner
+          .topbop__cart--left
+            .cart__noficationDelivery 
+              h3 MIỄN PHÍ VẪN CHUYỂN
+              .cart__noficationDelivery-detail 
+                p Áp dụng cho tất cả các đơn hàng được mua tại Topbop.
+                a(href='#' class='btn-compliment') Xem chi tiết
+
+            .topbop__cart--detail 
+              h2.cart__body--title GIỎ HÀNG
+              .cart__body--wrapper 
+                -for(let i = 0; i < 3; i++)
+                  .cart__product 
+                    .cart__product--image 
+                      picture 
+                        img(src="/images/cart/cart-product.png", alt="")
+                    .cart__product--desc 
+                      h4.product-name Ziiiro Multimatic Diamond Silver 03A 
+                      p.product-type Loại: Nam
+                      p.product-sku Mã Sản Phẩm: 900081
+                      .product-group-select 
+
+                    .cart__product--price
+                        .price__reality 41,940,000VNĐ
+                        .price__discount 37,746,000VNĐ
+
+
+          .topbop__cart--right
+            .cart__cta 
+              .cart__cta--heading Thành tiền
+              .cart__cta--counting 
+                .counting__item 
+                  span Phí giao hàng
+                  span Miễn phí
+                
+                .counting__item 
+                  span Giảm giá 
+                  span - 25,000,000 VNĐ
+
+              .cart__cta--final
+                span Tổng cộng
+                span 65,491,000 VNĐ
+block script 
+  script(src="js/function.js") 
