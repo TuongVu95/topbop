@@ -318,8 +318,14 @@ $color-sub: #161616;
             margin-bottom: 3.2rem;
         }
         @include breakpoints('md'){
+            flex-wrap: nowrap;
             &:not(:last-child) {
                 margin-bottom: .5rem;
+            }
+            .col-6{
+                &:first-child{
+                    margin-right: .5rem;
+                }
             }
         }
     }
@@ -345,6 +351,9 @@ $color-sub: #161616;
         @include breakpoints('md'){
             &__picture {
                 padding: 0;
+            }
+            &__img {
+                margin-bottom: 0;
             }
         }
     }
