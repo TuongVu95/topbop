@@ -9,10 +9,15 @@
     flex-basis: 86.4rem;
     max-width: 86.4rem;
     margin-right: 3.2rem;
+    @include breakpoints("md") {
+      margin-right: 0;
+    }
   }
   &--right {
     flex: 1;
     .cart__cta {
+      position: sticky;
+      top: 1rem;
       &--heading {
         @include fontSize(700, 2.4rem, 3.2rem);
         margin-bottom: 2rem;
@@ -20,6 +25,10 @@
       &--counting {
         padding-bottom: 2.4rem;
         border-bottom: 1px solid #f4f4f4;
+        @include breakpoints("md") {
+          padding-bottom: 0;
+          border: none;
+        }
         .counting__item {
           display: flex;
           justify-content: space-between;
@@ -29,6 +38,11 @@
           }
           &:not(:last-child) {
             margin-bottom: 1.2rem;
+          }
+          @include breakpoints("md") {
+            span {
+              @include fontSize(400, 1.4rem, 1.9rem);
+            }
           }
         }
       }
@@ -46,16 +60,50 @@
             font-weight: 700;
           }
         }
+        @include breakpoints("md") {
+          border: none;
+          span {
+            @include fontSize(400, 1.4rem, 1.9rem);
+          }
+        }
+      }
+      &--btn {
+        margin-top: 3.2rem;
       }
     }
   }
 
   &--detail {
     margin-top: 4.8rem;
+    @include breakpoints("md") {
+      margin-top: 0;
+    }
     .cart__body {
       &--title {
         @include fontSize(700, 2.4rem, 3.2rem);
         margin-bottom: 3.2rem;
+        .cart_status {
+          margin-top: 1.2rem;
+          span {
+            @include fontSize(400, 1.4rem, 1.9rem);
+            color: #898989;
+            display: inline-flex;
+            padding-right: 1.2rem;
+            &:nth-child(2) {
+              font-weight: 700;
+              color: #000000;
+              padding-left: 1.2rem;
+              border-left: 1px solid #898989;
+            }
+          }
+        }
+        @include breakpoints("md") {
+          text-align: center;
+          @include fontSize(700, 2rem, 2.2rem);
+          padding-bottom: 2.4rem;
+          margin-bottom: 2.4rem;
+          border-bottom: 1px solid #f2f2f2;
+        }
       }
     }
     .cart__product {
@@ -93,6 +141,70 @@
         .product-group-select {
           color: #898989;
           margin-bottom: 1.2rem;
+        }
+        .product-group-select {
+          display: flex;
+          @include breakpoints("md") {
+            display: block;
+          }
+          .option {
+            display: inline-flex;
+          }
+          .option-dropdown.open {
+            top: 100%;
+          }
+          .option-label {
+            color: #898989;
+            font-weight: normal;
+            margin-left: 0.4rem;
+            margin-right: 1.2rem;
+            @include breakpoints("md") {
+              @include fontSize(400, 1.4rem, 1.9rem);
+            }
+          }
+          .option-dropdown {
+            border: 1px solid #898989;
+            border-radius: unset;
+            min-width: 9.8rem;
+          }
+          .option-item {
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              background-color: #898989;
+              color: #fff;
+            }
+          }
+          .filter-arrange-icon {
+            transform: rotate(90deg);
+            font-size: 1.2rem;
+          }
+          .select-quantity {
+            display: flex;
+            margin-left: 1.6rem;
+            @include breakpoints("md") {
+              margin-left: 0;
+              margin-top: 0.4rem;
+            }
+            &_wrapper {
+              display: flex;
+              margin-left: 1.2rem;
+              align-items: center;
+              button {
+                border: none;
+                background: none;
+                color: #898989;
+                font-size: 1.8rem;
+              }
+              input {
+                max-width: 4rem;
+                border: none;
+                pointer-events: none;
+                color: #898989;
+                text-align: center;
+              }
+            }
+          }
         }
         @include breakpoints("md") {
           @include fontSize(700, 1.4rem, 1.8rem);
