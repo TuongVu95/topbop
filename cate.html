@@ -283,16 +283,21 @@
 
     <main class="page__wrap cate__page">
         <section class="section__page section__banner section1">
-            <div class="section__page-inner"><a href="http://">
+            <div class="section__page-inner">
+              <a href="http://">
                 <picture class="section__page-picture">
-                    <source media="(max-width: 768px )" srcset="">
+                    <source media="(max-width: 768px )" srcset="images/cate/banner-mb.png">
                     <img src="images/cate/banner.png" alt="Banner">
                 </picture>
             </a>
+            <div class="paragraph">
+                <p class="paragraph-tit">BOMBERG</p>
+                <p class="paragraph-desc">Waldhoff là thương hiệu của Starck Uhren Gmbh, có trụ sở tại Pforzheim, Đức. Waldhoff chuyên sản xuất những chiếc đồng hồ Automatic cao cấp và chất lượng được được thiết kế tại Thụy Sĩ... <a href>Xem thêm</a></p>
+            </div>
         </div>
         </section>
 
-        <div class="block-page">
+        <div class="block-page block-none">
            <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -315,11 +320,14 @@
                 <div class="section__page-inner module__product-inner">
                     <div class="module__product-head">
                         <h1 class="page-title title-product">BOMBERG</h1>
+                        <p class="count-product">
+                            <span>31 Sản Phẩm</span>
+                        </p>
                         <div class="module__product-filter">
                             <ul class="list__filter">
                                 <li class="list__filter-option">
                                     <a href="javascript:void(0)" class="toggle-filter">
-                                        <span class="toggle-filter-para">Ẩn lọc</span>
+                                        <p class="toggle-filter-para"> <span class="">Ẩn </span> lọc</p>
                                         <i class="icon-ic-options-filter list__filter-icon"></i>
                                     </a>
                                 </li>
@@ -329,7 +337,7 @@
                                             <span class="option-label">
                                                 Sắp xếp
                                             </span>
-                                            <i class="icon-chevron-down option-icon"></i>
+                                            <i class="icon-chevron-down option-icon filter-arrange-icon"></i>
                                         </div>
                                         <div class="option-dropdown">
                                             <div class="option-item">
@@ -362,13 +370,40 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="module__product-grid">
+                      <ul>
+                        <li>
+                          <div class="grid-col grid-col-1">
+                            <span class="grid-img grid-outline">
+                              <img src="images/icons/rectangle-outline.svg" alt="rectangle-outline">
+                            </span>
+                            <span class="grid-img grid-default">
+                              <img src="images/icons/rectangle-default.svg" alt="rectangle-outline">
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="grid-col active">
+                            <span class="grid-img grid-outline">
+                              <img src="images/icons/rectangle-caro.svg" alt="rectangle-outline">
+                            </span>
+                            <span class="grid-img grid-default">
+                              <img src="images/icons/rectangle-caro-inline.svg" alt="rectangle-outline">
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                     <div class="module__product-row">
                         <div class="row">
                             <div class="col-auto col-sidebar">
                                 <div class="sidebar">
                                     <div class="sidebar-inner">
                                         <div class="sidebar-head">
-
+                                            <p class="sidebar-head-tit">Filters</p>
+                                            <button class="btn btn-close js-btn-close">
+                                                <img src="images/cate/math-plus.png" alt="math-plus">
+                                            </button>
                                         </div>
                                         <div class="sidebar-filter">
                                             <div class="sidebar-filter-row">
@@ -380,7 +415,7 @@
                                                     <div class="group-checkbox">
                                                         <div class="checkbox checkboxAll">
                                                             <label for="check1" class="label">
-                                                                <input type="checkbox" value="lab-well" name="" id="check1">
+                                                                <input type="checkbox" value="lab-well" name="" id="check1" checked>
                                                                 <span class="label-text">Tất cả</span>
                                                             </label>
                                                         </div>
@@ -422,6 +457,7 @@
                                                             </label>
                                                         </div>
                                                     </div>
+                                                    <a href="javascript:void(0)" class="read-more js-readmore none-block"><span>+</span> Xem thêm</a>
                                                 </div>
                                             </div>
                                             <div class="sidebar-filter-row">
@@ -460,13 +496,27 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="filter-button filter-button-mb">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a class="btn btn-reset">
+                                                        <span class="f-w-500">Xoá</span>
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <a class="btn btn-apply">
+                                                        <span class="f-w-500">Chọn</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-auto col-product">
                                 <div class="product__cate">
                                     <div class="row">
-                                        <div class="col-4 col-md-6">
+                                        <div class="col-4 col-md-6 reset-col">
                                             <div class="product">
                                                 <a href="http://" class="product__link">
                                                     <div class="product__img">
@@ -496,7 +546,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-4 col-md-6">
+                                        <div class="col-4 col-md-6 reset-col">
                                             <div class="product">
                                                 <a href="http://" class="product__link">
                                                     <div class="product__img">
@@ -526,7 +576,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-4 col-md-6">
+                                        <div class="col-4 col-md-6 reset-col">
                                             <div class="product">
                                                 <a href="http://" class="product__link">
                                                     <div class="product__img">
@@ -556,7 +606,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-4 col-md-6">
+                                        <div class="col-4 col-md-6 reset-col">
                                             <div class="product">
                                                 <a href="http://" class="product__link">
                                                     <div class="product__img">

@@ -9,8 +9,6 @@ $color-lv2: #757575;
 }
 
 .page__header {
-    position: relative;
-    z-index: 11;
     padding-top: 4.2rem;
     &-top {
         @extend %flex-center;
@@ -187,6 +185,8 @@ $color-lv2: #757575;
         }
     }
     &-logo {
+        picture {
+        }
         @include breakpoints("md") {
             picture {
                 @include aspect-ratio(165, 31, 0);
@@ -237,7 +237,6 @@ $color-lv2: #757575;
 
         display: none;
         overflow: hidden;
-        z-index: 10;
         @include breakpoints("md") {
             position: relative;
         }
@@ -594,9 +593,11 @@ $color-lv2: #757575;
             &-icon {
                 top: 0.8rem;
             }
+            &-item {
+            }
         }
         &.expand {
-            // @debug #{$nav}-icon;
+            @debug #{$nav}-icon;
             #{$nav}-icon {
                 position: absolute;
                 padding-top: 8.4rem;
