@@ -1,50 +1,50 @@
 extends templates/_layout.pug
 
 block content
-  main.topbop__wrapper 
+  main.topbop__wrapper
     +breadcumb(['Trang chủ','Giỏ hàng'])
-    .topbop__cart 
+    .topbop__cart
       .container
         .topbop__cart--inner
           .topbop__cart--left
             .cart__noficationDelivery.block-none
               h3 MIỄN PHÍ VẪN CHUYỂN
-              .cart__noficationDelivery-detail 
+              .cart__noficationDelivery-detail
                 p Áp dụng cho tất cả các đơn hàng được mua tại Topbop.
                 a(href='#' class='btn-compliment') Xem chi tiết
 
-            .topbop__cart--detail 
+            .topbop__cart--detail
               .cart__body--title GIỎ HÀNG
-                .cart_status.none-block   
+                .cart_status.none-block
                   span 2 Sản Phẩm
                   span 65,491,000 VNĐ
-              .cart__body--wrapper 
+              .cart__body--wrapper
                 -for(let i = 0; i < 3; i++)
-                  .cart__product 
-                    .cart__product--image 
-                      picture 
-                        img(src="/images/cart/cart-product.png", alt="")
-                    .cart__product--desc 
-                      h4.product-name Ziiiro Multimatic Diamond Silver 03A 
+                  .cart__product
+                    .cart__product--image
+                      picture
+                        img(src="images/cart/cart-product.png", alt="")
+                    .cart__product--desc
+                      h4.product-name Ziiiro Multimatic Diamond Silver 03A
                       p.product-type Loại: Nam
                       p.product-sku Mã Sản Phẩm: 900081
-                      .product-group-select 
+                      .product-group-select
                         .select-type
                           .option
                             .option-button
-                              span Kích thước 
+                              span Kích thước
                               span.option-label 40 mm
-                              
+
                               i.icon-chevron-down.option-icon.filter-arrange-icon
-                            
-                            .option-dropdown 
+
+                            .option-dropdown
                               -for(let i = 0; i < 5; i++)
                                .option-item 44
-                        
-                        .select-quantity 
+
+                        .select-quantity
                             span Số lượng
                             .select-quantity_wrapper
-                              button.btn-decrease - 
+                              button.btn-decrease -
                               input(type="text" name="qty" value="1")
                               button.btn-inscrease +
                     .cart__product--price
@@ -53,22 +53,22 @@ block content
 
 
           .topbop__cart--right
-            .cart__cta 
+            .cart__cta
               .cart__cta--heading.block-none Thành tiền
-              .cart__cta--counting 
-                .counting__item 
+              .cart__cta--counting
+                .counting__item
                   span Phí giao hàng
                   span Miễn phí
-                
-                .counting__item 
-                  span Giảm giá 
+
+                .counting__item
+                  span Giảm giá
                   span - 25,000,000 VNĐ
 
               .cart__cta--final
                 span Tổng cộng
                 span 65,491,000 VNĐ
-              
-              .cart__cta--btn 
+
+              .cart__cta--btn
                 a(href="#").btn.w-100 MUA HÀNG
-block script 
-  script(src="js/function.js") 
+block script
+  script(src="js/function.js")

@@ -1,28 +1,28 @@
 extends templates/_layout.pug
 
-block content  
-  main.topbop__wrapper 
+block content
+  main.topbop__wrapper
     .topbop__branding
       +saleSlide
 
       .topbop__branding--banner
-        picture 
-          source(media="(max-width: 992px)",srcset="/images/banner/branding-banner.png")
-          img(src="/images/banner/branding-banner.png", alt="")
+        picture
+          source(media="(max-width: 992px)",srcset="images/banner/branding-banner.png")
+          img(src="images/banner/branding-banner.png", alt="")
 
       .topbop__branding--introduction
         .container
           .introduction__inner
-            .introduction__logo 
+            .introduction__logo
               picture
-                img(src="/images/branding/branding-logo.png", alt="", srcset="")
+                img(src="images/branding/branding-logo.png", alt="", srcset="")
             .introduction__name THƯƠNG HIỆU SWISS ĐỘC LẬP
             .introduction__desc BOMBERG đang vượt khỏi lối mòn của chế tác đồng hồ truyền thống, tạo ra những chiếc đồng hồ dành cho những người sành điệu, sáng tạo và tự tin, trên khắp thế giới ở Mỹ Latinh (các thị trường dẫn dắt của nó, đặc biệt là Mexico, nơi thương hiệu đã là đồng hồ phong cách số 5 thương hiệu), Hoa Kỳ, Châu Á và Châu Âu. Thương hiệu Thụy Sĩ, độc lập, nhanh nhẹn.
-            .introduction__image 
-              picture 
-                img(src="/images/branding/branding-product.png", alt="", srcset="")
+            .introduction__image
+              picture
+                img(src="images/branding/branding-product.png", alt="", srcset="")
 
-      .topbop__branding--collection 
+      .topbop__branding--collection
         .container
           .collection__head BỘ SƯU TẬP BOMBERG
           .collection__inner.row
@@ -30,19 +30,19 @@ block content
               .collection__item.col-6.col-md-12
                 .collection__item--image
                   a(href='#')
-                    picture 
-                      img(src="/images/branding/collection-image.png", alt="")
-                .collection__item--detail 
+                    picture
+                      img(src="images/branding/collection-image.png", alt="")
+                .collection__item--detail
                   .detail__brandname Bomberg
                   .detail__name BB - 01 AUTOMATIC
                   .detail__desc "Calavera" mang ý nghĩa quan trọng ở Mexico.
-                  .detail__btn 
+                  .detail__btn
                     a.btn MUA NGAY
 
 
       .topbop__branding--highlight
           +slideProduct('BOMBERG NỔI BẬT')
 
-      +otherProduct  
-block script 
-  script(src="/js/function.js") 
+      +otherProduct
+block script
+  script(src="/js/function.js")

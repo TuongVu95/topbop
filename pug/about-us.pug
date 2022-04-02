@@ -1,14 +1,14 @@
 extends templates/_layout.pug
 
-block content 
+block content
   main.topbop__wrapper
     .topbop__aboutus
       .topbop__aboutus--banner
         picture
-          source(media="(max-width:992px )", srcset="/images/banner/banner-aboutus-mb.png")
-          img(src="/images/banner/banner-aboutus.png" alt="")
+          source(media="(max-width:992px )", srcset="images/banner/banner-aboutus-mb.png")
+          img(src="images/banner/banner-aboutus.png" alt="")
 
-      .topbop__aboutus--history.swiper.about-us-swiper 
+      .topbop__aboutus--history.swiper.about-us-swiper
         .swiper-pagination
         .swiper-wrapper
           -for(var i = 0; i < 3; i++)
@@ -28,10 +28,10 @@ block content
               .aboutus__item
                 .aboutus__item--image
                   a(href="#")
-                    picture 
-                      img(src="/images/article/about-us.png" alt="")
-                .aboutus__item--text 
+                    picture
+                      img(src="images/article/about-us.png" alt="")
+                .aboutus__item--text
                   a(href='#') Là nhà bán lẻ đồng hồ có uy tín trên thị trường Việt.
 
-block script 
-  script(src="/js/function.js") 
+block script
+  script(src="/js/function.js")
