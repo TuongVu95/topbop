@@ -7,14 +7,17 @@ block content
       .container
         .topbop__cart--inner
           .topbop__cart--left
-            .cart__noficationDelivery 
+            .cart__noficationDelivery.block-none
               h3 MIỄN PHÍ VẪN CHUYỂN
               .cart__noficationDelivery-detail 
                 p Áp dụng cho tất cả các đơn hàng được mua tại Topbop.
                 a(href='#' class='btn-compliment') Xem chi tiết
 
             .topbop__cart--detail 
-              h2.cart__body--title GIỎ HÀNG
+              .cart__body--title GIỎ HÀNG
+                .cart_status.none-block   
+                  span 2 Sản Phẩm
+                  span 65,491,000 VNĐ
               .cart__body--wrapper 
                 -for(let i = 0; i < 3; i++)
                   .cart__product 
@@ -26,7 +29,24 @@ block content
                       p.product-type Loại: Nam
                       p.product-sku Mã Sản Phẩm: 900081
                       .product-group-select 
-
+                        .select-type
+                          .option
+                            .option-button
+                              span Kích thước 
+                              span.option-label 40 mm
+                              
+                              i.icon-chevron-down.option-icon.filter-arrange-icon
+                            
+                            .option-dropdown 
+                              -for(let i = 0; i < 5; i++)
+                               .option-item 44
+                        
+                        .select-quantity 
+                            span Số lượng
+                            .select-quantity_wrapper
+                              button.btn-decrease - 
+                              input(type="text" name="qty" value="1")
+                              button.btn-inscrease +
                     .cart__product--price
                         .price__reality 41,940,000VNĐ
                         .price__discount 37,746,000VNĐ
@@ -34,7 +54,7 @@ block content
 
           .topbop__cart--right
             .cart__cta 
-              .cart__cta--heading Thành tiền
+              .cart__cta--heading.block-none Thành tiền
               .cart__cta--counting 
                 .counting__item 
                   span Phí giao hàng
@@ -47,5 +67,8 @@ block content
               .cart__cta--final
                 span Tổng cộng
                 span 65,491,000 VNĐ
+              
+              .cart__cta--btn 
+                a(href="#").btn.w-100 MUA HÀNG
 block script 
   script(src="js/function.js") 
