@@ -17,12 +17,11 @@
             margin-bottom: .5rem;
             margin-right: 0 !important;
             padding: 0 .25rem;
-
-            &:not(:last-child), &:not(:nth-child(2n)){
-                // margin-right: .5rem;
-            }
             &:nth-child(2n){
                 margin-right: 0;
+            }
+            img{
+                width: 100%;
             }
         }
     }

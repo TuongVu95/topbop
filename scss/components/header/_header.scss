@@ -10,6 +10,8 @@ $color-lv2: #757575;
 
 .page__header {
     padding-top: 4.2rem;
+    position: relative;
+    z-index: 6;
     &-top {
         @extend %flex-center;
         justify-content: space-between;
@@ -97,6 +99,9 @@ $color-lv2: #757575;
         .social-item {
             &:not(:last-child) {
                 margin-right: 1.6rem;
+            }
+            .ic-label{
+                font-family: "Manrope", Arial, Helvetica, sans-serif;
             }
         }
         &-mb {
@@ -204,6 +209,7 @@ $color-lv2: #757575;
     }
     @include breakpoints("md") {
         padding: 1.6rem 0;
+        position: unset;
     }
 }
 

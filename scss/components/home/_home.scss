@@ -112,7 +112,23 @@ $color-sub: #161616;
             }
         }
     }
+}
+.group-section{
     @include breakpoints("md") {
+        display: flex;
+        flex-direction: column;
+        .section1{
+            order: 1;
+        }
+        .section2{
+            order: 2;
+        }
+        .section3{
+            order: 4;
+        }
+        .section4{
+            order: 3;
+        }
     }
 }
 .section1 {
@@ -122,6 +138,14 @@ $color-sub: #161616;
         }
     }
 }
+.section2{
+    @include breakpoints("md") {
+        .section__page-picture{
+            @include aspect-ratio(750, 750, 0);
+        }
+    }
+}
+
 .section__module {
     .section__page-heading {
         margin-bottom: 2.4rem;
@@ -325,6 +349,9 @@ $color-sub: #161616;
 }
 .row-reverse {
     flex-direction: row-reverse;
+    @include breakpoints('md'){
+
+    }
 }
 .section__hightlight {
     .reset-row {
@@ -335,8 +362,14 @@ $color-sub: #161616;
         }
         @include breakpoints("md") {
             flex-wrap: nowrap;
+            margin: 0 -2.1rem;
+            box-shadow: none;
+            align-items: unset;
             &:not(:last-child) {
                 margin-bottom: 0.5rem;
+            }
+            [class*="col"]{
+                padding: 0 .25rem;
             }
         }
     }
@@ -346,6 +379,11 @@ $color-sub: #161616;
         }
         @include breakpoints("md") {
             flex-wrap: nowrap;
+            // margin-right: 0.5rem;
+            height: 100%;
+            picture, img{
+                height: 100%;
+            }
             &:not(:last-child) {
                 margin-bottom: 0.5rem;
             }
@@ -353,7 +391,9 @@ $color-sub: #161616;
     }
     &-product {
         height: 100%;
-        // box-shadow: inset 0px 0px 4.8rem rgba(0, 0, 0, 0.08);
+        @include breakpoints("md") {
+            box-shadow: inset 0px 0px 4.8rem rgba(0, 0, 0, 0.08);
+        }
     }
     .product {
         // padding: 6.8rem 12rem;
@@ -366,8 +406,22 @@ $color-sub: #161616;
             padding: 5.5rem 0;
         }
         @include breakpoints("md") {
+            height: 100%;
             &__picture {
                 padding: 0;
+                max-width: 18.5rem;
+                max-height: 18.5rem;
+                img{
+                    max-height: 185px;
+                }
+            }
+            &__link, &__img{
+                height: inherit;
+            }
+            &__link{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
             }
             &__img {
                 margin-bottom: 0;
@@ -421,6 +475,11 @@ $color-sub: #161616;
             &-alert {
                 color: $black;
                 @include fontSize(400, 1.8rem, 2.8rem);
+            }
+        }
+        &__picture{
+            img{
+                width: 100%;
             }
         }
     }
