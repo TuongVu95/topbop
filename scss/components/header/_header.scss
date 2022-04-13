@@ -599,11 +599,9 @@ $color-lv2: #757575;
             &-icon {
                 top: 0.8rem;
             }
-            &-item {
-            }
         }
         &.expand {
-            @debug #{$nav}-icon;
+            // @debug #{$nav}-icon;
             #{$nav}-icon {
                 position: absolute;
                 padding-top: 8.4rem;

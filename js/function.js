@@ -236,16 +236,16 @@ const pageCate = () => {
 
   const gridCol = $('.grid-col');
 
-  btnToggleFilter.click(function(){
+  btnToggleFilter.click(function () {
     const $that = $(this);
     $that.toggleClass('active');
 
-    if($mobile){
+    if ($mobile) {
       var para = "Lọc";
       colSidebar.toggleClass('expand');
       $('html,body').toggleClass('disable-scroll');
 
-    }else{
+    } else {
       colSidebar.toggleClass('hide');
       var para = $('.toggle-filter.active').length ? "Hiện lọc" : "Ẩn lọc";
     }
@@ -253,7 +253,7 @@ const pageCate = () => {
     contenPara.text(para);
   });
 
-  btnOption.click(function(){
+  btnOption.click(function () {
     const $that = $(this);
     $that.toggleClass('active');
     optionDropdown.toggleClass('open');
@@ -264,6 +264,7 @@ const pageCate = () => {
     e.preventDefault();
 
     const that = $(this);
+
     $radio.prop('checked', false);
     that.prop('checked', true);
 
@@ -272,35 +273,35 @@ const pageCate = () => {
   });
 
   // checkbox
-  groupCheckbox.each(function(){
+  groupCheckbox.each(function () {
     const that = $(this), $radioChild = that.find('.checkbox').not('.checkboxAll');
     const checkboxAll = $('.checkboxAll');
 
-    $radioChild.change(function(){
+    $radioChild.change(function () {
       console.log(1);
       checkboxAll.prop('checked', false);
     });
   });
 
   // đóng filter $mobile
-  btnClose.click(function(){
+  btnClose.click(function () {
     colSidebar.removeClass('expand');
   });
 
 
-  gridCol.each(function(){
+  gridCol.each(function () {
     const $that = $(this);
     const productCate = $('.product__cate');
     const resetCol = $('.product__cate .reset-col');
 
-    $that.click(function(){
+    $that.click(function () {
       gridCol.removeClass('active');
       $that.addClass('active');
 
-      if($that.is('.grid-col-1')){
+      if ($that.is('.grid-col-1')) {
         resetCol.addClass('col-sm-12');
         productCate.addClass('product-grid');
-      }else{
+      } else {
         resetCol.removeClass('col-sm-12');
         productCate.removeClass('product-grid');
       }
@@ -324,15 +325,159 @@ const detailPolicy = () => {
 
 const radio = () => {
   var $checkbox = $('.checkbox'),
-  input = $checkbox.find('input[type="checkbox"]'),
-  label = $checkbox.find('label');
+    input = $checkbox.find('input[type="checkbox"]'),
+    label = $checkbox.find('label');
 
-input.attr('id', function (i) {
-  return 'ex' + i;
-});
-label.attr('for', function (i) {
-  return 'ex' + i;
-});
+  input.attr('id', function (i) {
+    return 'ex' + i;
+  });
+  label.attr('for', function (i) {
+    return 'ex' + i;
+  });
+}
+
+const pageCart = () => {
+  // dropdown
+  var jsSelect = $('.js-select');
+
+  jsSelect.each(function () {
+    const $that = $(this);
+    const $trigger = $('.js-trigger');
+
+    const $triggerList = $('.js-trigger-list');
+    const selectText = $('.custom-select-text');
+    const optionItem = $that.find('.custom-options-item');
+
+    var classExpand = 'expand';
+    // console.log($that);
+
+    function triggerClass($remove, $add, $classExpand) {
+      $remove.removeClass($classExpand);
+      $add.addClass($classExpand);
+    }
+
+    $trigger.click(function (e) {
+      const _that = $(this), $parent = _that.closest(jsSelect);
+
+      const isExpand = jsSelect.is(`.${classExpand}`);
+
+      if (isExpand) {
+        triggerClass(jsSelect, $parent, classExpand);
+      } else {
+        triggerClass(jsSelect, $parent, classExpand);
+      }
+
+    });
+
+    optionItem.click(function () {
+      const $that = $(this), selectData = $that.text(), parent = $that.closest('.js-select');
+      const $selectText = $that.closest('.js-select').find('.custom-select-text');
+      const cityFormGroup = $that.closest('.form-groups');
+
+      parent.attr('data-city', 1);
+
+      cityFormGroup.removeClass('invalid');
+
+      $selectText.text(selectData);
+
+      jsSelect.removeClass(classExpand);
+    });
+  });
+
+  $(document).click(function (e) {
+    const jsTrigger = $('.js-trigger');
+    if (!jsTrigger.is(e.target) && jsTrigger.has(e.target).length === 0) {
+      jsSelect.removeClass('expand');
+    }
+  });
+}
+
+//validate
+const inputNumberPhone = $('input[name="phone"]');
+// console.log(inputNumberPhone);
+
+//check number phone
+var phoneRegex = function (number) {
+  var vnf_regex_10 = /([\+0]+(2|3|5|7|8|9|1[2|6|8|9]))+([0-9]{8})\b/,
+
+    vnf_regex_11 = /([\+84|84|0]+(2|3|5|7|8|9|1[2|6|8|9]))+([0-9]{9})\b/;
+
+  if (parseInt(number.slice(0, 2)) === 02) {
+    return vnf_regex_11.test(number);
+  } else {
+    return vnf_regex_10.test(number);
+  }
+}
+
+const checkPhone = () => {
+  const $value = inputNumberPhone.val();
+  return phoneRegex($value);
+}
+
+// checkPhone();
+const validateUser = () => {
+  inputNumberPhone.on('keyup keydown', function () {
+    const that = $(this), formGroup = that.closest('.form-groups'), err = formGroup.find('.form-error');
+
+    const HA_NOI = 02;
+
+    var valueInt = parseInt(that.val().slice(0, 2));
+
+    valueInt === HA_NOI ? inputNumberPhone.attr('maxlength', '11') : inputNumberPhone.attr('maxlength', '10');
+
+    if (/\D/g.test(that.val())) {
+      this.value = this.value.replace(/\D/g, '');
+    }
+
+    if (!checkPhone() && that.val().length > 0) {
+      formGroup.addClass('invalid');
+      err.text('Số điện thoại không hợp lệ');
+    } else {
+      formGroup.removeClass('invalid');
+      err.text('Thông tin bắt buộc');
+    }
+
+  });
+}
+
+const dropdownCity = () => {
+  const jsSelect = $('.js-select');
+  var flag = false;
+  jsSelect.each(function () {
+    const that = $(this), dataCity = that.attr('data-city');
+    const cityFormGroup = that.closest('.form-groups');
+
+    if (dataCity === "") {
+      cityFormGroup.addClass('invalid');
+      flag = true;
+    } else {
+      cityFormGroup.removeClass('invalid');
+      flag = false;
+    }
+  });
+  return flag;
+}
+
+const validateAddress = () => {
+
+}
+
+const submit = () => {
+  const btnSubmit = $('.js-btn-submit');
+
+  btnSubmit.click(function (e) {
+    e.preventDefault();
+
+    if (!checkPhone()) {
+      inputNumberPhone.closest('.form-groups').addClass('invalid');
+    }
+
+    if (!checkPhone() || dropdownCity()) {
+      return false;
+    }
+
+  });
+
 }
 
 const init = () => {
@@ -342,7 +487,11 @@ const init = () => {
   detailPolicy();
   detailSwiper();
   radio();
+  pageCart();
+  validateUser();
+  submit();
 }
+
 init();
 
 $(document).ready(function () {
