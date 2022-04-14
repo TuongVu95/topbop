@@ -30,6 +30,20 @@
         * {
             @include fontSize(400, 1.4rem, 1.9rem);
         }
+
+        @include breakpoints('md'){
+            &:not(:first-child) {
+                &:before {
+                    @include fontSize(400, 1.2rem, 1.6rem);
+                    padding: 0;
+                    color: #898989;
+                }
+            }
+            * {
+                @include fontSize(400, 1.2rem, 1.6rem);
+                color: #898989;
+            }
+        }
     }
 }
 .cate__page {

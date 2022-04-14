@@ -394,7 +394,19 @@ const pageCart = () => {
 
 //validate
 const inputNumberPhone = $('input[name="phone"]');
-// console.log(inputNumberPhone);
+const inputUserName = $('input[name="username"]');
+const inputPhone = $('input[name="phone"]');
+
+// console.log("inputUserName", inputUserName);
+function checkNameNotNumber(value) {
+  var regexName = /\d+/g;
+  return regexName.test(value);
+}
+
+function isValidCharacter(text) {
+  const validCharacterRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+  return validCharacterRegex.test(text);
+}
 
 //check number phone
 var phoneRegex = function (number) {
@@ -414,6 +426,25 @@ const checkPhone = () => {
   return phoneRegex($value);
 }
 
+const checkUsername = () => {
+  const $value = inputUserName.val().trim(),
+    $valueLength = $value.length > 0;
+
+  if ((checkNameNotNumber($value) || isValidCharacter($value)) && $valueLength) {
+    return true;
+  }
+  return false;
+}
+
+console.log("checkUsername()", checkUsername());
+
+const checkAddClassInvalid = () => {
+  console.log("checkUsername()12312313113", checkUsername());
+  if(!checkUsername()){
+    console.log(123123123);
+  }
+}
+// console.log("checkUsername", checkUsername());
 // checkPhone();
 const validateUser = () => {
   inputNumberPhone.on('keyup keydown', function () {
@@ -431,13 +462,25 @@ const validateUser = () => {
 
     if (!checkPhone() && that.val().length > 0) {
       formGroup.addClass('invalid');
-      err.text('Số điện thoại không hợp lệ');
+      err.text('Error message here');
     } else {
       formGroup.removeClass('invalid');
-      err.text('Thông tin bắt buộc');
+      // err.text('Error message here');
     }
 
   });
+
+  inputUserName.on('keyup keydown', function () {
+    const $value = inputUserName.val().trim(),
+      $valueLength = $value.length > 0;
+
+    if ((checkNameNotNumber($value) || isValidCharacter($value)) && $valueLength) {
+      inputUserName.closest('.form-groups').addClass('invalid');
+      // return true;
+    } else {
+      inputUserName.closest('.form-groups').removeClass('invalid');
+    }
+  })
 }
 
 const dropdownCity = () => {
@@ -476,21 +519,22 @@ const submit = () => {
       return false;
     }
 
+    checkAddClassInvalid();
   });
 
 }
 
 const payments = () => {
-    const jsPayment = $('.js-payment');
+  const jsPayment = $('.js-payment');
 
-    jsPayment.click(function(e){
-      e.preventDefault();
+  jsPayment.click(function (e) {
+    e.preventDefault();
 
-        const $that = $(this);
+    const $that = $(this);
 
-        jsPayment.removeClass('active');
-        $that.addClass('active');
-    });
+    jsPayment.removeClass('active');
+    $that.addClass('active');
+  });
 }
 const init = () => {
   featureHeader();
