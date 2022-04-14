@@ -480,6 +480,18 @@ const submit = () => {
 
 }
 
+const payments = () => {
+    const jsPayment = $('.js-payment');
+
+    jsPayment.click(function(e){
+      e.preventDefault();
+
+        const $that = $(this);
+
+        jsPayment.removeClass('active');
+        $that.addClass('active');
+    });
+}
 const init = () => {
   featureHeader();
   pageHome();
@@ -490,6 +502,7 @@ const init = () => {
   pageCart();
   validateUser();
   submit();
+  payments();
 }
 
 init();

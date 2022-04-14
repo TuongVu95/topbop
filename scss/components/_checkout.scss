@@ -1,11 +1,11 @@
-.checkout-page{
+.checkout-page {
     padding: 4.8rem 0 10rem;
-    @include breakpoints('md'){
-        padding-top: 1.6rem;
-        .section-title{
-font-size: 20px;
-line-height: 22px;
-letter-spacing: 0.0015em;
+    @include breakpoints("md") {
+        padding: 1.6rem 0 7.2rem;
+        .section-title {
+            font-size: 20px;
+            line-height: 22px;
+            letter-spacing: 0.0015em;
         }
     }
 }
@@ -21,43 +21,43 @@ letter-spacing: 0.0015em;
 }
 .section-page-row {
     padding-top: 7.9rem;
-    >.row{
+    > .row {
         margin: 0;
-        >.col-6{
+        > .col-6 {
             padding: 0;
         }
     }
-    .card-body{
-        border: 1px solid #E5E5E5;
+    .card-body {
+        border: 1px solid #e5e5e5;
     }
     .col-left {
         flex: 1;
         max-width: 100%;
     }
-    .col-right{
+    .col-right {
         max-width: calc(100% - 895px);
         flex-basis: calc(100% - 895px);
         margin-left: 1.6rem;
     }
 
-    @include breakpoints('md'){
+    @include breakpoints("md") {
         padding-top: 2.4rem;
-        >.row{
+        > .row {
             flex-direction: column;
         }
-        .card-body{
+        .card-body {
             border: 0;
         }
         .col-left {
             order: 2;
         }
-        .col-right{
+        .col-right {
             margin-left: 0;
             order: 1;
             max-width: 100%;
             flex: 1;
         }
-        .card-head{
+        .card-head {
             display: none;
         }
     }
@@ -80,7 +80,7 @@ letter-spacing: 0.0015em;
         &::placeholder {
             color: #a8a8a8;
         }
-        &:focus{
+        &:focus {
             outline: none;
         }
     }
@@ -92,15 +92,38 @@ letter-spacing: 0.0015em;
             margin-top: 1.6rem;
         }
     }
-    .form-submit{
+    .form-submit {
         text-align: right;
-        .btn-submit{
-            background: #FA5400;
+        .btn-submit {
+            background: #fa5400;
             width: 16.9rem;
             padding: 1.5rem 0;
         }
+
+        @include breakpoints('md'){
+            .ex-price{
+                display: flex !important;
+                justify-content: space-between;
+                margin-bottom: 2.5rem;
+                > * {
+                    @include fontSize(700,1.6rem,1.8rem);
+                }
+                &-num{
+                    color: #42882B;
+                }
+            }
+        }
+
+        @include breakpoints('sm'){
+            .btn-submit{
+                width: 100%;
+                background: #161616;
+                @include fontSize(700,1.4rem,1.8rem);
+                padding: 1.1rem 0;
+            }
+        }
     }
-    @include breakpoints('md'){
+    @include breakpoints("md") {
         padding: 0;
         .label-form {
             @include fontSize(700, 1.4rem, 1.9rem);
@@ -132,7 +155,7 @@ letter-spacing: 0.0015em;
         @include fontSize(400, 1.4rem, 1.9rem);
         color: #a8a8a8;
         cursor: pointer;
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             padding: 1rem 1.6rem;
         }
     }
@@ -163,7 +186,7 @@ letter-spacing: 0.0015em;
     width: 100%;
     z-index: 1;
 
-    box-shadow: 0 .3rem .4rem rgba(10, 10, 10, 0.15);
+    box-shadow: 0 0.3rem 0.4rem rgba(10, 10, 10, 0.15);
     border: 1px solid #cccccc;
     border-top: 0;
     top: calc(100% + 1rem);
@@ -187,13 +210,12 @@ letter-spacing: 0.0015em;
 
 .block-form-payments {
     .reset-col {
-        // margin-top: 1.6rem;
         .btn {
             width: 100%;
             padding: 1.5rem 1.6rem;
 
             background: #ffffff;
-            border: .1rem solid #cccccc;
+            border: 0.1rem solid #cccccc;
             box-sizing: border-box;
 
             color: #131313;
@@ -202,19 +224,43 @@ letter-spacing: 0.0015em;
             font-weight: 400;
         }
     }
-    @include breakpoints('md'){
+    @include breakpoints("md") {
         .reset-col {
-            // margin-top: 1.6rem;
             .btn {
-               text-align: left;
-               justify-content: flex-start;
-               border: none;
-               padding: 0;
+                text-align: left;
+                justify-content: flex-start;
+                border: none;
+                padding: 0;
+                position: relative;
+                padding-left: 2.8rem;
+                &::before,&::after{
+                    content: '';
+                    position: absolute;
+                    border-radius: 100%;
+                }
+                &:before{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    border: 2px solid #898989;
+                    left: 0;
+                }
+                &:after{
+                    width: .8rem;
+                    height: .8rem;
+                    left: 4px;
+                    transition: all .3s ease;
+                }
+                &.active{
+                    &:after{
+                        background: #161616;
+                    }
+                }
             }
         }
     }
 }
 .block-form-voucher {
+
     .group-form {
         display: flex;
         align-items: center;
@@ -226,69 +272,88 @@ letter-spacing: 0.0015em;
             font-size: 1.4rem;
             background: #adadad;
             padding: 1.5rem 2.4rem;
-            border: .1rem solid #adadad;
+            border: 0.1rem solid #adadad;
             margin-left: 1.6rem;
         }
     }
+    @include breakpoints('md'){
+        border-bottom: 1px solid #F2F2F2;
+        padding-bottom: 2.4rem;
+        .group-form {
+            .btn{
+               margin-left: .8rem;
+            }
+        }
+    }
+    @include breakpoints('sm'){
+        .group-form {
+            .btn{
+                padding: 1.1rem 2.5rem;
+                border: none;
+                span{
+                    line-height: 1.8rem;
+                }
+            }
+        }
+    }
 }
-.card-sumary{
+.card-sumary {
     position: sticky;
-    top:0;
-    &-head{
-        background: #E5E5E5;
-        .para{
+    top: 0;
+    &-head {
+        background: #e5e5e5;
+        .para {
             color: $black;
         }
     }
-    &-body{
+    &-body {
         padding: 3.2rem 2.4rem 0;
         border: none;
-        .card-sum{
+        .card-sum {
             padding-bottom: 3.2rem;
         }
-        .row-para{
+        .row-para {
             display: flex;
             justify-content: space-between;
-            &:not(:last-child){
-                margin-bottom: .8rem;
+            &:not(:last-child) {
+                margin-bottom: 0.8rem;
             }
-            span{
+            span {
                 @include fontSize(400, 1.6rem, 1.8rem);
             }
-            &.sum-total{
+            &.sum-total {
                 padding-top: 0.8rem;
                 > * {
-                    @include fontSize(700,1.8rem, 2rem);
+                    @include fontSize(700, 1.8rem, 2rem);
                 }
-                .sumary-num{
-                    color: #42882B;
+                .sumary-num {
+                    color: #42882b;
                 }
             }
         }
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             display: flex;
             flex-direction: column;
             padding: 0;
             border: none !important;
-            .card-sum{
-                order:2;
+            .card-sum {
+                order: 2;
                 padding-top: 2.4rem;
             }
-            .card-product{
+            .card-product {
                 order: 1;
-                border-bottom: 1px solid #F2F2F2;
-
+                border-bottom: 1px solid #f2f2f2;
             }
-            .row-para{
-                span{
+            .row-para {
+                span {
                     @include fontSize(400, 1.4rem, 1.9rem);
                 }
-                &.sum-total{
+                &.sum-total {
                     padding-top: 0;
                     > * {
-                        @include fontSize(400,1.4rem, 1.9rem);
+                        @include fontSize(400, 1.4rem, 1.9rem);
                     }
-                    .sumary-num{
+                    .sumary-num {
                         font-weight: 700;
                     }
                 }
@@ -296,64 +361,64 @@ letter-spacing: 0.0015em;
         }
     }
 
-    &-product{
-        border-top: 1px solid #E5E5E5;
+    &-product {
+        border-top: 1px solid #e5e5e5;
         padding: 3.2rem 0;
-        .tit{
-            @include fontSize(700,1.6rem,1.8rem);
+        .tit {
+            @include fontSize(700, 1.6rem, 1.8rem);
             margin-bottom: 1.6rem;
         }
-        .product{
+        .product {
             display: flex;
-            &:not(:last-child){
+            &:not(:last-child) {
                 margin-bottom: 1.6rem;
             }
-            &-picture{
+            &-picture {
                 width: 80px;
                 height: 80px;
                 margin-right: 1.2rem;
             }
-            &-name{
-                margin-bottom: .8rem;
+            &-name {
+                margin-bottom: 0.8rem;
                 color: #131313;
-                @include fontSize(700,1.4rem,1.8rem);
+                @include fontSize(700, 1.4rem, 1.8rem);
             }
-            &-info{
+            &-info {
                 flex: 1;
             }
         }
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             padding-top: 2.4rem;
         }
     }
-    .list-param{
-        &-row{
-            &:not(:last-child){
-                margin-bottom: .4rem;
+    .list-param {
+        &-row {
+            &:not(:last-child) {
+                margin-bottom: 0.4rem;
             }
-            span{
+            span {
                 color: #898989;
             }
         }
     }
 }
-.form-error{
+.form-error {
     display: none;
-    margin-top: .8rem;
+    margin-top: 0.8rem;
     color: red;
 }
-.form-groups{
-    &.invalid{
-        .form-error{
+.form-groups {
+    &.invalid {
+        .form-error {
             display: block;
         }
-        .required{
-            border: 1px solid #DA1E28;
+        .required {
+            border: 1px solid #da1e28;
         }
     }
 }
 
-.truncate2{
+.truncate2 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
