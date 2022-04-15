@@ -1,7 +1,7 @@
 .contact-page {
     &-wrap {
         padding: 4.8rem 0 10rem;
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             padding: 3.2rem 0 6.4rem;
         }
     }
@@ -21,7 +21,7 @@
             left: calc(100% - 4rem);
             top: 1.4rem;
         }
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             max-width: 100%;
             .form-input {
                 @include fontSize(400, 1.4rem, 1.9rem);
@@ -29,19 +29,20 @@
             }
         }
     }
-    @include breakpoints('md'){
-        .breadcrumb{
+    @include breakpoints("md") {
+        .breadcrumb {
             padding-top: 1.6rem;
             margin-bottom: 0;
         }
     }
 }
 .sidebar-menu {
-    @include breakpoints('md'){
-       ul{
-        display: inline-flex;
-        flex-direction: column;
-       }
+    @include breakpoints("md") {
+        padding: 0 1.6rem;
+        ul {
+            display: inline-flex;
+            flex-direction: column;
+        }
     }
     &-item {
         display: inline-block;
@@ -51,20 +52,20 @@
         transition: all 0.6s ease, -webkit-transform 0.6s ease;
         a {
             @include fontSize(400, 1.6rem, 1.8rem);
-            @include breakpoints('md'){
+            @include breakpoints("md") {
                 @include fontSize(400, 1.4rem, 1.9rem);
             }
         }
         &:not(:last-child) {
             margin-bottom: 2.8rem;
         }
-        &.active{
+        &.active {
             background-size: 100% 100%;
             a {
                 font-weight: 700;
             }
         }
-        @media(min-width:992px){
+        @media (min-width: 992px) {
             &:hover {
                 background-size: 100% 100%;
                 a {
@@ -72,7 +73,7 @@
                 }
             }
         }
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             max-width: max-content;
             &:not(:last-child) {
                 margin-bottom: 1.6rem;
@@ -86,33 +87,34 @@
 .contact {
     &-content {
         padding-top: 5rem;
-        > .row{
+        > .row {
             gap: 5.4rem;
         }
-        .reset-col{
-            &-left{
+        .reset-col {
+            &-left {
                 max-width: 20rem;
                 flex: 0 0 20rem;
                 padding: 0;
             }
-            &-right{
+            &-right {
                 flex: 1;
             }
         }
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             padding-top: 3.2rem;
-            > .row{
+            > .row {
                 gap: 4.8rem;
                 margin: 0;
             }
-            .reset-col{
-                &-left{
+            .reset-col {
+                &-left {
                     max-width: 100%;
                     flex: 1 100%;
                     padding: 0;
                 }
-                &-right{
-                    flex: 1;
+                &-right {
+                    flex: 1 100%;
+                    max-width: 100%;
                     padding: 0;
                 }
             }
@@ -123,7 +125,7 @@
             margin-bottom: 3.2rem;
             @include fontSize(700, 2rem, 2.2rem);
         }
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             .tit {
                 margin-bottom: 2.2rem;
                 @include fontSize(700, 1.6rem, 1.8rem);
@@ -153,14 +155,14 @@
                     margin-bottom: 1.6rem;
                 }
             }
-            .tel{
-                a{
+            .tel {
+                a {
                     text-decoration: underline;
                 }
             }
         }
     }
-    @include breakpoints('md'){
+    @include breakpoints("md") {
         flex-direction: column;
         gap: 1.6rem;
         li {
@@ -174,9 +176,9 @@
             }
             &-content {
                 p {
-                    @include fontSize(400,1.2rem,1.6rem);
+                    @include fontSize(400, 1.2rem, 1.6rem);
                     &:not(:last-child) {
-                        margin-bottom: .8rem;
+                        margin-bottom: 0.8rem;
                     }
                 }
             }
@@ -196,9 +198,10 @@
     .mess-xl {
         @include fontSize(400, 1.4rem, 1.9rem);
     }
-    @include breakpoints('md'){
+    @include breakpoints("md") {
         margin-top: 3.2rem;
-        .mess-small, .mess-xl {
+        .mess-small,
+        .mess-xl {
             padding: 0 1.6rem;
         }
     }
@@ -340,7 +343,7 @@
 
 .accordion {
     border-top: 0.1rem solid #f4f4f4;
-    &-item{
+    &-item {
         border-bottom: 0.1rem solid #f4f4f4;
     }
     &-tit {
@@ -350,28 +353,41 @@
         letter-spacing: 0.0015em;
 
         color: #131313;
-        padding: 1.6rem 0;
-
+        padding: 1.6rem;
 
         position: relative;
         cursor: pointer;
-        &.active{
+        &.active {
             border-bottom: none;
             .btn-expand {
-            &:before{
-                transform: rotate(
-                    90deg
-                    );
+                &:before {
+                    transform: rotate(90deg);
+                }
             }
         }
+        @include breakpoints("md") {
+            font-size: 16px;
+            line-height: 18px;
+            &.active {
+                + .accordion-content {
+                    padding-bottom: 1.2rem;
+                }
+            }
         }
     }
     &-content {
         margin-top: 0.8rem;
         display: none;
+        padding: 0 1.6rem;
         .para {
-            margin-bottom: 2.4rem;
+            margin-bottom: 1.8rem;
             @include fontSize(400, 1.6rem, 2.2rem);
+        }
+        @include breakpoints("md") {
+            .para {
+                margin-bottom: 1.6rem;
+                @include fontSize(400, 1.4rem, 2rem);
+            }
         }
     }
     .btn-expand {
@@ -399,6 +415,53 @@
             left: 0;
             width: 100%;
             height: 0.2rem;
+        }
+    }
+}
+
+.table-content {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 2.4rem 1.9rem;
+    display: inline-block;
+    margin-bottom: 1.8rem;
+    tr {
+        td {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px;
+            display: inline-block;
+        }
+        &:not(:last-child){
+            td {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .table-name {
+        width: 140px;
+        font-weight: 700;
+        margin-right: 2rem;
+    }
+    .table-desc {
+        width: 179px;
+    }
+    @include breakpoints('md'){
+        margin: 0 -1.6rem 1.6rem;
+        padding: 1.6rem;
+        tr {
+            display: flex;
+            td {
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+        .table-name {
+            width: 100px;
+            margin-right: 1.8rem;
+        }
+        .table-desc {
+            width: 197px;
         }
     }
 }
