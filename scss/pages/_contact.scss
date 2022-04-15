@@ -20,7 +20,7 @@
         }
     }
     .page-line {
-        border: 1px solid #f4f4f4;
+        // border: 1px solid #f4f4f4;
     }
 }
 .sidebar-menu {
@@ -56,8 +56,8 @@
         }
         .reset-col{
             &-left{
-                max-width: 17rem;
-                flex: 0 0 17rem;
+                max-width: 20rem;
+                flex: 0 0 20rem;
                 padding: 0;
             }
             &-right{
@@ -240,6 +240,10 @@
 }
 
 .accordion {
+    border-top: 0.1rem solid #f4f4f4;
+    &-item{
+        border-bottom: 0.1rem solid #f4f4f4;
+    }
     &-tit {
         font-weight: 700;
         font-size: 20px;
@@ -248,7 +252,7 @@
 
         color: #131313;
         padding: 1.6rem 0;
-        border-bottom: 0.1rem solid #f4f4f4;
+
 
         position: relative;
         cursor: pointer;
