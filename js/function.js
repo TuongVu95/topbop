@@ -426,8 +426,8 @@ const checkPhone = () => {
   return phoneRegex($value);
 }
 
-const checkUsername = () => {
-  const $value = inputUserName.val().trim(),
+const checkUsername = ($username) => {
+  const $value = $username.val().trim(),
     $valueLength = $value.length > 0;
 
   if ((checkNameNotNumber($value) || isValidCharacter($value)) && $valueLength) {
@@ -436,13 +436,10 @@ const checkUsername = () => {
   return false;
 }
 
-console.log("checkUsername()", checkUsername());
+// console.log("checkUsername()", checkUsername());
 
 const checkAddClassInvalid = () => {
-  console.log("checkUsername()12312313113", checkUsername());
-  if(!checkUsername()){
-    console.log(123123123);
-  }
+
 }
 // console.log("checkUsername", checkUsername());
 // checkPhone();
@@ -519,7 +516,7 @@ const submit = () => {
       return false;
     }
 
-    checkAddClassInvalid();
+    // checkAddClassInvalid();
   });
 
 }

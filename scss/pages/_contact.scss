@@ -1,0 +1,32 @@
+.contact-page {
+    &-wrap {
+        padding: 4.8rem 0 10rem;
+    }
+    .box-form {
+        max-width: 34.3rem;
+        margin: 3.2rem auto auto;
+        .form-input {
+            @include fontSize(400, 1.4rem, 1.9rem);
+            padding: 1.4rem 5.6rem 1.4rem 1.6rem;
+            border: 1px solid #8D8D8D;
+            background: $white;
+            color: #898989;
+        }
+        .icon-search{
+            max-width: 2.4rem;
+            max-height: 2.4rem;
+            left: calc(100% - 4rem);
+            top: 1.4rem;
+        }
+    }
+}
+.sidebar-menu{
+    &-item{
+        &:not(:last-child){
+            margin-bottom: 2.8rem;
+        }
+    }
+    &-link{
+        @include fontSize(400,1.6rem,1.8rem);
+    }
+}
