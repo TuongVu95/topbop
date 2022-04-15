@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopBop</title>
+    <link rel="stylesheet" href="css/libs/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/libs/jquery-3.1.0.min.js"></script>
+    <script src="js/libs/swiper.min.js"></script>
+</head>
+
+<body>
+    <header class="page__header">
+        <div class="container">
+            <div class="page__header-top">
+                <div class="page__header-left--mobile">
+                    <button class="open-main-nav jsOpenNav"><span class="burger"></span></button>
+                </div>
+                <div class="page__header-left page__header--col"><a class="page__header-logo" href="/">
+                        <picture>
+                            <source media="(max-width: 992px )" srcset="images/logo/logo-mb.png"><img
+                                src="images/logo/logo.png" alt="Logo">
+                        </picture>
+                    </a></div>
+                <div class="page__header-right page__header--col">
+                    <div class="page__header-right--item form-search">
+                        <div class="form-group">
+                            <input class="form-input form-input-search" type="text" placeholder="Tìm kiếm">
+                            <button class="btn btn-form-search icon-search" type="submit"><img
+                                    src="images/icons/ic-search.svg" alt="Search"></button>
+                        </div>
+                    </div>
+                    <div class="page__header-right--item list__social">
+                        <ul>
+                            <li class="social-item"><a href=""><img src="images/icons/icon-heart.svg" alt="alt"></a>
+                            </li>
+                            <li class="social-item"><a href=""><img src="images/icons/shopping-bag.svg" alt="alt"></a>
+                            </li>
+                            <li class="social-item"><a href=""><img src="images/icons/phone.svg" alt="alt"></a></li>
+                        </ul>
+                    </div>
+                    <div class="page__header-right--item form__user">
+                        <div class="form__regist form__user-item"><a class="txt-uppercase f-w-700">ĐĂNG KÝ</a></div>
+                        <span class="line-vertical"></span>
+                        <div class="form__login form__user-item"><a class="txt-uppercase f-w-700">Đăng nhập</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="page__header-nav nav-mobile">
+                <div class="page__header-nav--inner">
+                    <div class="page__header-burger">
+                        <button class="open-main-nav jsOpenNav"><span class="burger"></span></button>
+                    </div>
+                    <ul class="page__nav-list">
+                        <li class="page__nav-item jsActionExpand page__profile">
+                            <a class="page__nav-link" href="http://">
+                                <picture>
+                                    <img src="images/icons/user.svg" alt="User">
+                                </picture>
+                                <span class="label-name">Hi, Ly</span>
+                            </a>
+                            <div class="page__nav-icon hide-show"><span class="back">All</span><i
+                                    class="icon-chevron-down"></i></div>
+                            <div class="page__nav-dropdown">
+                                <ul class="page__nav-lv1">
+                                    <li class="page__nav-lv1--item">
+                                        <a href="" class="page__nav-link">
+                                            Trang cá nhân
+                                        </a>
+                                    </li>
+                                    <li class="page__nav-lv1--item">
+                                        <a href="" class="page__nav-link">
+                                            Yêu thích
+                                        </a>
+                                    </li>
+                                    <li class="page__nav-lv1--item">
+                                        <a href="" class="page__nav-link">
+                                            Bài viết đã lưu
+                                        </a>
+                                    </li>
+                                    <li class="page__nav-lv1--item">
+                                        <a href="" class="page__nav-link">
+                                            Cài đặt tài khoản
+                                        </a>
+                                    </li>
+                                    <li class="page__nav-lv1--item">
+                                        <a href="" class="page__nav-link">
+                                            Đăng xuất
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">Đồng hồ
+                                nam</a>
+                            <div class="page__nav-icon hide-show"><span class="back">All</span><i
+                                    class="icon-chevron-down"></i></div>
+                            <div class="page__nav-dropdown">
+                                <ul class="page__nav-lv1">
+                                    <li class="page__nav-lv1--item">
+                                        <ul class="page__nav-lv2">
+                                            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                                            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a>
+                                            </li>
+                                    </li>
+                                </ul>
+                                <ul class="page__nav-lv2">
+                                    <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                                    <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                        </li>
+                    </ul>
+                    <ul class="page__nav-lv2">
+                        <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                        <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                        </li>
+                    </ul>
+                    <ul class="page__nav-lv2">
+                        <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                        <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                        </li>
+                    </ul>
+                    </li>
+                    </ul>
+                </div>
+                </li>
+                <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">ĐỒNG HỒ NỮ</a>
+                    <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i>
+                    </div>
+                    <div class="page__nav-dropdown">
+                        <ul class="page__nav-lv1">
+                            <li class="page__nav-lv1--item">
+                                <ul class="page__nav-lv2">
+                                    <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                                    <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                            </li>
+                        </ul>
+                        <ul class="page__nav-lv2">
+                            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                </li>
+                </ul>
+                <ul class="page__nav-lv2">
+                    <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                    <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                    </li>
+                </ul>
+                <ul class="page__nav-lv2">
+                    <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                    <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                    </li>
+                </ul>
+                </li>
+                </ul>
+            </div>
+            </li>
+            <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">PHỤ KIỆN</a>
+                <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i>
+                </div>
+                <div class="page__nav-dropdown">
+                    <ul class="page__nav-lv1">
+                        <li class="page__nav-lv1--item">
+                            <ul class="page__nav-lv2">
+                                <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                                <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                        </li>
+                    </ul>
+                    <ul class="page__nav-lv2">
+                        <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                        <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+            </li>
+            </ul>
+            <ul class="page__nav-lv2">
+                <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                </li>
+            </ul>
+            <ul class="page__nav-lv2">
+                <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        </li>
+        <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">VÒNG ĐEO</a>
+            <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i></div>
+            <div class="page__nav-dropdown">
+                <ul class="page__nav-lv1">
+                    <li class="page__nav-lv1--item">
+                        <ul class="page__nav-lv2">
+                            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                    </li>
+                </ul>
+                <ul class="page__nav-lv2">
+                    <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                    <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+        </li>
+        </ul>
+        <ul class="page__nav-lv2">
+            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+            </li>
+        </ul>
+        <ul class="page__nav-lv2">
+            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+            </li>
+        </ul>
+        </li>
+        </ul>
+        </div>
+        </li>
+        <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">SALE</a>
+            <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i></div>
+            <div class="page__nav-dropdown">
+                <ul class="page__nav-lv1">
+                    <li class="page__nav-lv1--item">
+                        <ul class="page__nav-lv2">
+                            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                    </li>
+                </ul>
+                <ul class="page__nav-lv2">
+                    <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                    <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+        </li>
+        </ul>
+        <ul class="page__nav-lv2">
+            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+            </li>
+        </ul>
+        <ul class="page__nav-lv2">
+            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+            </li>
+        </ul>
+        </li>
+        </ul>
+        </div>
+        </li>
+        </ul>
+        <div class="list__social list__social-mb">
+            <ul>
+                <li class="social-item">
+                    <a href="">
+                        <picture class="ic-picture">
+                            <img src="images/icons/icon-heart.svg" alt="alt">
+                        </picture>
+                        <span class="ic-label">Yêu thích</span>
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a href="">
+                        <picture class="ic-picture">
+                            <img src="images/icons/shopping-bag.svg" alt="alt">
+                        </picture>
+                        <span class="ic-label">Giỏ hàng</span>
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a href="">
+                        <picture class="ic-picture">
+                            <img src="images/icons/ic-help-circle.svg" alt="alt">
+                        </picture>
+                        <span class="ic-label">Trợ giúp</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header__desc-mb">
+            <p>
+                Trở thành Thành viên của TOPBOP để nhận được những ưu đãi tốt nhất và cập nhật thông tin nhanh nhất.
+            </p>
+        </div>
+
+        <div class="header__login-mb">
+            <div class="header__login-inner">
+                <button class="btn btn-regist"><span>Đăng ký</span></button>
+                <button class="btn btn-login"><span>Đăng nhập</span></button>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </header>
+
+    <main class="page__wrap contact-page">
+        <!-- breadcrumb -->
+        <div class="block-page">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/" class="link">Trang chủ</a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="#" class="link">Hỗ trợ</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- banner  -->
+        <div class="block-banner">
+            <picture>
+                <img src="images/contact/banner-contact.png" alt="Contact">
+            </picture>
+        </div>
+
+        <div class="contact-page-wrap">
+            <div class="container">
+                <h1 class="title-page section-title txt-center">
+                    HỖ TRỢ
+                </h1>
+                <div class="box-form">
+                    <form action="">
+                        <div class="form-group">
+                            <input class="form-input form-input-search" type="text"
+                                placeholder="Bạn cần chúng tôi giúp đỡ gì ?">
+                            <button class="btn btn-form-search icon-search" type="submit"><img
+                                    src="images/icons/ic-search.svg" alt="Search"></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-content">
+                    <div class="row">
+                        <div class="col-2 reset-col-left">
+                            <div class="sidebar-menu">
+                                <ul>
+                                    <li class="sidebar-menu-item ">
+                                        <a href="http://" class="sidebar-link">
+                                            Liên hệ với chúng tôi
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a href="http://" class="sidebar-link">
+                                            Đồng hồ chính hãng
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a href="http://" class="sidebar-link">
+                                            Chính sách bảo hành
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a href="http://" class="sidebar-link">
+                                            Chính sách thanh toán
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a href="http://" class="sidebar-link">
+                                            Chính sách vận chuyển
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a href="http://" class="sidebar-link">
+                                            Chính sách đổi trả
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a href="http://" class="sidebar-link">
+                                            Điều khoản sử dụng
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item active">
+                                        <a href="http://" class="sidebar-link">
+                                            Chính sách bảo mật
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-10 reset-col-right">
+                            <div class="contact-description">
+                                <p class="sub-title tit">CHÍNH SÁCH BẢO MẬT</p>
+                                <p class="page-line"></p>
+
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <p class="accordion-tit js-action-expand">
+                                            MỤC ĐÍCH ÁP DỤNG
+                                            <span class="btn-expand"></span>
+                                        </p>
+                                        <div class="accordion-content js-list">
+                                            <p class="para">
+                                                Chính sách bảo mật và chia sẻ thông tin này (“Chính Sách”) nhằm đảm bảo
+                                                an
+                                                toàn thông tin liên quan đến các tổ chức, cá nhân tham gia truy cập
+                                                và/hoặc
+                                                giao dịch trên website topbop.vn
+                                            </p>
+                                            <p class="para">
+                                                Chính Sách này mô tả cách tiếp nhận, tổng hợp, lưu giữ, sử dụng và bảo
+                                                vệ
+                                                thông tin của các tổ chức, cá nhân tham gia truy cập, giao dịch trên
+                                                TOPBOP
+                                                (“khách hàng”). Việc khách hàng truy cập hoặc thực hiện giao dịch trên
+                                                TOPBOP được hiểu là khách hàng đã đọc, hiểu và đồng ý tuân thủ Chính
+                                                Sách
+                                                này, kể cả các phiên bản sửa đổi, bổ sung của Chính Sách. Phiên bản sửa
+                                                đổi,
+                                                bổ sung Chính Sách này (nếu có) sẽ có hiệu lực sau 5 ngày kể từ ngày
+                                                việc
+                                                sửa đổi, bổ sung Chính Sách được thông báo trên TOPBOP.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <p class="accordion-tit js-action-expand">
+                                            QUY ĐỊNH CỤ THỂ
+                                            <span class="btn-expand"></span>
+                                        </p>
+                                        <div class="accordion-content js-list">
+                                            <p class="para">
+                                                <strong class="para-bold">
+                                                    a. Về việc thu thập thông tin
+                                                </strong>
+                                            </p>
+                                            <p class="para">
+                                                Khi khách hàng thực hiện giao dịch và/hoặc đăng ký mở tài khoản tại
+                                                TOPBOP,
+                                                tùy từng thời điểm, khách hàng phải cung cấp một số thông tin cần thiết
+                                                cho
+                                                việc thực hiện giao dịch và/hoặc đăng ký tài khoản (“Thông Tin khách
+                                                hàng”).
+                                            </p>
+                                            Khách hàng có trách nhiệm đảm bảo những thông tin khách hàng cung cấp là đầy
+                                            đủ và chính xác và luôn cập nhật thông tin để đảm bảo tính đầy đủ và chính
+                                            xác. TOPBOP không chịu trách nhiệm giải quyết bất kỳ tranh chấp nào nếu
+                                            thông tin khách hàng cung cấp không chính xác hoặc không được cập nhật hoặc
+                                            giả mạo.
+                                            <p class="para">
+                                                <strong class="para-bold">
+                                                    b. Về việc lưu giữ và bảo mật thông tin riêng
+                                                </strong>
+                                            </p>
+                                            <p class="para">
+                                                Mọi Thông Tin khách hàng, cũng như các thông tin trao đổi giữa khách
+                                                hàng và
+                                                TOPBOP đều được lưu giữ và bảo mật bởi hệ thống của TOPBOP.
+                                            </p>
+                                            <p class="para">
+                                                - TOPBOP không cho phép các bên thứ ba theo dõi hoặc thu thập thông tin
+                                                của
+                                                khách hàng trên các website thành phần của TOPBOP
+                                            </p>
+                                            <p class="para">
+                                                - Khách hàng tuyệt đối không được có bất kỳ hành vi sử dụng công cụ,
+                                                chương
+                                                trình để can thiệp trái phép vào hệ thống hay làm thay đổi cấu trúc dữ
+                                                liệu
+                                                của TOPBOP, cũng như bất kỳ hành vi nào khác nhằm phát tán, cổ vũ cho
+                                                các
+                                                hoạt động với mục đích can thiệp, phá hoại hay xâm nhập vào dữ liệu của
+                                                hệ
+                                                thống TOPBOP, cũng như các các hành vi mà pháp luật Việt Nam nghiêm cấm.
+                                                Trong trường hợp Chúng Tôi phát hiện Bạn có hành vi cố tình giả mạo,
+                                                gian
+                                                lận, phát tán các thông tin trái phép,… Chúng tôi có quyền chuyển Thông
+                                                Tin
+                                                Cá Nhân của Bạn cho các cơ quan có thẩm quyền để xử lý theo quy định
+                                                pháp
+                                                luật.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <p class="accordion-tit js-action-expand">
+                                            SỬ DỤNG THÔNG TIN KHÁCH HÀNG
+                                            <span class="btn-expand"></span>
+                                        </p>
+                                        <div class="accordion-content js-list">
+                                            <p class="para">
+                                                - TOPBOP có quyền sử dụng các thông tin khách hàng cung cấp, bao gồm
+                                                nhưng
+                                                không giới hạn ở Thông Tin khách hàng để:
+                                            </p>
+                                            <p class="para">
+                                                - Cung cấp các dịch vụ/tiện ích cho khách hàng dựa trên nhu cầu và các
+                                                thói
+                                                quen của khách hàng khi truy cập vào TOPBOP;
+                                            </p>
+                                            <p class="para">- Gửi các thông báo, trao đổi thông tin giữa khách hàng với
+                                                TOPBOP;</p>
+                                            <p class="para">
+                                                - Phát hiện, ngăn chặn các hoạt động giả mạo, phá hoại tài khoản của
+                                                khách
+                                                hàng hoặc các hoạt động giả mạo nhận dạng của khách hàng trên TOPBOP;
+                                            </p>
+                                            <p class="para">
+                                                - Liên lạc, hỗ trợ liên lạc và giải quyết với khách hàng trong những
+                                                trường
+                                                hợp đặc biệt.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <p class="accordion-tit js-action-expand">
+                                            LIÊN KẾT VỚI CÁC WEBSITE KHÁC
+                                            <span class="btn-expand"></span>
+                                        </p>
+                                        <div class="accordion-content js-list">
+                                            <p class="para">
+                                                - Khách hàng có trách nhiệm bảo vệ thông tin tài khoản của mình và không
+                                                cung cấp bất kỳ thông tin nào liên quan đến tài khoản và mật khẩu truy
+                                                cập
+                                                trên TOPBOP trên các website khác ngoại trừ khi đăng nhập vào địa chỉ
+                                                chính
+                                                thức của TOPBOP tại http://TopBop.com.
+                                            </p>
+                                            <p class="para">
+                                                - Khách hàng không chịu trách nhiệm về những vấn đề phát sinh khi khách
+                                                hàng
+                                                truy cập vào TOPBOP từ các website khác không phải là website chính thức
+                                                của
+                                                TOPBOP.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <p class="accordion-tit js-action-expand">
+                                            CHIA SẺ THÔNG TIN KHÁCH HÀNG
+                                            <span class="btn-expand"></span>
+                                        </p>
+                                        <div class="accordion-content js-list">
+                                            <p class="para">
+                                                - TopBop không cung cấp Thông Tin khách hàng cho bất kỳ bên thứ ba nào
+                                                trừ
+                                                trường hợp phải thực hiện theo yêu cầu của các cơ quan Nhà nước có thẩm
+                                                quyền, hoặc theo quy định của pháp luật, hoặc khi việc cung cấp thông
+                                                tin đó
+                                                là cần thiết để TOPBOP cung cấp dịch vụ/tiện ích cho khách hàng (ví dụ:
+                                                cung
+                                                cấp các thông tin giao nhận cần thiết cho các đơn vị đối tác vận chuyển
+                                                …).
+                                            </p>
+                                            <p class="para">
+                                                - Ngoài các trường hợp nêu trên, TOPBOP sẽ có thông báo cụ thể cho khách
+                                                hàng khi phải tiết lộ Thông Tin khách hàng cho một bên thứ ba. Trong
+                                                trường
+                                                hợp này, TOPBOP cam kết sẽ chỉ tiết lộ Thông Tin khách hàng khi được sự
+                                                đồng
+                                                ý của khách hàng.
+                                            </p>
+                                            <p class="para">- TOPBOP có thể chia sẻ Thông Tin khách hàng cho các mục
+                                                đích sau:</p>
+                                            <p class="para">
+                                                * Nghiên cứu thị trường và các báo cáo phân tích: TOPBOP có thể dùng
+                                                Thông
+                                                Tin khách hàng để nghiên cứu thị trường, tổng hợp, phân tích thông tin
+                                                chung
+                                                của khách hàng (ví dụ độ tuổi trung bình, khu vực địa lý), thông tin chi
+                                                tiết sẽ được ẩn và chỉ được dùng để phục vụ công việc thống kê. Trong
+                                                trường
+                                                hợp TOPBOP tiến hành khảo sát cần sự tham gia của khách hàng, bất kỳ câu
+                                                trả
+                                                lời cho khảo sát hoặc thăm dò dư luận mà khách hàng cung cấp cho TOPBOP
+                                                sẽ
+                                                không được chuyển cho bất kỳ bên thứ ba nào.
+                                            </p>
+                                            <p class="para">
+                                                * Trao đổi Thông Tin khách hàng các bên thứ 3 là đối tác, đại lý của
+                                                TOPBOP:
+                                                TOPBOP có thể chuyển Thông Tin khách hàng cho các đại lý và nhà thầu phụ
+                                                để
+                                                làm phân tích dữ liệu, tiếp thị và hỗ trợ dịch vụ khách hàng. TOPBOP
+                                                cũng có
+                                                thể trao đổi Thông Tin khách hàng với bên thứ ba cho mục đích chống gian
+                                                lận
+                                                và giảm rủi ro tín dụng.
+                                            </p>
+                                            <p class="para">
+                                                * Trao đổi Thông Tin khách hàng với các đối tác quảng cáo: Hệ thống theo
+                                                dõi
+                                                hành vi của khách hàng được TOPBOP sử dụng trên kênh hiển thị quảng cáo
+                                                (ví
+                                                dụ như tiếp thị lại khách hàng, hệ thống quản lý các chiến dịch quảng
+                                                cáo,
+                                                báo cáo về nhân khẩu, sở thích của khách hàng với công cụ Google
+                                                Analytics...) có thể thu thập được các thông tin như độ tuổi, giới tính,
+                                                sở
+                                                thích và số lần tương tác với số lần xuất hiện của quảng cáo. Với tính
+                                                năng
+                                                cài đặt quảng cáo, khách hàng có thể lựa chọn thoát ra khỏi tính năng
+                                                theo
+                                                dõi hành vi khách hàng của Google Analytics và lựa chọn cách xuất hiện
+                                                của
+                                                kênh hiển thị quảng cáo trên Google.
+                                            </p>
+                                            <p class="para">
+                                                * Trao đổi Thông Tin khách hàng với những đơn vị kinh doanh khác mà
+                                                TOPBOP
+                                                có kế hoạch sáp nhập hoặc mua lại: Trong trường hợp này, TOPBOP sẽ yêu
+                                                cầu
+                                                những đơn vị đó tuân thủ nghiêm ngặt theo Chính Sách này.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <p class="accordion-tit js-action-expand">
+                                            SỬ DỤNG COOKIE
+                                            <span class="btn-expand"></span>
+                                        </p>
+                                        <div class="accordion-content js-list">
+                                            <p class="para">
+                                                TOPBOP cung cấp các tập tin cookie hoặc các công nghệ tương tự, nhằm thu
+                                                thập các thông tin như: lịch sử truy cập, các lựa chọn của khách hàng
+                                                khi truy cập và sử dụng tính năng của TOPBOP... nhằm tăng trải nghiệm
+                                                bảo mật và giúp TOPBOP hiểu rõ nhu cầu, sở thích của khách hàng để có
+                                                thể cung cấp dịch vụ tốt hơn.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <p class="accordion-tit js-action-expand">
+                                            LIÊN HỆ, GIẢI ĐÁP THẮC MẮC
+                                            <span class="btn-expand"></span>
+                                        </p>
+                                        <div class="accordion-content js-list">
+                                            <p class="para">
+                                                Bất kỳ khi nào khách hàng cần hỗ trợ, hãy gọi đến số hotline của 090 991
+                                                8058 ; hoặc gửi email đến địa chỉ: topbop.vn@gmail.com
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page__footer">
+        <div class="container">
+            <div class="page__inner">
+                <div class="row reset-row">
+                    <div class="col-3 col-md-12 footer__col footer__topbop">
+                        <div class="footer__col-tit js-action-expand">
+                            CÔNG TY TNHH TOPBOP
+                            <span class="btn-expand"></span>
+                        </div>
+                        <ul class="footer__list js-list">
+                            <li class="footer__list-item js-list-item">
+                                <a href="http://" class="footer__list-link js-list-link">
+                                    <p>Về chúng tôi</p>
+                                </a>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <div class="footer__list-mess js-list-mess">
+                                    <p>GPDKKD: 0316903865 CẤP BỞI KH & ĐT TP.HCM.</p>
+                                    <p>MÃ SỐ THUẾ / DN: 0316903865</p>
+                                </div>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <div class="footer__list-mess js-list-mess">
+                                    <p>ĐỊA CHỈ: TẦNG 5, TÒA NHÀ OPERAVIEW, 161 ĐỒNG KHỞI, PHƯỜNG BẾN NGHÉ, QUẬN 1,
+                                        TP.HCM</p>
+                                </div>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <div class="footer__list-mess js-list-mess">
+                                    <a href="tel:+84 909118058">HOTLINE: +84 909118058</a>
+                                </div>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <div class="footer__list-mess js-list-mess">
+                                    <a href="tel:+84 909118058">GMAIL: TOPBOP@GMAIL.COM</a>
+                                </div>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <div class="footer__list-mess js-list-mess">
+                                    <p>THỜI GIAN :</p>
+                                    <p>LÀM VIỆC: 8 AM - 6 PM</p>
+                                    <p>MỞ CỬA: 8 AM - 9 PM</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 col-md-12 footer__col">
+                        <div class="footer__col-tit js-action-expand">
+                            CHÍNH SÁCH HỖ TRỢ
+                            <span class="btn-expand"></span>
+                        </div>
+                        <ul class="footer__list js-list">
+                            <li class="footer__list-item js-list-item">
+                                <a href="http://" class="footer__list-link js-list-link">
+                                    CHÍNH SÁCH BẢO HÀNH
+                                </a>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <a href="http://" class="footer__list-link js-list-link">
+                                    CHÍNH SÁCH THANH TOÁN
+                                </a>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <a href="http://" class="footer__list-link js-list-link">
+                                    CHÍNH SÁCH VẬN CHUYỂN
+                                </a>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <a href="http://" class="footer__list-link js-list-link">
+                                    CHÍNH SÁCH ĐỔI TRẢ
+                                </a>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <a href="http://" class="footer__list-link js-list-link">
+                                    CÂU HỎI THƯỜNG GẶP
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 col-md-12 footer__col">
+                        <div class="footer__col-tit js-action-expand">
+                            SẢN PHẨM
+                            <span class="btn-expand"></span>
+                        </div>
+                        <ul class="footer__list js-list">
+                            <li class="footer__list-item js-list-item">
+                                <a href="http://" class="footer__list-link js-list-link">
+                                    THƯƠNG HIỆU
+                                </a>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <a href="http://" class="footer__list-link js-list-link">
+                                    NAM
+                                </a>
+                            </li>
+                            <li class="footer__list-item js-list-item">
+                                <a href="http://" class="footer__list-link js-list-link">
+                                    nữ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 col-md-12 footer__col footer__col-child">
+                        <div class="footer__group-connect">
+                            <div class="footer__col-tit js-action-expand">
+                                KẾT NỐI VỚI TOPBOP
+                            </div>
+                            <p class="footer__desc">
+                                Đăng kí để nhận thông tin mới nhất về TOPBOP tin tức, cập nhật và lợi ích thành viên.
+                            </p>
+
+                            <div class="form-wrap">
+                                <form action="">
+                                    <button class="btn btn-email">ĐĂNG KÝ EMAIL</button>
+                                    <span class="form-icon icon-chevron-down"></span>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="law">
+                            <div class="footer__col-tit js-action-expand">
+                                PHÁP LÝ
+                                <span class="btn-expand"></span>
+                            </div>
+                            <ul class="footer__list js-list">
+                                <li class="footer__list-item js-list-item">
+                                    <a href="http://" class="">
+                                        ĐIỀU KHOẢN SỬ DỤNG
+                                    </a>
+                                </li>
+                                <li class="footer__list-item js-list-item">
+                                    <a href="http://" class="">
+                                        CHÍNH SÁCH BẢO MẬT
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="footer__list-social">
+                            <li class="footer__list-social--item">
+                                <a href="http://" class="footer__list-social--link">
+                                    <i class="social-facebook footer__list-social--icon"></i>
+                                    <i class="social-facebook-hover footer__list-social--hover"></i>
+                                </a>
+                            </li>
+                            <li class="footer__list-social--item">
+                                <a href="http://" class="footer__list-social--link">
+                                    <i class="social-instagram footer__list-social--icon"></i>
+                                    <i class="social-instagram-hover footer__list-social--hover"></i>
+                                </a>
+                            </li>
+                            <li class="footer__list-social--item">
+                                <a href="http://" class="footer__list-social--link">
+                                    <i class="social-youtube footer__list-social--icon"></i>
+                                    <i class="social-youtube-hover footer__list-social--hover"></i>
+                                </a>
+                            </li>
+                            <li class="footer__list-social--item">
+                                <a href="http://" class="footer__list-social--link">
+                                    <i class="social-twitter footer__list-social--icon"></i>
+                                    <i class="social-twitter-hover footer__list-social--hover"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <div class="footer__copyright-inner">
+                        <div class="footer__row">
+                            <div class="footer__copyright-location">
+                                <picture>
+                                    <img src="images/icons/ic-location.svg" alt="location">
+                                </picture>
+                                <span class="footer__copyright-country">Vietnam</span>
+                                <span class="copyright">© 2021 TopBop.vn All Rights Reserved</span>
+                            </div>
+                            <div class="footer__payments">
+                                <ul class="footer__payments-list">
+                                    <li class="footer__payments-item">
+                                        <a href="http://" class="footer__payments-link">
+                                            <img src="images/payments/visa.png" alt="Visa">
+                                        </a>
+                                    </li>
+                                    <li class="footer__payments-item">
+                                        <a href="http://" class="footer__payments-link">
+                                            <img src="images/payments/master.png" alt="Mastercard">
+                                        </a>
+                                    </li>
+                                    <li class="footer__payments-item">
+                                        <a href="http://" class="footer__payments-link">
+                                            <img src="images/payments/paypal.png" alt="Paypal">
+                                        </a>
+                                    </li>
+                                    <li class="footer__payments-item">
+                                        <a href="http://" class="footer__payments-link">
+                                            <img src="images/payments/american.png" alt="American">
+                                        </a>
+                                    </li>
+                                    <li class="footer__payments-item">
+                                        <a href="http://" class="footer__payments-link">
+                                            <img src="images/payments/maestro.png" alt="Maestro">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/function.js"></script>
+</body>
+
+</html>
