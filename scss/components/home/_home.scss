@@ -31,9 +31,25 @@ $color-sub: #161616;
         @include fontSize(400, 1.6rem, 1.8rem);
     }
 }
+.home__page{
+    .section__page-picture, .section__hightlight-picture picture, .mansory-line-item picture, .blog__picture, .product__picture, .block__slide-link picture{
+        overflow: hidden;
+        img{
+            transition: all .6s ease-in-out
+        }
+        @media(min-width: 992px){
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
 .section {
     &__page {
         padding-bottom: 10rem;
+        overflow: hidden;
         .section-title {
             margin-bottom: 2.4rem;
         }
@@ -105,6 +121,7 @@ $color-sub: #161616;
 .section__banner {
     $s: ".section__page";
     #{$s} {
+
         &-heading {
             margin-bottom: 1.6rem;
             @include breakpoints("sm") {
@@ -167,6 +184,7 @@ $color-sub: #161616;
     }
 }
 .block__list {
+    overflow: hidden;
     &-item {
         background: #f4f4f4;
         justify-content: space-between;
@@ -505,6 +523,9 @@ $color-sub: #161616;
 }
 .section__question {
     padding-bottom: 6.3rem;
+    .topbop__detail--benefit{
+        overflow: hidden;
+    }
     .benefit__item {
         padding: 1.6rem !important;
         .custom-setting {

@@ -8,14 +8,16 @@
   <title>TopBop</title>
   <link rel="stylesheet" href="css/libs/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
+
   <script src="js/libs/jquery-3.1.0.min.js"></script>
   <script src="js/libs/swiper.min.js"></script>
+  <script src="js/libs/wow.js"></script>
 </head>
 
 <body>
   <header class="page__header">
     <div class="container">
-      <div class="page__header-top">
+      <div class="page__header-top ">
         <div class="page__header-left--mobile">
           <button class="open-main-nav jsOpenNav"><span class="burger"></span></button>
         </div>
@@ -44,7 +46,7 @@
           </div>
         </div>
       </div>
-      <div class="page__header-nav nav-mobile">
+      <div class="page__header-nav nav-mobile wow fadeIn" data-wow-duration="1s">
         <div class="page__header-nav--inner">
           <div class="page__header-burger">
             <button class="open-main-nav jsOpenNav"><span class="burger"></span></button>
@@ -281,7 +283,7 @@
   </header>
   <main class="page__wrap home__page">
     <div class="topbop__saleSlide">
-      <div class="topbop__saleSlide--inner">
+      <div class="topbop__saleSlide--inner wow fadeIn" data-wow-delay="300ms" data-wow-duration="1s">
         <div class="swiper sale-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide sale__slide"><a href="#">
@@ -308,9 +310,9 @@
     </div>
     <section class="group-section">
           <!-- section1 -->
-        <section class="section__page section__banner section1">
+        <section class="section__page section__banner section1 ">
           <div class="container">
-            <div class="section__page-inner"><a href="http://">
+            <div class="section__page-inner wow zoomIn" data-wow-duration="2s" data-wow-delay="300ms" ata-wow-offset="10"><a href="http://">
                 <picture class="section__page-picture">
                   <source media="(max-width: 768px )" srcset="images/home/banner1-mb.webp"><img src="images/home/banner1.webp" alt="Banner">
                 </picture>
@@ -325,7 +327,7 @@
         <!-- section2 -->
         <section class="section__page section__banner section2">
           <div class="container">
-            <div class="section__page-inner"><a href="http://">
+            <div class="section__page-inner wow zoomIn" data-wow-duration="2s" data-wow-delay="300ms"><a href="http://">
                 <picture class="section__page-picture">
                   <source media="(max-width: 992px )" srcset="images/home/BOMBERG-mb.webp"><img src="images/home/BOMBERG.webp" alt="Banner">
                 </picture>
@@ -340,10 +342,10 @@
         <!-- section3 -->
         <section class="section__page section__module section3">
           <div class="container">
-            <div class="section_page-inner">
+            <div class="section_page-inner " >
               <div class="row">
                 <div class="col-6 col-sm-12">
-                  <div class="section__module-left">
+                  <div class="section__module-left wow slideInUp" data-wow-duration="2s" data-wow-delay="300ms">
                     <div class="module-product">
                       <picture class="section__page-picture">
                         <source media="(max-width: 768px )" srcset="images/home/module1-mb.webp"><img src="images/home/module1.png" alt="Banner">
@@ -355,7 +357,7 @@
                   </div>
                 </div>
                 <div class="col-6 col-sm-12">
-                  <div class="section__module-right">
+                  <div class="section__module-right wow slideInUp" data-wow-duration="2s" data-wow-delay="400ms">
                     <div class="module-product">
                       <picture class="section__page-picture">
                         <source media="(max-width: 768px )" srcset="images/home/module2-mb.webp"><img src="images/home/module2.png" alt="Banner">
@@ -374,7 +376,7 @@
         <!-- section4 -->
         <section class="section__page section__banner section4">
           <div class="container">
-            <div class="section__page-inner"><a href="http://">
+            <div class="section__page-inner wow zoomIn" data-wow-duration="2s" data-wow-delay="300ms"><a href="http://">
                 <picture class="section__page-picture">
                   <source media="(max-width: 768px )" srcset="images/home/WALDHOFF-mb.webp"><img src="images/home/WALDHOFF.webp" alt="Banner">
                 </picture>
@@ -390,7 +392,7 @@
     <!-- section5 -->
     <section class="section__page section__trending section5">
       <div class="container">
-        <div class="section__trending-inner">
+        <div class="section__trending-inner wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms">
           <div class="topbop__swiper swiper swiper-trending">
             <div class="block__swiper-head">
               <h2 class="section-title  block__swiper-head--heading">TRENDING BRANDS</h2>
@@ -475,27 +477,27 @@
           <div class="row">
             <div class="col-6 col-md-12">
               <ul class="block__list">
-                <li class="block__list-item"><a class="block__list-link" href="http://">
+                <li class="block__list-item wow slideInLeft" data-wow-duration="2s" data-wow-delay="220ms"><a class="block__list-link" href="http://">
                     <p class="block__list-name title-product">ĐỒNG HỒ NAM</p>
                     <picture class="section__page-picture block__picture">
                       <source media="(max-width: 768px )" srcset="images/home/img-list-cate1-mb.webp">
                       <img src="images/home/img-list-cate1.webp" alt="Banner">
                     </picture>
                   </a></li>
-                <li class="block__list-item"><a class="block__list-link" href="http://">
+                <li class="block__list-item wow slideInLeft" data-wow-duration="2s" data-wow-delay="180ms"><a class="block__list-link" href="http://">
                     <p class="block__list-name title-product">ĐỒNG HỒ Nữ</p>
                     <picture class="section__page-picture">
                       <source media="(max-width: 768px )" srcset="images/home/img-list-cate2-mb.webp">
                       <img src="images/home/img-list-cate2.webp" alt="Banner">
                     </picture>
                   </a></li>
-                <li class="block__list-item"><a class="block__list-link" href="http://">
+                <li class="block__list-item wow slideInLeft" data-wow-duration="2s" data-wow-delay="140ms"><a class="block__list-link" href="http://">
                     <p class="block__list-name title-product">PHỤ KIỆN</p>
                     <picture class="section__page-picture" srcset="images/home/img-list-cate3-mb.webp">
                       <source media="(max-width: 768px )"><img src="images/home/img-list-cate3.webp" alt="Banner">
                     </picture>
                   </a></li>
-                <li class="block__list-item"><a class="block__list-link" href="http://">
+                <li class="block__list-item wow slideInLeft" data-wow-duration="2s" data-wow-delay="100ms"><a class="block__list-link" href="http://">
                     <p class="block__list-name title-product">VÒNG ĐEO</p>
                     <picture class="section__page-picture">
                       <source media="(max-width: 768px )" srcset="images/home/img-list-cate4-mb.webp">
@@ -505,7 +507,7 @@
               </ul>
             </div>
             <div class="col-6 col-md-12">
-              <div class="block__wrap">
+              <div class="block__wrap wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms">
                 <div class="block__content block-none">
                   <p>INGERSOLL</p>
                   <p class="strong"><strong>THE GRAFTON</strong></p>
@@ -531,7 +533,7 @@
     <!-- section7 -->
     <section class="section__page section__product-news section7">
       <div class="container">
-        <div class="section__page-inner">
+        <div class="section__page-inner wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms">
           <div class="topbop__swiper swiper swiper-product">
             <div class="block__swiper-head">
               <h2 class="section-title  block__swiper-head--heading">SẢN PHẨM MỚI</h2>
@@ -711,7 +713,7 @@
     <!-- section8 -->
     <section class="section__page section__hightlight section8">
       <div class="container">
-        <div class="section_page-inner">
+        <div class="section_page-inner wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms">
           <h2 class="section-title">SẢN PHẨM NỔI BẬT</h2>
           <div class="row no-gutters reset-row">
             <div class="col-6">
@@ -911,7 +913,7 @@
     <!-- section9 -->
     <section class="section__page section__social section9">
       <div class="container">
-        <div class="section__page-inner">
+        <div class="section__page-inner wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms">
           <div class="topbop__swiper swiper swiper-social">
             <div class="block__swiper-head">
               <h2 class="section-title  block__swiper-head--heading">social</h2>
@@ -1098,7 +1100,7 @@
     <!-- section10 -->
     <section class="section__page section__blogs section10">
       <div class="container">
-        <div class="section__page-inner">
+        <div class="section__page-inner wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms">
           <div class="topbop__swiper swiper swiper-blogs">
             <div class="block__swiper-head">
               <h2 class="section-title  block__swiper-head--heading">BLOGS</h2>
@@ -1908,7 +1910,7 @@
           </h2>
           <div class="topbop__detail--benefit row">
             <div class="col-3 col-md-12">
-              <div class="benefit__item">
+              <div class="benefit__item wow fadeInUp" data-wow-duration="2s" data-wow-delay="100ms">
                 <div class="benefit__item--image custom-setting">
                   <picture> <img src="images/icons/ibm-security--services.png" alt="security services"></picture>
                 </div>
@@ -1919,7 +1921,7 @@
               </div>
             </div>
             <div class="col-3 col-md-12">
-              <div class="benefit__item">
+              <div class="benefit__item wow fadeInUp" data-wow-duration="2s" data-wow-delay="200ms">
                 <div class="benefit__item--image custom-setting">
                   <picture> <img src="images/icons/settings--check.png" alt="settings check"></picture>
                 </div>
@@ -1930,7 +1932,7 @@
               </div>
             </div>
             <div class="col-3 col-md-12">
-              <div class="benefit__item">
+              <div class="benefit__item wow fadeInUp" data-wow-duration="2s" data-wow-delay="300ms">
                 <div class="benefit__item--image custom-setting">
                   <picture> <img src="images/icons/doi-tra.png" alt="doi tra"></picture>
                 </div>
@@ -1941,7 +1943,7 @@
               </div>
             </div>
             <div class="col-3 col-md-12">
-              <div class="benefit__item">
+              <div class="benefit__item wow fadeInUp" data-wow-duration="2s" data-wow-delay="400ms">
                 <div class="benefit__item--image custom-setting">
                   <picture> <img src="images/icons/delivery--parcel.png" alt="delivery parcel"></picture>
                 </div>

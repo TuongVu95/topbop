@@ -139,7 +139,7 @@ function detailSwiper() {
 
 
 const pageHome = () => {
-  console.log("$desktop", $desktop);
+  // console.log("$desktop", $desktop);
   if ($desktop) {
     var swiper = new Swiper(".swiper-trending", {
       slidesPerView: "auto",
@@ -218,6 +218,28 @@ const pageHome = () => {
       }
     }
   });
+
+  const elWow = $('.wow');
+
+  if(elWow.length){
+    var wow = new WOW(
+      {
+        boxClass:     'wow',
+        animateClass: 'animated',
+        offset:       0,
+        mobile:       true,
+        live:         true,
+        delay: 5,
+        callback:     function(box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null,
+        resetAnimation: true,
+      }
+    );
+    wow.init();
+  }
 
 }
 
