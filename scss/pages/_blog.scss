@@ -1,0 +1,64 @@
+.blog__page {
+    .sub-title {
+        line-height: 2rem;
+        font-weight: 700;
+    }
+    .blog {
+        padding-bottom: 2.8rem;
+        &__name {
+            margin-bottom: 1.6rem !important;
+        }
+        &__desc {
+            position: unset;
+            margin: 0;
+        }
+        &__mess {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 1.6rem;
+        }
+        .group__icon {
+            display: flex;
+            &-item {
+                cursor: pointer;
+            }
+        }
+    }
+    .module__product-head,
+    .module__product-row {
+        padding-top: 6rem;
+    }
+    .module__head-sub {
+        display: flex;
+        justify-content: space-between;
+        .filter {
+            padding: 0.8rem 2.7rem;
+            display: inline-flex;
+            align-items: center;
+            picture {
+                margin-left: 0.4rem;
+            }
+        }
+        > * {
+            @include fontSize(400, 1.6rem, 1.8rem);
+            color: #898989;
+        }
+    }
+    .module__product-row {
+        .row {
+            .col-4 {
+                margin-bottom: 4.4rem;
+            }
+        }
+    }
+    .option-dropdown {
+        &-tit {
+            display: block;
+            @include fontSize(700, 2rem, 2.2rem);
+            letter-spacing: 0.0015em;
+            color: #131313;
+            padding: .8rem 1.6rem;
+        }
+    }
+}
