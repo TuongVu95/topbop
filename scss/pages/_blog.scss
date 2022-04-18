@@ -5,6 +5,9 @@
     }
     .blog {
         padding-bottom: 2.8rem;
+        &__list{
+            padding-top: 6rem;
+        }
         &__name {
             margin-bottom: 1.6rem !important;
         }
@@ -58,7 +61,119 @@
             @include fontSize(700, 2rem, 2.2rem);
             letter-spacing: 0.0015em;
             color: #131313;
-            padding: .8rem 1.6rem;
+            padding: 0.8rem 1.6rem;
+        }
+    }
+}
+.blog__detail {
+    padding-bottom: 10rem;
+    .module__content{
+        max-width: 86.6rem;
+        &-article{
+            padding-bottom: 4.8rem;
+        }
+    }
+    .para-space-24 {
+        margin-bottom: 2.4rem;
+    }
+    &-tit {
+        @include fontSize(600, 4.8rem, 5.6rem);
+    }
+    &-author {
+        @include fontSize(400, 1.6rem, 1.8rem);
+        margin-bottom: 5.1rem;
+    }
+    .picture{
+        margin-bottom: 3.2rem;
+
+    }
+    .caption {
+        @include fontSize(700, 2rem, 2.2rem);
+        letter-spacing: 0.0015em;
+        margin-bottom: 2.4rem;
+        @include breakpoints('md'){
+            @include fontSize(700, 1.6rem, 1.8rem);
+            margin-bottom: 1.2rem;
+        }
+    }
+    .para-content {
+        @include fontSize(400, 1.6rem, 2.2rem);
+        letter-spacing: 0.0016em;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        @include breakpoints('md'){
+            @include fontSize(400, 1.4rem, 1.9rem);
+            &:not(:last-child) {
+                margin-bottom: 1.2rem;
+            }
+        }
+    }
+    .module__product-row {
+        padding-top: 0;
+        .row .col-4{
+            margin-bottom: 0;
+        }
+    }
+    .page__content{
+        padding-top: 3.2rem;
+        .rs-col{
+            padding: 0;
+            &:first-child{
+                max-width: 11.2rem;
+                flex: 0 0 11.2rem;
+            }
+        }
+        @include breakpoints('md'){
+            .row{
+                margin: 0;
+            }
+        }
+    }
+}
+.list__social{
+    position: sticky;
+    top: 0;
+    padding-top: 15.6rem;
+    // transform: translate(-6.8rem, 0);
+    &-item{
+        transition: all 1s;
+        &:not(:last-child){
+            margin-bottom: 2.4rem;
+        }
+        &:hover{
+            transform: translate(110px, 0);
+        }
+    }
+    &-link{
+        display: flex;
+        align-items: center;
+    }
+    &-name{
+        flex: 0 0 6.8rem;
+    }
+    &-icon{
+        color: #898989;
+        font-size: 2.4rem;
+        line-height: 1;
+
+        width: 2.4rem;
+    }
+    @include breakpoints('md'){
+        // display: flex;
+        padding-top: 0;
+        position: relative;
+        &-mb{
+            display: flex !important;
+        }
+        &-item{
+            transition: all 1s;
+            &:not(:last-child){
+                margin-bottom: 2.4rem;
+            }
+            &:hover{
+                transform: translate(110px, 0);
+            }
         }
     }
 }
