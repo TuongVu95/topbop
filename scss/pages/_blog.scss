@@ -2,17 +2,21 @@
     .sub-title {
         line-height: 2rem;
         font-weight: 700;
+        @include breakpoints("md") {
+            font-size: 16px;
+            line-height: 18px;
+        }
     }
     .blog {
         padding-bottom: 2.8rem;
-        &__list{
+        &__list {
             padding-top: 6rem;
         }
         &__name {
             margin-bottom: 1.6rem !important;
         }
-        &__picture{
-            img{
+        &__picture {
+            img {
                 width: 100%;
             }
         }
@@ -32,16 +36,18 @@
                 cursor: pointer;
             }
         }
-        @include breakpoints('md'){
-            .group__icon {
-                display: none;
-            }
+        @include breakpoints("md") {
             &__name {
                 margin-bottom: 1.2rem !important;
             }
-            &__picture{
-                @include aspect-ratio(127,116,0);
-                img{
+            &__desc {
+                width: 100%;
+            }
+        }
+        @include breakpoints("sm") {
+            &__picture {
+                @include aspect-ratio(343, 184, 0);
+                img {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -51,14 +57,51 @@
                     height: 100%;
                 }
             }
-            &__desc {
-                width: 100%;
-            }
         }
     }
     .module__product-head,
     .module__product-row {
         padding-top: 6rem;
+    }
+    @include breakpoints("md") {
+        .breadcrumb {
+            margin-top: 1.6rem;
+        }
+        .module__product-head {
+            padding-top: 3.9rem;
+        }
+        .module__product-row {
+            padding-top: 3.2rem;
+        }
+        .option-button {
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            box-sizing: border-box;
+            border-radius: 4rem;
+            padding: 0.7rem 1.4rem;
+            display: inline-flex;
+            gap: 1rem;
+        }
+        .option-label {
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+        .option-icon {
+            font-size: 1.2rem;
+        }
+        .option-item {
+            .radio input{
+                &:after, &:before{
+                    top: .1rem;
+                }
+            }
+            label {
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+            }
+        }
     }
     .module__head-sub {
         display: flex;
@@ -81,9 +124,28 @@
             .col-4 {
                 margin-bottom: 4.4rem;
                 padding: 0;
+
+            }
+            @include breakpoints("md") {
+                margin: 0;
+                .col-4 {
+                    margin-bottom: 0;
+                    &:not(:last-child){
+                        margin-bottom: 1.2rem;
+                    }
+                }
+                .blog-desktop {
+                    .blog {
+                        padding: 0 0 4.7rem;
+                    }
+                }
             }
         }
+        @include breakpoints("md") {
+            padding-bottom: 4.8rem;
+        }
     }
+
     .option-dropdown {
         &-tit {
             display: block;
@@ -91,17 +153,26 @@
             letter-spacing: 0.0015em;
             color: #131313;
             padding: 0.8rem 1.6rem;
+            @include breakpoints('md'){
+                font-size: 1.6rem;
+                line-height: 1.8rem;
+            }
+        }
+        @include breakpoints('md'){
+            &.open{
+                top: calc(100% + .8rem);
+            }
         }
     }
 }
 .blog__detail {
     padding: 4.8rem 0 10rem;
-    @include breakpoints('md'){
+    @include breakpoints("md") {
         padding-bottom: 4.8rem;
     }
-    .module__content{
+    .module__content {
         max-width: 86.6rem;
-        &-article{
+        &-article {
             padding-bottom: 4.8rem;
         }
     }
@@ -110,30 +181,28 @@
     }
     &-tit {
         @include fontSize(600, 4.8rem, 5.6rem);
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             @include fontSize(600, 3.2rem, 4rem);
         }
     }
     &-author {
         @include fontSize(400, 1.6rem, 1.8rem);
         margin-bottom: 5.1rem;
-        strong{
+        strong {
             font-weight: 500;
         }
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             margin-bottom: 2.4rem;
-
         }
     }
-    .picture{
+    .picture {
         margin-bottom: 3.2rem;
-
     }
     .caption {
         @include fontSize(700, 2rem, 2.2rem);
         letter-spacing: 0.0015em;
         margin-bottom: 2.4rem;
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             @include fontSize(700, 1.6rem, 1.8rem);
             margin-bottom: 1.2rem;
         }
@@ -144,7 +213,7 @@
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
-        @include breakpoints('md'){
+        @include breakpoints("md") {
             @include fontSize(400, 1.4rem, 1.9rem);
             &:not(:last-child) {
                 margin-bottom: 1.2rem;
@@ -153,99 +222,111 @@
     }
     .module__product-row {
         padding-top: 0;
-        .row .col-4{
+        .row .col-4 {
             margin-bottom: 0;
         }
     }
-    .page__content{
+    .page__content {
         padding-top: 3.2rem;
-        .rs-col{
+        .rs-col {
             padding: 0;
-            &:first-child{
+            &:first-child {
                 max-width: 11.2rem;
                 flex: 0 0 11.2rem;
             }
         }
-        @include breakpoints('md'){
-            .row{
+        @include breakpoints("md") {
+            .row {
                 margin: 0;
             }
         }
     }
-    .blog{
-        @include breakpoints('md'){
+    .blog {
+        @include breakpoints("md") {
             padding: 0;
             display: flex;
             align-items: center;
             gap: 1.6rem;
-            &__list{
+            &__list {
                 padding-top: 2.4rem;
-                > .row{
-                    .col-md-12{
+                > .row {
+                    .col-md-12 {
                         padding: 0;
-                        &:not(:last-child){
+                        &:not(:last-child) {
                             margin-bottom: 1.6rem;
                         }
                     }
                 }
             }
-            &__name{
+            &__name {
                 font-weight: 600;
                 font-size: 20px;
                 line-height: 28px;
             }
-            &__desktop{
-
-            }
-            &__mess{
+            &__mess {
                 display: none;
             }
-            &__img{
+            &__picture {
+                @include aspect-ratio(127, 116, 0);
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &__img {
                 max-width: 12.7rem;
                 flex-basis: 12.7rem;
                 margin-bottom: 0;
             }
-            &__info{
+            &__info {
                 flex: 1;
+            }
+            .group__icon {
+                display: none;
             }
         }
     }
 }
-.list__social-vertical{
+.list__social-vertical {
     position: sticky;
     top: 0;
     padding-top: 15.6rem;
-    &--item{
+    &--item {
         transition: all 1s;
-        &:not(:last-child){
+        &:not(:last-child) {
             margin-bottom: 2.4rem;
         }
     }
-    &--link{
+    &--link {
         display: flex;
         align-items: center;
     }
-    &--name{
+    &--name {
         flex: 0 0 6.8rem;
     }
-    &--icon{
+    &--icon {
         color: #898989;
         font-size: 2.4rem;
         line-height: 1;
 
         width: 2.4rem;
     }
-    @include breakpoints('md'){
+    @include breakpoints("md") {
         padding-top: 0;
         position: relative;
         margin-bottom: 2.4rem;
-        &--mb{
+        &--mb {
             display: flex !important;
             align-items: center;
             gap: 3.2rem;
         }
-        &--item{
-            &:not(:last-child){
+        &--item {
+            &:not(:last-child) {
                 margin-bottom: 0rem;
             }
         }
