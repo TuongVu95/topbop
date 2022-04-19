@@ -210,6 +210,7 @@ $color-lv2: #757575;
     @include breakpoints("md") {
         padding: 1.6rem 0;
         position: unset;
+        border-bottom: 1px solid #F6F6F6;
     }
 }
 
