@@ -299,6 +299,12 @@
             }
         }
     }
+    .para-caption{
+        margin-top: 4rem;
+        @include breakpoints("md") {
+            margin-top: 3.2rem;
+        }
+    }
     .module__product-row {
         padding-top: 0;
         // padding-left: 11.2rem;
