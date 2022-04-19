@@ -244,6 +244,10 @@
     padding: 4.8rem 0 10rem;
     @include breakpoints("md") {
         padding-bottom: 4.8rem;
+        padding-top: 0;
+        .picture-content{
+            margin-top: 2.5rem;
+        }
     }
     .module__content {
         max-width: 86.6rem;
@@ -297,8 +301,12 @@
     }
     .module__product-row {
         padding-top: 0;
+        // padding-left: 11.2rem;
         .row .col-4 {
             margin-bottom: 0;
+        }
+        @include breakpoints("md") {
+            padding-bottom: 0 !important;
         }
     }
     .page__content {
@@ -318,7 +326,7 @@
     }
     .blog {
         @include breakpoints("md") {
-            padding: 0;
+            padding: 0 !important;
             display: flex;
             align-items: center;
             gap: 1.6rem;
@@ -371,6 +379,7 @@
     position: sticky;
     top: 0;
     padding-top: 15.6rem;
+    padding-bottom: 0.6rem;
     &--item {
         transition: all 1s;
         &:not(:last-child) {
@@ -403,6 +412,50 @@
         &--item {
             &:not(:last-child) {
                 margin-bottom: 0rem;
+            }
+        }
+    }
+}
+
+
+.picture-grid{
+    &-row{
+        display: flex;
+        // align-items: center;
+        gap: 31px;
+    }
+    &-right{
+        display: flex;
+        flex-direction: column;
+        gap: 3.1rem;
+        .picture{
+            margin-bottom: 0;
+        }
+    }
+    @include breakpoints('md'){
+        &-row{
+            gap: 12px;
+        }
+        &-left{
+            flex-basis: 235px;
+            max-width: 235px;
+        }
+        &-right{
+            gap: 1.2rem;
+            flex-basis: 9.6rem;
+            max-width: 9.6rem;
+            .picture{
+                // @include aspect-ratio(96, 123,0);
+                max-width: 96px;
+                // img{
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     right: 0;
+                //     bottom: 0;
+                //     width: 100%;
+                //     height: 100%;
+                // }
             }
         }
     }
