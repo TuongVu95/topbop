@@ -307,9 +307,9 @@
                 <h1 class="sub-title title-product">NỔI BẬT</h1>
                 <div class="module__product-filter">
                     <ul class="list__filter">
-                        <li class="list__filter-option filter-arrange">
+                        <li class="list__filter-option filter-arrange inner-filter">
                             <div class="option">
-                                <div class="option-button active">
+                                <div class="option-button">
                                     <span class="option-label">
                                         Sắp xếp
                                     </span>
@@ -366,11 +366,32 @@
             </div>
             <div class="module__head-sub">
                 <p class="total-blog">Có 214 bài viết</p>
-                <span class="filter">Lọc
-                    <picture>
-                        <img src="images/icons/arrows--vertical.png" alt="">
-                    </picture>
-                </span>
+                <div class="filter-wrap">
+                    <div class="filter js-filter inner-filter">
+                        Lọc
+                        <picture>
+                            <img src="images/icons/arrows--vertical.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="filter-dropdown">
+                        <ul class="filter-dropdown-list js-list-dropdown">
+                            <li class="filter-dropdown-item active js-list-item">
+                                <span class="filter-dropdown-content">
+                                    Mới nhất
+                                    <i class="icon-arrow-thin-up filter-dropdown-icon"></i>
+                                </span>
+                            </li>
+                            <li class="filter-dropdown-item js-list-item">
+                                <span class="filter-dropdown-content">
+                                    Cũ nhất
+                                    <i class="icon-arrow-thin-down filter-dropdown-icon"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
             </div>
 
             <div class="module__product-row">

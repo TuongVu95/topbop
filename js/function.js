@@ -258,6 +258,11 @@ const pageCate = () => {
 
   const gridCol = $('.grid-col');
 
+  const jsFilter = $('.js-filter');
+
+  const jsListItem = $('.js-list-item');
+  const filterDropdown = $('.filter-dropdown');
+
   btnToggleFilter.click(function () {
     const $that = $(this);
     $that.toggleClass('active');
@@ -279,6 +284,8 @@ const pageCate = () => {
     const $that = $(this);
     $that.toggleClass('active');
     optionDropdown.toggleClass('open');
+
+    filterDropdown.removeClass('open');
   });
 
   // sắp xếp
@@ -300,7 +307,7 @@ const pageCate = () => {
     const checkboxAll = $('.checkboxAll');
 
     $radioChild.change(function () {
-      console.log(1);
+      // console.log(1);
       checkboxAll.prop('checked', false);
     });
   });
@@ -329,6 +336,23 @@ const pageCate = () => {
       }
 
     });
+  });
+
+
+  jsFilter.click(function(){
+    filterDropdown.toggleClass('open');
+    $('.option-dropdown').removeClass('open');
+  });
+
+  jsListItem.click(function(){
+    const $that = $(this), $content = $that.find('.filter-dropdown-content'), $html = $content.html();
+    jsFilter.html($html).addClass('active');
+
+    jsListItem.removeClass('active');
+
+    $that.addClass('active');
+
+    filterDropdown.removeClass('open');
   });
 }
 
@@ -555,6 +579,17 @@ const payments = () => {
     $that.addClass('active');
   });
 }
+
+$document.on('click',function(e){
+  const innerFilter = $('.inner-filter'), $target = e.target;
+  const filterDropdown = $('.filter-dropdown');
+
+  if(!innerFilter.is($target) && innerFilter.has($target).length === 0){
+    $('.filter-dropdown, .option-dropdown').removeClass('open')
+  }
+
+});
+
 const init = () => {
   featureHeader();
   pageHome();

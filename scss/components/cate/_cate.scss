@@ -35,7 +35,7 @@
             &:not(:first-child) {
                 &:before {
                     @include fontSize(400, 1.2rem, 1.6rem);
-                    padding: 0;
+                    padding: 0 .3rem;
                     color: #898989;
                 }
             }
