@@ -311,10 +311,11 @@ $color-lv2: #757575;
         &--item {
             display: flex;
             margin: 0 -1.6rem;
+            flex-wrap: wrap;
         }
         @include breakpoints("md") {
             &--item {
-                flex-wrap: wrap;
+                // flex-wrap: wrap;
             }
         }
     }
@@ -322,6 +323,7 @@ $color-lv2: #757575;
         max-width: calc(100% / 4);
         flex-basis: calc(100% / 4);
         padding: 0 1.6rem;
+        margin-bottom: 2rem;
         &--title {
             margin-bottom: 2.4rem;
         }
