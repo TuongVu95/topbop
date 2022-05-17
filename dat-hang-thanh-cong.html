@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- CSS file import -->
+    <link rel="stylesheet" href="css/libs/swiper.min.css">
+    <link rel="stylesheet" href="css/libs/aos.css">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Js file import -->
+    <script src="js/libs/jquery-3.1.0.min.js"></script>
+    <script src="js/libs/swiper.min.js"></script>
+    <script src="js/libs/aos.js"></script>
+
+</head>
+
+<body>
+    <header class="page__header">
+        <div class="container">
+          <div class="page__header-top ">
+            <div class="page__header-left--mobile">
+              <button class="open-main-nav jsOpenNav"><span class="burger"></span></button>
+            </div>
+            <div class="page__header-left page__header--col"><a class="page__header-logo" href="/">
+                <picture>
+                  <source media="(max-width: 992px )" srcset="images/logo/logo-mb.png"><img src="images/logo/logo.png" alt="Logo">
+                </picture>
+              </a></div>
+            <div class="page__header-right page__header--col">
+              <div class="page__header-right--item form-search">
+                <div class="form-group">
+                  <input class="form-input form-input-search" type="text" placeholder="Tìm kiếm">
+                  <button class="btn btn-form-search icon-search" type="submit"><img src="images/icons/ic-search.svg" alt="Search"></button>
+                </div>
+              </div>
+              <div class="page__header-right--item list__social">
+                <ul>
+                  <li class="social-item"><a href=""><img src="images/icons/icon-heart.svg" alt="alt"></a></li>
+                  <li class="social-item"><a href=""><img src="images/icons/shopping-bag.svg" alt="alt"></a></li>
+                  <li class="social-item"><a href=""><img src="images/icons/phone.svg" alt="alt"></a></li>
+                </ul>
+              </div>
+              <div class="page__header-right--item form__user">
+                <div class="form__regist form__user-item"><a class="txt-uppercase f-w-700">ĐĂNG KÝ</a></div><span class="line-vertical"></span>
+                <div class="form__login form__user-item"><a class="txt-uppercase f-w-700">Đăng nhập</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="page__header-nav nav-mobile wow fadeIn" data-wow-duration="1s">
+            <div class="page__header-nav--inner">
+              <div class="page__header-burger">
+                <button class="open-main-nav jsOpenNav"><span class="burger"></span></button>
+              </div>
+              <ul class="page__nav-list">
+                <li class="page__nav-item jsActionExpand page__profile">
+                  <a class="page__nav-link" href="http://">
+                    <picture>
+                      <img src="images/icons/user.svg" alt="User">
+                    </picture>
+                    <span class="label-name">Hi, Ly</span>
+                  </a>
+                  <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i></div>
+                  <div class="page__nav-dropdown">
+                    <ul class="page__nav-lv1">
+                      <li class="page__nav-lv1--item">
+                        <a href="" class="page__nav-link">
+                          Trang cá nhân
+                        </a>
+                      </li>
+                      <li class="page__nav-lv1--item">
+                        <a href="" class="page__nav-link">
+                          Yêu thích
+                        </a>
+                      </li>
+                      <li class="page__nav-lv1--item">
+                        <a href="" class="page__nav-link">
+                          Bài viết đã lưu
+                        </a>
+                      </li>
+                      <li class="page__nav-lv1--item">
+                        <a href="" class="page__nav-link">
+                          Cài đặt tài khoản
+                        </a>
+                      </li>
+                      <li class="page__nav-lv1--item">
+                        <a href="" class="page__nav-link">
+                          Đăng xuất
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">Đồng hồ nam</a>
+                  <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i></div>
+                  <div class="page__nav-dropdown">
+                    <ul class="page__nav-lv1">
+                      <li class="page__nav-lv1--item">
+                        <ul class="page__nav-lv2">
+                          <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                          <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                      </li>
+                    </ul>
+                    <ul class="page__nav-lv2">
+                      <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                      <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                </li>
+              </ul>
+              <ul class="page__nav-lv2">
+                <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                </li>
+              </ul>
+              <ul class="page__nav-lv2">
+                <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                </li>
+              </ul>
+              <ul class="page__nav-lv2">
+                <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                </li>
+              </ul>
+              </li>
+              </ul>
+            </div>
+            </li>
+            <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">ĐỒNG HỒ NỮ</a>
+              <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i></div>
+              <div class="page__nav-dropdown">
+                <ul class="page__nav-lv1">
+                  <li class="page__nav-lv1--item">
+                    <ul class="page__nav-lv2">
+                      <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                      <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                  </li>
+                </ul>
+                <ul class="page__nav-lv2">
+                  <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                  <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+            </li>
+            </ul>
+            <ul class="page__nav-lv2">
+              <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+              <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+              </li>
+            </ul>
+            <ul class="page__nav-lv2">
+              <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+              <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+              </li>
+            </ul>
+            </li>
+            </ul>
+          </div>
+          </li>
+          <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">PHỤ KIỆN</a>
+            <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i></div>
+            <div class="page__nav-dropdown">
+              <ul class="page__nav-lv1">
+                <li class="page__nav-lv1--item">
+                  <ul class="page__nav-lv2">
+                    <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                    <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+                </li>
+              </ul>
+              <ul class="page__nav-lv2">
+                <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+          </li>
+          </ul>
+          <ul class="page__nav-lv2">
+            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+            </li>
+          </ul>
+          <ul class="page__nav-lv2">
+            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+            </li>
+          </ul>
+          </li>
+          </ul>
+        </div>
+        </li>
+        <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">VÒNG ĐEO</a>
+          <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i></div>
+          <div class="page__nav-dropdown">
+            <ul class="page__nav-lv1">
+              <li class="page__nav-lv1--item">
+                <ul class="page__nav-lv2">
+                  <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                  <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+              </li>
+            </ul>
+            <ul class="page__nav-lv2">
+              <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+              <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+        </li>
+        </ul>
+        <ul class="page__nav-lv2">
+          <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+          <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+          </li>
+        </ul>
+        <ul class="page__nav-lv2">
+          <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+          <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+          </li>
+        </ul>
+        </li>
+        </ul>
+        </div>
+        </li>
+        <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">SALE</a>
+          <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i></div>
+          <div class="page__nav-dropdown">
+            <ul class="page__nav-lv1">
+              <li class="page__nav-lv1--item">
+                <ul class="page__nav-lv2">
+                  <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+                  <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+              </li>
+            </ul>
+            <ul class="page__nav-lv2">
+              <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+              <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+        </li>
+        </ul>
+        <ul class="page__nav-lv2">
+          <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+          <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+          </li>
+        </ul>
+        <ul class="page__nav-lv2">
+          <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
+          <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
+          </li>
+        </ul>
+        </li>
+        </ul>
+        </div>
+        </li>
+        </ul>
+        <div class="list__social list__social-mb">
+          <ul>
+            <li class="social-item">
+              <a href="">
+                <picture class="ic-picture">
+                  <img src="images/icons/icon-heart.svg" alt="alt">
+                </picture>
+                <span class="ic-label">Yêu thích</span>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="">
+                <picture class="ic-picture">
+                  <img src="images/icons/shopping-bag.svg" alt="alt">
+                </picture>
+                <span class="ic-label">Giỏ hàng</span>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="">
+                <picture class="ic-picture">
+                  <img src="images/icons/ic-help-circle.svg" alt="alt">
+                </picture>
+                <span class="ic-label">Trợ giúp</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__desc-mb">
+          <p>
+            Trở thành Thành viên của TOPBOP để nhận được những ưu đãi tốt nhất và cập nhật thông tin nhanh nhất.
+          </p>
+        </div>
+
+        <div class="header__login-mb">
+          <div class="header__login-inner">
+            <button class="btn btn-regist"><span>Đăng ký</span></button>
+            <button class="btn btn-login"><span>Đăng nhập</span></button>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+      </header>
+
+    <main class="page-wrapper cart-final success">
+        <div class="container">
+            <div class="lc-body">
+                <div class="lc-head">
+                  <div class="cart-final-head txt-center">
+                    <div class="cart-final-icon m-b-12">
+                        <div class="icon icon--order-success svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="154px" height="154px">
+                                <g fill="none" stroke="#22AE73" stroke-width="2">
+                                  <circle cx="77" cy="77" r="72" style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;"></circle>
+                                  <circle id="colored" fill="#22AE73" cx="77" cy="77" r="72" style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;"></circle>
+                                  <polyline class="st0" stroke="#fff" stroke-width="10" points="43.5,77.8 63.7,97.9 112.2,49.4 " style="stroke-dasharray:100px, 100px; stroke-dashoffset: 200px;"></polyline>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="cart-mess">
+                        <p class="fs-p-18 f-w-500 txt-gray-900">
+                          Đặt hàng thành công
+                        </p>
+                        <p class="fs-p-16 fs-p-md-14 txt-gray-700">
+                          Bộ phận chăm sóc khách hàng sẽ liên hệ đến quý khách trong vòng <strong>5 phút.</strong>
+                        </p>
+                      </div>
+                  </div>
+                  <div class="lc-content">
+                    <div class="table table-user m-b-md-8">
+                      <div class="table-head p-y-8 p-x-20 p-x-md-10 p-y-md-10">
+                        <div class="u-flex no-gutters align-items-center">
+                          <div class="col">
+                            <div class="fs-p-18 f-w-500 txt-gray-800 fs-p-md-16">
+                              Thông tin giao hàng
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-body p-x-20 p-t-8 p-b-16 p-x-md-10 p-y-md-0">
+                        <table class="table">
+                          <tbody>
+                            <tr class="fs-p-16">
+                              <td class="txt-gray p-y-6 p-y-md-8">Số đơn hàng</td>
+                              <td class="txt-gray-700 p-y-6 p-y-md-8">
+                                <strong class="txt-primary-700 m-r-8">3079183</strong>
+                              </td>
+                            </tr>
+                            <tr class="fs-p-16">
+                              <td class="txt-gray p-y-6 p-y-md-8">Họ và tên</td>
+                              <td class="txt-gray-700 p-y-6 p-y-md-8">Chị Vy</td>
+                            </tr>
+                            <tr class="fs-p-16">
+                              <td class="txt-gray p-y-6 p-y-md-8">Số điện thoại</td>
+                              <td class="txt-gray-700 p-y-6 p-y-md-8">0937108022</td>
+                            </tr>
+                            <tr class="fs-p-16">
+                              <td class="txt-gray p-y-6 p-y-md-8">Email</td>
+                              <td class="txt-gray-700 p-y-6 p-y-md-8">
+                                vynguyen1998@gmail.com
+                              </td>
+                            </tr>
+                            <tr class="fs-p-16">
+                              <td class="txt-gray p-y-6 p-y-md-8">
+                                Nhận tại nhà thuốc
+                              </td>
+                              <td class="txt-gray-700 p-y-6 p-y-md-8">
+                                422-424 Cách Mạng Tháng Tám, P.11, Q.3, TP. Hồ Chí
+                                Minh
+                              </td>
+                            </tr>
+                            <tr class="fs-p-16">
+                              <td class="txt-gray p-y-6 p-y-md-8">
+                                Thời gian dự kiến
+                              </td>
+                              <td class="txt-gray-700 p-y-6 p-y-md-8">
+                                Thứ 4, 24/02/2021
+                              </td>
+                            </tr>
+                            <tr class="fs-p-16">
+                              <td class="txt-gray p-y-6 p-y-md-8">
+                                Phương thức thanh toán
+                              </td>
+                              <td class="txt-gray-700 p-y-6 p-y-md-8">
+                                Trả tiền mặt khi nhận hàng
+                              </td>
+                            </tr>
+                            <tr class="fs-p-16">
+                              <td class="txt-gray p-y-6 p-y-md-8">Ghi chú yêu cầu</td>
+                              <td class="txt-gray-700 p-y-6 p-y-md-8">
+                                Đến nhận sau giờ hành chính
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="table table-product">
+                      <div class="table-head p-y-8 p-x-20 p-x-md-10 p-y-md-10">
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="fs-p-18 f-w-500 txt-gray-800 fs-p-md-16">
+                              Thông tin đơn hàng
+                            </div>
+                          </div>
+                          <div class="col-6 col-hidden">
+                            <div class="row row-cols-3">
+                              <div class="col">
+                                <div class="fs-p-18 f-w-500 txt-gray-800 fs-p-md-16 txt-left">
+                                  Quy cách
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="fs-p-18 f-w-500 txt-gray-800 fs-p-md-16 txt-center">
+                                  Số lượng
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="fs-p-18 f-w-500 txt-gray-800 fs-p-md-16 txt-right">
+                                  Thành tiền
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-body p-x-md-10 p-x-20">
+                        <div class="row p-t-16 p-b-8">
+                          <div class="col-6 col-sm-12">
+                            <div class="u-flex no-gutters">
+                              <div class="item-img m-r-8">
+                                <a href="">
+                                  <img src="https://via.placeholder.com/300x300" alt="">
+                                </a>
+                              </div>
+                              <div class="item-info col">
+                                <h3 class="item-tit truncate2">
+                                  <a href="" class="txt-gray-800 fs-p-16 fs-p-md-14">Viên Uống Bổ Sung Vitamin Và Khoáng Chất Calcium
+                                    Plus Puri Walgreen</a>
+                                </h3>
+                                <div class="item-mess">
+                                  <ul class="list-group list-disc-small">
+                                    <li class="txt-gray-600">
+                                      Tặng 1 suất mua sản phẩm thực phẩm chức năng
+                                      giảm đến 40%
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-hidden">
+                            <div class="row row-cols-3">
+                              <div class="col">
+                                <div class="fs-p-16 txt-gray-700 f-w-400">
+                                  Hộp 60 viên
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="fs-p-16 txt-gray-700 f-w-400 txt-center">
+                                  1
+                                </div>
+                              </div>
+                              <div class="col txt-right">
+                                <div class="fs-p-16 txt-gray-700 f-w-500">
+                                  200.000đ
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row p-t-16 p-b-8">
+                          <div class="col-6 col-sm-12">
+                            <div class="u-flex no-gutters">
+                              <div class="item-img m-r-8">
+                                <a href="">
+                                  <img src="https://via.placeholder.com/300x300" alt="">
+                                </a>
+                              </div>
+                              <div class="item-info col">
+                                <h3 class="item-tit truncate2">
+                                  <a href="" class="txt-gray-800 fs-p-16 fs-p-md-14">Nước Xịt Khoáng Vichy Eau Thermale Mineralizing
+                                    Thermal Water 150ml</a>
+                                </h3>
+                                <div class="item-mess">
+                                  <ul class="list-group list-disc-small">
+                                    <li class="txt-gray-600">
+                                      Giảm giá 10% khi mua 1 sản phẩm
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-hidden">
+                            <div class="row row-cols-3">
+                              <div class="col">
+                                <div class="fs-p-16 txt-gray-700 f-w-400">
+                                  Chai 150ml
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="fs-p-16 txt-gray-700 f-w-400 txt-center">
+                                  1
+                                </div>
+                              </div>
+                              <div class="col txt-right">
+                                <div class="fs-p-16 txt-gray-700 f-w-500">
+                                  234.000đ
+                                </div>
+                                <strike class="fs-p-16 f-w-400 txt-gray m-t-4">
+                                  260.000đ
+                                </strike>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="check-final p-t-16 p-b-24 p-b-md-16 p-x-0 u-flex justify-end">
+                          <div class="cart-check">
+                            <ul>
+                              <li>
+                                <span>Tổng tiền</span>
+                                <span>434.000đ</span>
+                              </li>
+                              <li>
+                                <span>Khuyến mãi giảm</span>
+                                <span>-26.000đ</span>
+                              </li>
+                              <li>
+                                <span>Phí giao hàng</span>
+                                <span>15.000đ</span>
+                              </li>
+                              <li>
+                                <span>Cần thanh toán</span>
+                                <span>423.000đ</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-final--btn txt-center">
+                      <a class="btn">VỀ TRANG CHỦ</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page__footer">
+        <div class="container">
+          <div class="page__inner">
+            <div class="row reset-row">
+              <div class="col-3 col-md-12 footer__col footer__topbop">
+                <div class="footer__col-tit js-action-expand">
+                  CÔNG TY TNHH TOPBOP
+                  <span class="btn-expand"></span>
+                </div>
+                <ul class="footer__list js-list">
+                  <li class="footer__list-item js-list-item">
+                    <a href="http://" class="footer__list-link js-list-link">
+                      <p>Về chúng tôi</p>
+                    </a>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <div class="footer__list-mess js-list-mess">
+                      <p>GPDKKD: 0316903865 CẤP BỞI KH & ĐT TP.HCM.</p>
+                      <p>MÃ SỐ THUẾ / DN: 0316903865</p>
+                    </div>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <div class="footer__list-mess js-list-mess">
+                      <p>ĐỊA CHỈ: TẦNG 5, TÒA NHÀ OPERAVIEW, 161 ĐỒNG KHỞI, PHƯỜNG BẾN NGHÉ, QUẬN 1, TP.HCM</p>
+                    </div>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <div class="footer__list-mess js-list-mess">
+                      <a href="tel:+84 909118058">HOTLINE: +84 909118058</a>
+                    </div>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <div class="footer__list-mess js-list-mess">
+                      <a href="tel:+84 909118058">GMAIL: TOPBOP@GMAIL.COM</a>
+                    </div>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <div class="footer__list-mess js-list-mess">
+                      <p>THỜI GIAN :</p>
+                      <p>LÀM VIỆC: 8 AM - 6 PM</p>
+                      <p>MỞ CỬA: 8 AM - 9 PM</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-3 col-md-12 footer__col">
+                <div class="footer__col-tit js-action-expand">
+                  CHÍNH SÁCH HỖ TRỢ
+                  <span class="btn-expand"></span>
+                </div>
+                <ul class="footer__list js-list">
+                  <li class="footer__list-item js-list-item">
+                    <a href="http://" class="footer__list-link js-list-link">
+                      CHÍNH SÁCH BẢO HÀNH
+                    </a>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <a href="http://" class="footer__list-link js-list-link">
+                      CHÍNH SÁCH THANH TOÁN
+                    </a>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <a href="http://" class="footer__list-link js-list-link">
+                      CHÍNH SÁCH VẬN CHUYỂN
+                    </a>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <a href="http://" class="footer__list-link js-list-link">
+                      CHÍNH SÁCH ĐỔI TRẢ
+                    </a>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <a href="http://" class="footer__list-link js-list-link">
+                      CÂU HỎI THƯỜNG GẶP
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-3 col-md-12 footer__col">
+                <div class="footer__col-tit js-action-expand">
+                  SẢN PHẨM
+                  <span class="btn-expand"></span>
+                </div>
+                <ul class="footer__list js-list">
+                  <li class="footer__list-item js-list-item">
+                    <a href="http://" class="footer__list-link js-list-link">
+                      THƯƠNG HIỆU
+                    </a>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <a href="http://" class="footer__list-link js-list-link">
+                      NAM
+                    </a>
+                  </li>
+                  <li class="footer__list-item js-list-item">
+                    <a href="http://" class="footer__list-link js-list-link">
+                      nữ
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-3 col-md-12 footer__col footer__col-child">
+                <div class="footer__group-connect">
+                  <div class="footer__col-tit js-action-expand">
+                    KẾT NỐI VỚI TOPBOP
+                  </div>
+                  <p class="footer__desc">
+                    Đăng kí để nhận thông tin mới nhất về TOPBOP tin tức, cập nhật và lợi ích thành viên.
+                  </p>
+
+                  <div class="form-wrap">
+                    <form action="">
+                      <button class="btn btn-email">ĐĂNG KÝ EMAIL</button>
+                      <span class="form-icon icon-chevron-down"></span>
+                    </form>
+                  </div>
+                </div>
+
+                <div class="law">
+                  <div class="footer__col-tit js-action-expand">
+                    PHÁP LÝ
+                    <span class="btn-expand"></span>
+                  </div>
+                  <ul class="footer__list js-list">
+                    <li class="footer__list-item js-list-item">
+                      <a href="http://" class="">
+                        ĐIỀU KHOẢN SỬ DỤNG
+                      </a>
+                    </li>
+                    <li class="footer__list-item js-list-item">
+                      <a href="http://" class="">
+                        CHÍNH SÁCH BẢO MẬT
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <ul class="footer__list-social">
+                  <li class="footer__list-social--item">
+                    <a href="http://" class="footer__list-social--link">
+                      <i class="social-facebook footer__list-social--icon"></i>
+                      <i class="social-facebook-hover footer__list-social--hover"></i>
+                    </a>
+                  </li>
+                  <li class="footer__list-social--item">
+                    <a href="http://" class="footer__list-social--link">
+                      <i class="social-instagram footer__list-social--icon"></i>
+                      <i class="social-instagram-hover footer__list-social--hover"></i>
+                    </a>
+                  </li>
+                  <li class="footer__list-social--item">
+                    <a href="http://" class="footer__list-social--link">
+                      <i class="social-youtube footer__list-social--icon"></i>
+                      <i class="social-youtube-hover footer__list-social--hover"></i>
+                    </a>
+                  </li>
+                  <li class="footer__list-social--item">
+                    <a href="http://" class="footer__list-social--link">
+                      <i class="social-twitter footer__list-social--icon"></i>
+                      <i class="social-twitter-hover footer__list-social--hover"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__copyright">
+              <div class="footer__copyright-inner">
+                <div class="footer__row">
+                  <div class="footer__copyright-location">
+                    <picture>
+                      <img src="images/icons/ic-location.svg" alt="location">
+                    </picture>
+                    <span class="footer__copyright-country">Vietnam</span>
+                    <span class="copyright">© 2021 TopBop.vn All Rights Reserved</span>
+                  </div>
+                  <div class="footer__payments">
+                    <ul class="footer__payments-list">
+                      <li class="footer__payments-item">
+                        <a href="http://" class="footer__payments-link">
+                          <img src="images/payments/visa.png" alt="Visa">
+                        </a>
+                      </li>
+                      <li class="footer__payments-item">
+                        <a href="http://" class="footer__payments-link">
+                          <img src="images/payments/master.png" alt="Mastercard">
+                        </a>
+                      </li>
+                      <li class="footer__payments-item">
+                        <a href="http://" class="footer__payments-link">
+                          <img src="images/payments/paypal.png" alt="Paypal">
+                        </a>
+                      </li>
+                      <li class="footer__payments-item">
+                        <a href="http://" class="footer__payments-link">
+                          <img src="images/payments/american.png" alt="American">
+                        </a>
+                      </li>
+                      <li class="footer__payments-item">
+                        <a href="http://" class="footer__payments-link">
+                          <img src="images/payments/maestro.png" alt="Maestro">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <small class="copyright">
+        <span>Copyright © 2022 WOLF. All rights reserved.</span>
+    </small>
+    <script src="js/function.js"></script>
+</body>
+
+</html>
