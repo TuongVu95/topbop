@@ -7,11 +7,20 @@ $color-lv2: #757575;
 .f-w-700 {
     font-weight: 700;
 }
-
+body{
+    overflow-x: hidden;
+}
 .page__header {
-    padding-top: 4.2rem;
     position: relative;
-    z-index: 6;
+    z-index: 9;
+    &-inner{
+        background: #fff;
+        padding-top: 4.2rem;
+        @include breakpoints("md") {
+            padding: 1.6rem 0;
+            position: unset;
+        }
+    }
     &-top {
         @extend %flex-center;
         justify-content: space-between;
@@ -208,7 +217,7 @@ $color-lv2: #757575;
         }
     }
     @include breakpoints("md") {
-        padding: 1.6rem 0;
+        // padding: 1.6rem 0;
         position: unset;
         border-bottom: 1px solid #f6f6f6;
     }
@@ -619,9 +628,27 @@ $color-lv2: #757575;
         }
     }
 }
+.over-suggest {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.7;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s;
+    z-index: 8;
+    &.open{
+        opacity: 1;
+        visibility: visible;
+    }
+}
 .popup {
     position: absolute;
-    top: 0;
+    top: 102px;
     right: 0;
     left: 0;
     width: 100%;
@@ -629,10 +656,10 @@ $color-lv2: #757575;
     // background: rgba(0, 0, 0, 0.8);
     z-index: 9;
 
-    transition: all .3s;
+    transition: all 0.3s;
     opacity: 0;
     visibility: hidden;
-    &.open{
+    &.open {
         opacity: 1;
         visibility: visible;
     }
@@ -683,28 +710,24 @@ $color-lv2: #757575;
             position: relative;
             width: 12px;
             height: 12px;
-            background: #42882B;
+            background: #42882b;
             display: inline-block;
             border-radius: 1000px;
             margin-right: 8px;
-            &:before{
-                content: '';
+            &:before {
+                content: "";
                 position: absolute;
                 right: 0;
                 left: 4px;
                 top: 1.5px;
                 display: inline-block;
-                transform: rotate(
-            45deg
-            );
+                transform: rotate(45deg);
                 height: 7px;
                 width: 4px;
                 border-bottom: 2px solid #fff;
                 border-right: 2px solid #fff;
             }
         }
-    }
-    &-body {
     }
     .p-product {
         display: flex;
@@ -747,7 +770,6 @@ $color-lv2: #757575;
                 margin-left: 28px;
             }
         }
-
     }
     .group-btn {
         display: flex;
@@ -767,6 +789,20 @@ $color-lv2: #757575;
             .count {
                 font-weight: 700;
             }
+        }
+    }
+    @include breakpoints('md'){
+        top: 0;
+        .container{
+            padding: 0;
+        }
+        &-wrap {
+            position: relative;
+            z-index: 1;
+            background: $white;
+            padding: 16px 16px 0;
+            max-width: 528px;
+            margin-left: auto;
         }
     }
 }

@@ -642,7 +642,7 @@ function addPopup(){
     const btnPopupClose = $('.popup-close');
 
     btnPopupClose.click(function () {
-      $('.popup').removeClass('open');
+      $('.popup, .over-suggest').removeClass('open');
     });
 }
 addPopup();
