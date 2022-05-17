@@ -196,6 +196,10 @@ body{
                 padding: 0 16px;
                 position: relative;
             }
+            .container{
+                padding: 0;
+                height: 100%;
+            }
         }
     }
     &-logo {
@@ -663,6 +667,7 @@ body{
         opacity: 1;
         visibility: visible;
     }
+
     &-close {
         position: absolute;
         top: 24px;
@@ -688,7 +693,9 @@ body{
         &:after {
             transform: rotate(-45deg) translate(-50%, -50%);
         }
-        &:before {
+        @include breakpoints('md'){
+            top: 16px;
+            right: 16px;
         }
     }
     &-wrap {
@@ -737,11 +744,18 @@ body{
             line-height: 18px;
             color: #000000;
             margin-bottom: 12px;
+            @include breakpoints('md'){
+                margin-bottom: 8px;
+            }
         }
         &-picture {
             max-width: 88px;
             width: 100%;
             margin-right: 24px;
+            @include breakpoints('md'){
+                max-width: 80px;
+            margin-right: 12px;
+            }
         }
         &-info {
             flex: 1;
@@ -756,6 +770,17 @@ body{
             &-item {
                 margin-bottom: 12px;
             }
+            @include breakpoints('md'){
+                margin-bottom: 4px;
+                * {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+                &-item {
+                    margin-bottom: 4px;
+                }
+            }
         }
         .group-prices {
             margin-bottom: 5px;
@@ -769,6 +794,18 @@ body{
                 color: #898989;
                 margin-left: 28px;
             }
+            @include breakpoints('md'){
+                margin-bottom: 16px;
+               *{
+                   display: block;
+               }
+               .price-sale{
+                   margin-bottom: 4px;
+               }
+               .price{
+                   margin-left: 0;
+               }
+            }
         }
     }
     .group-btn {
@@ -781,6 +818,7 @@ body{
             line-height: 18px;
             padding: 14.75px 16px;
             width: 168px;
+            font-weight: 700;
             &-cart {
                 background: #ffffff;
                 border: 1px solid #cccccc;
@@ -788,6 +826,12 @@ body{
             }
             .count {
                 font-weight: 700;
+            }
+        }
+        @include breakpoints('md'){
+            padding-left: 0;
+            .btn {
+                width: 100%;
             }
         }
     }
