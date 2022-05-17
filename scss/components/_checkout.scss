@@ -217,6 +217,9 @@
 
 .block-form-payments {
     .reset-col {
+        input[type="radio"]{
+            display: none;
+        }
         .btn {
             width: 100%;
             padding: 1.5rem 1.6rem;
@@ -229,11 +232,19 @@
             text-transform: none;
 
             font-weight: 400;
+            appearance: none;
+
+            @media (min-width: 992px){
+                &.active{
+                    background: #161616;
+                    color: $white;
+                }
+            }
         }
     }
     @include breakpoints("md") {
         .reset-col {
-            .btn {
+            .btn, input[type="button"] {
                 text-align: left;
                 justify-content: flex-start;
                 border: none;

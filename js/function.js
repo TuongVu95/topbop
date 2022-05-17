@@ -571,12 +571,14 @@ const payments = () => {
   const jsPayment = $('.js-payment');
 
   jsPayment.click(function (e) {
-    e.preventDefault();
-
-    const $that = $(this);
+    // e.preventDefault();
+    const $that = $(this), radio = $that.next('input[type="radio"]');
 
     jsPayment.removeClass('active');
     $that.addClass('active');
+
+    $('.js-payment + input[type="radio"]').prop('checked', false);
+    radio.prop('checked', true);
   });
 }
 
