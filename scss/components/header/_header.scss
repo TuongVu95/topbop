@@ -100,7 +100,7 @@ $color-lv2: #757575;
             &:not(:last-child) {
                 margin-right: 1.6rem;
             }
-            .ic-label{
+            .ic-label {
                 font-family: "Manrope", Arial, Helvetica, sans-serif;
             }
         }
@@ -210,7 +210,7 @@ $color-lv2: #757575;
     @include breakpoints("md") {
         padding: 1.6rem 0;
         position: unset;
-        border-bottom: 1px solid #F6F6F6;
+        border-bottom: 1px solid #f6f6f6;
     }
 }
 
@@ -409,7 +409,7 @@ $color-lv2: #757575;
                 }
             }
 
-            &.block-profile{
+            &.block-profile {
                 z-index: 11;
             }
         }
@@ -583,7 +583,6 @@ $color-lv2: #757575;
     .page__profile {
         $nav: ".page__nav";
         .page__nav {
-
             &-lv1 {
                 padding: 0 !important;
                 &--item {
@@ -608,14 +607,165 @@ $color-lv2: #757575;
             #{$nav}-icon {
                 position: absolute;
                 padding-top: 8.4rem;
-                right:0;
-                .back{
+                right: 0;
+                .back {
                     display: none;
                 }
-                i.icon-chevron-down{
+                i.icon-chevron-down {
                     font-size: 1.8rem;
                     line-height: 2rem;
                 }
+            }
+        }
+    }
+}
+.popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+    &.open{
+        opacity: 1;
+        visibility: visible;
+    }
+    &-close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        display: block;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        cursor: pointer;
+        &:after,
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 3px;
+            height: 20px;
+            background-color: #000000;
+            transform: rotate(45deg) translate(-50%, -50%);
+            transform-origin: top left;
+            transition: all 420ms;
+            content: "";
+        }
+        &:after {
+            transform: rotate(-45deg) translate(-50%, -50%);
+        }
+        &:before {
+        }
+    }
+    &-wrap {
+        position: relative;
+        z-index: 1;
+        background: $white;
+        padding: 24px;
+        max-width: 528px;
+        margin-left: auto;
+    }
+    &-head {
+        margin-bottom: 24px;
+        &-ic {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+        }
+        .ic-tick {
+            position: relative;
+            width: 12px;
+            height: 12px;
+            background: #42882B;
+            display: inline-block;
+            border-radius: 1000px;
+            margin-right: 8px;
+            &:before{
+                content: '';
+                position: absolute;
+                right: 0;
+                left: 4px;
+                top: 1.5px;
+                display: inline-block;
+                transform: rotate(
+            45deg
+            );
+                height: 7px;
+                width: 4px;
+                border-bottom: 2px solid #fff;
+                border-right: 2px solid #fff;
+            }
+        }
+    }
+    &-body {
+    }
+    .p-product {
+        display: flex;
+        &-name {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            color: #000000;
+            margin-bottom: 12px;
+        }
+        &-picture {
+            max-width: 88px;
+            width: 100%;
+            margin-right: 24px;
+        }
+        &-info {
+            flex: 1;
+        }
+        .group-label {
+            * {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 18px;
+                color: #898989;
+            }
+            &-item {
+                margin-bottom: 12px;
+            }
+        }
+        .group-prices {
+            margin-bottom: 5px;
+            span {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 18px;
+                color: #161616;
+            }
+            .price {
+                color: #898989;
+                margin-left: 28px;
+            }
+        }
+
+    }
+    .group-btn {
+        display: flex;
+        gap: 8px;
+        padding: 23.75px 0;
+        padding-left: 112px;
+        .btn {
+            font-size: 14px;
+            line-height: 18px;
+            padding: 14.75px 16px;
+            width: 168px;
+            &-cart {
+                background: #ffffff;
+                border: 1px solid #cccccc;
+                color: #131313;
+            }
+            .count {
+                font-weight: 700;
             }
         }
     }

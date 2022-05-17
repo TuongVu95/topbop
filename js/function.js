@@ -340,8 +340,9 @@ const pageCate = () => {
 
 
   jsFilter.click(function(){
-    filterDropdown.toggleClass('open');
     $('.option-dropdown').removeClass('open');
+    filterDropdown.toggleClass('open');
+    console.log(122);
   });
 
   jsListItem.click(function(){
@@ -635,6 +636,16 @@ $('.morelink').click(function (e) {
   $(this).prev().toggle();
   $(this).hide();
 })
+
+
+function addPopup(){
+    const btnPopupClose = $('.popup-close');
+
+    btnPopupClose.click(function () {
+      $('.popup').removeClass('open');
+    });
+}
+addPopup();
 
 jQuery.fn.extend({
   accordion: function () {
