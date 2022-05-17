@@ -6,6 +6,7 @@ block content
       +saleSlide
       .topbop__detail--product
         .container
+
           .topbop__detail--inner
             .topbop__detail--left
               .topbop__detail--slide.swiper.detail-swiper
@@ -25,6 +26,8 @@ block content
                           picture
                             img(src="images/detail/detail-product-mb.png" alt="")
             .topbop__detail--right
+              //- .topbop__detail--summaryMb.none-block test
+
               .detail--right__wrapper
                 +breadcumb(['Trang chủ','Bomberg','Multimatic Diamond Silver 03A'],false)
                 .topbop__detail--heading Bomberg Multimatic Diamond Silver 03A
@@ -36,9 +39,9 @@ block content
                   .price__block
                     p.main-price 37,746,000VNĐ
                     p.discount-price 41,940,000VNĐ
-                  .discount__percent 25% Off
+                  .discount__percent.block-none 25% Off
 
-                .topbop__detail--option
+                .topbop__detail--option.block-none
                   .option__head Size
                   .option__group
                     span.option__button 42 mm

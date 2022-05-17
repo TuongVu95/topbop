@@ -243,6 +243,14 @@
           }
         }
       }
+      .group-btn {
+        margin-top: 3.4rem;
+        a {
+          &:last-child {
+            margin-left: 2.2rem;
+          }
+        }
+      }
     }
   }
   .cart__noficationDelivery {
