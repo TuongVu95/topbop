@@ -283,8 +283,10 @@ const pageCate = () => {
   btnOption.click(function () {
     const $that = $(this);
     $that.toggleClass('active');
+
     optionDropdown.toggleClass('open');
 
+    console.log(1)
     filterDropdown.removeClass('open');
   });
 
@@ -586,9 +588,9 @@ const payments = () => {
 $document.on('click',function(e){
   const innerFilter = $('.inner-filter'), $target = e.target;
   const filterDropdown = $('.filter-dropdown');
-
-  if(!innerFilter.is($target) && innerFilter.has($target).length === 0){
-    $('.filter-dropdown, .option-dropdown').removeClass('open')
+  // console.log("innerFilter.is($target)", $('.option-item, .radio, .radio input[type="radio"]').is($target), $target)
+  if(!$('.option-item, .radio, .radio input[type="radio"]').is($target) && $('.option-item, .radio, .radio input[type="radio"]').has($target).length === 0){
+    // $('.filter-dropdown, .option-dropdown').removeClass('opsen')
   }
 
 });
