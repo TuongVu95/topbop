@@ -8,7 +8,6 @@
   <title>TopBop</title>
   <link rel="stylesheet" href="css/libs/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
-
   <script src="js/libs/jquery-3.1.0.min.js"></script>
   <script src="js/libs/swiper.min.js"></script>
   <script src="js/libs/wow.js"></script>
@@ -17,15 +16,17 @@
 <body>
   <header class="page__header">
     <div class="container">
-      <div class="page__header-top ">
+      <div class="page__header-top">
         <div class="page__header-left--mobile">
           <button class="open-main-nav jsOpenNav"><span class="burger"></span></button>
         </div>
-        <div class="page__header-left page__header--col"><a class="page__header-logo" href="/">
+        <div class="page__header-left page__header--col">
+          <a class="page__header-logo" href="/">
             <picture>
               <source media="(max-width: 992px )" srcset="images/logo/logo-mb.png"><img src="images/logo/logo.png" alt="Logo">
             </picture>
-          </a></div>
+          </a>
+        </div>
         <div class="page__header-right page__header--col">
           <div class="page__header-right--item form-search">
             <div class="form-group">
@@ -46,50 +47,38 @@
           </div>
         </div>
       </div>
-      <div class="page__header-nav nav-mobile wow fadeIn" data-wow-duration="1s">
+
+      <div class="search-suggest-box">
+        <div class="search-suggest-inner">
+          <div class="search-suggest-search">
+            <div class="form-group">
+              <input class="form-input form-input-search" type="text" placeholder="Tìm kiếm">
+              <button class="btn btn-form-search icon-search" type="submit"><img src="images/icons/ic-search.svg" alt="Search"></button>
+              <span class="btn-ic-close">
+                <img src="images/icons/math-plus.svg" alt="math-plus">
+              </span>
+            </div>
+            <div class="search-suggest-result">
+                <p class="result-mess">Tìm kiếm gần đây nhất</p>
+                <ul class="result-list">
+                  <li class="result-list-item">
+                    <a href>Waldhoff</a>
+                  </li>
+                  <li class="result-list-item">
+                    <a href>Tonino Lamborghini</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page__header-nav nav-mobile">
         <div class="page__header-nav--inner">
           <div class="page__header-burger">
             <button class="open-main-nav jsOpenNav"><span class="burger"></span></button>
           </div>
           <ul class="page__nav-list">
-            <li class="page__nav-item jsActionExpand page__profile">
-              <a class="page__nav-link" href="http://">
-                <picture>
-                  <img src="images/icons/user.svg" alt="User">
-                </picture>
-                <span class="label-name">Hi, Ly</span>
-              </a>
-              <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i></div>
-              <div class="page__nav-dropdown">
-                <ul class="page__nav-lv1">
-                  <li class="page__nav-lv1--item">
-                    <a href="" class="page__nav-link">
-                      Trang cá nhân
-                    </a>
-                  </li>
-                  <li class="page__nav-lv1--item">
-                    <a href="" class="page__nav-link">
-                      Yêu thích
-                    </a>
-                  </li>
-                  <li class="page__nav-lv1--item">
-                    <a href="" class="page__nav-link">
-                      Bài viết đã lưu
-                    </a>
-                  </li>
-                  <li class="page__nav-lv1--item">
-                    <a href="" class="page__nav-link">
-                      Cài đặt tài khoản
-                    </a>
-                  </li>
-                  <li class="page__nav-lv1--item">
-                    <a href="" class="page__nav-link">
-                      Đăng xuất
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
             <li class="page__nav-item jsActionExpand"><a class="page__nav-link" href="http://">Đồng hồ nam</a>
               <div class="page__nav-icon hide-show"><span class="back">All</span><i class="icon-chevron-down"></i></div>
               <div class="page__nav-dropdown">
@@ -103,11 +92,6 @@
                 <ul class="page__nav-lv2">
                   <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
                   <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
-            </li>
-          </ul>
-          <ul class="page__nav-lv2">
-            <li class="page__nav-lv2--title">Thương hiệu nổi tiếng
-            <li class="page__nav-lv2--item"><a href="http://">Tonino Lamborghini</a></li>
             </li>
           </ul>
           <ul class="page__nav-lv2">
@@ -241,158 +225,96 @@
     </div>
     </li>
     </ul>
-    <div class="list__social list__social-mb">
-      <ul>
-        <li class="social-item">
-          <a href="">
-            <picture class="ic-picture">
-              <img src="images/icons/icon-heart.svg" alt="alt">
-            </picture>
-            <span class="ic-label">Yêu thích</span>
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="">
-            <picture class="ic-picture">
-              <img src="images/icons/shopping-bag.svg" alt="alt">
-            </picture>
-            <span class="ic-label">Giỏ hàng</span>
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="">
-            <picture class="ic-picture">
-              <img src="images/icons/ic-help-circle.svg" alt="alt">
-            </picture>
-            <span class="ic-label">Trợ giúp</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="header__desc-mb">
-      <p>
-        Trở thành Thành viên của TOPBOP để nhận được những ưu đãi tốt nhất và cập nhật thông tin nhanh nhất.
-      </p>
-    </div>
-
-    <div class="header__login-mb">
-      <div class="header__login-inner">
-        <button class="btn btn-regist"><span>Đăng ký</span></button>
-        <button class="btn btn-login"><span>Đăng nhập</span></button>
-      </div>
-    </div>
     </div>
     </div>
     </div>
   </header>
 
   <main class="page__wrap home__page">
-    <div class="topbop__saleSlide">
-      <div class="topbop__saleSlide--inner wow fadeIn" data-wow-delay="300ms" data-wow-duration="1s">
-        <div class="swiper sale-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide sale__slide"><a href="#">
-                <p class="sale__slide--head">SALE UP TO 50%</p>
-                <p class="sale__slide--markdown">Shop All Our New Markdowns</p>
-              </a></div>
-            <div class="swiper-slide sale__slide"><a href="#">
-                <p class="sale__slide--head">SALE UP TO 50%</p>
-                <p class="sale__slide--markdown">Shop All Our New Markdowns</p>
-              </a></div>
-            <div class="swiper-slide sale__slide"><a href="#">
-                <p class="sale__slide--head">SALE UP TO 50%</p>
-                <p class="sale__slide--markdown">Shop All Our New Markdowns</p>
-              </a></div>
-            <div class="swiper-slide sale__slide"><a href="#">
-                <p class="sale__slide--head">SALE UP TO 50%</p>
-                <p class="sale__slide--markdown">Shop All Our New Markdowns</p>
-              </a></div>
-          </div>
-          <div class="swiper-button-prev slide-btn non-border non-hover"><i class="icon-chevron-downp-left"></i></div>
-          <div class="swiper-button-next slide-btn non-border non-hover"><i class="icon-chevron-down"></i></div>
+    <section class="section__page section__banner section1">
+      <div class="container">
+        <div class="section__page-inner"><a href="http://">
+            <picture class="section__page-picture">
+              <source media="(max-width: 768px )" srcset="images/home/banner1-mb.webp"><img src="images/home/banner1.webp" alt="Banner">
+            </picture>
+          </a>
+          <p class="section__page-heading heading-title">SALE END YEAR</p>
+          <p class="section__page-sub sub-title">Ưu Đãi Khách Mới Giảm Ngay 500.000VNĐ</p>
+          <div class="block__btn"><a class="btn btn-buy">Mua ngay</a></div>
         </div>
       </div>
-    </div>
-    <section class="group-section">
-      <!-- section1 -->
-      <section class="section__page section__banner section1 ">
-        <div class="container">
-          <div class="section__page-inner wow slideInUp" data-wow-duration="2s" data-wow-delay="300ms" ata-wow-offset="10"><a href="http://">
-              <picture class="section__page-picture">
-                <source media="(max-width: 768px )" srcset="images/home/banner1-mb.webp"><img src="images/home/banner1.webp" alt="Banner">
-              </picture>
-            </a>
-            <p class="section__page-heading heading-title">SALE END YEAR</p>
-            <p class="section__page-sub sub-title">Ưu Đãi Khách Mới Giảm Ngay 500.000VNĐ</p>
-            <div class="block__btn"><a class="btn btn-buy">Mua ngay</a></div>
-          </div>
+    </section>
+    <section class="section__page section__banner section2">
+      <div class="container">
+        <div class="section__page-inner"><a href="http://">
+            <picture class="section__page-picture">
+              <source media="(max-width: 768px )" srcset="images/home/BOMBERG-mb.webp"><img src="images/home/BOMBERG.webp" alt="Banner">
+            </picture>
+          </a>
+          <p class="section__page-heading heading-title">BOMBERG</p>
+          <p class="section__page-sub sub-title">Đồng Hồ Đức Sang Trọng &amp; Đẳng Cấp</p>
+          <div class="block__btn"><a class="btn btn-buy">Mua ngay</a></div>
         </div>
-      </section>
-
-      <!-- section2 -->
-      <section class="section__page section__banner section2">
-        <div class="container">
-          <div class="section__page-inner wow zoomIn" data-wow-duration="2s" data-wow-delay="300ms"><a href="http://">
-              <picture class="section__page-picture">
-                <source media="(max-width: 992px )" srcset="images/home/BOMBERG-mb.webp"><img src="images/home/BOMBERG.webp" alt="Banner">
-              </picture>
-            </a>
-            <p class="section__page-heading heading-title">BOMBERG</p>
-            <p class="section__page-sub sub-title">Đồng Hồ Đức Sang Trọng &amp; Đẳng Cấp</p>
-            <div class="block__btn"><a class="btn btn-buy">Mua ngay</a></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- section3 -->
-      <section class="section__page section__module section3">
-        <div class="container">
-          <div class="section_page-inner ">
-            <div class="row">
-              <div class="col-6 col-sm-12">
-                <div class="section__module-left wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms">
-                  <div class="module-product">
-                    <picture class="section__page-picture">
-                      <source media="(max-width: 768px )" srcset="images/home/module1-mb.webp"><img src="images/home/module1.png" alt="Banner">
-                    </picture>
-                    <p class="section__page-heading heading-title">TONINO LAMBORGHINI</p>
-                    <p class="section__page-sub sub-title">Siêu Phẩm Đồng Hồ Thể Thao Từ Italia</p>
-                    <div class="block__btn"><a class="btn btn-buy">Mua ngay</a></div>
-                  </div>
+      </div>
+    </section>
+    <section class="section__page section__module section3">
+      <div class="container">
+        <div class="section_page-inner">
+          <div class="row">
+            <div class="col-6 col-sm-12">
+              <div class="section__module-left wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms">
+                <div class="module-product">
+                  <picture class="section__page-picture">
+                    <source media="(max-width: 768px )" srcset="images/home/module1-mb.webp"><img src="images/home/module1.png" alt="Banner">
+                  </picture>
+                  <p class="section__page-heading heading-title">TONINO LAMBORGHINI</p>
+                  <p class="section__page-sub sub-title">Siêu Phẩm Đồng Hồ Thể Thao Từ Italia</p>
+                  <div class="block__btn"><a class="btn btn-buy">Mua ngay</a></div>
                 </div>
               </div>
-              <div class="col-6 col-sm-12">
-                <div class="section__module-right wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms">
-                  <div class="module-product">
-                    <picture class="section__page-picture">
-                      <source media="(max-width: 768px )" srcset="images/home/module2-mb.webp"><img src="images/home/module2.png" alt="Banner">
-                    </picture>
-                    <p class="section__page-heading heading-title">ARMAND NICOLET</p>
-                    <p class="section__page-sub sub-title">Thanh Lịch &amp; Cổ Điển Từ Tramelan Thụy Sỹ</p>
-                    <div class="block__btn"><a class="btn btn-buy">Mua ngay</a></div>
-                  </div>
+            </div>
+            <div class="col-6 col-sm-12">
+              <div class="section__module-right wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms">
+                <div class="module-product">
+                  <picture class="section__page-picture">
+                    <source media="(max-width: 768px )" srcset="images/home/module2-mb.webp"><img src="images/home/module2.png" alt="Banner">
+                  </picture>
+                  <p class="section__page-heading heading-title">ARMAND NICOLET</p>
+                  <p class="section__page-sub sub-title">Thanh Lịch &amp; Cổ Điển Từ Tramelan Thụy Sỹ</p>
+                  <div class="block__btn"><a class="btn btn-buy">Mua ngay</a></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- section4 -->
-      <section class="section__page section__banner section4">
-        <div class="container">
-          <div class="section__page-inner wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms"><a href="http://">
-              <picture class="section__page-picture">
-                <source media="(max-width: 768px )" srcset="images/home/WALDHOFF-mb.webp"><img src="images/home/WALDHOFF.webp" alt="Banner">
-              </picture>
-            </a>
-            <p class="section__page-heading heading-title">WALDHOFF</p>
-            <p class="section__page-sub sub-title">Thể Hiện Cá Tính Vì Bomberg Là Khác Biệt</p>
-            <div class="block__btn"><a class="btn btn-buy">KHÁM PHÁ NGAY</a></div>
-          </div>
+      </div>
+    </section>
+    <section class="section__page section__banner section4">
+      <div class="container">
+        <div class="section__page-inner"><a href="http://">
+            <picture class="section__page-picture">
+              <source media="(max-width: 768px )" srcset="images/home/WALDHOFF-mb.webp"><img src="images/home/WALDHOFF.webp" alt="Banner">
+            </picture>
+          </a>
+          <p class="section__page-heading heading-title">WALDHOFF</p>
+          <p class="section__page-sub sub-title">Thể Hiện Cá Tính Vì Bomberg Là Khác Biệt</p>
+          <div class="block__btn"><a class="btn btn-buy">Mua ngay</a></div>
         </div>
-      </section>
+      </div>
+    </section>
+    <section class="section__page section__trending section5">
+      <div class="container">
+        <div class="section__page-inner wow fadeIn" data-wow-duration="2s" data-wow-delay="300ms"><a href="http://">
+            <picture class="section__page-picture">
+              <source media="(max-width: 768px )" srcset="images/home/WALDHOFF-mb.webp"><img src="images/home/WALDHOFF.webp" alt="Banner">
+            </picture>
+          </a>
+          <p class="section__page-heading heading-title">WALDHOFF</p>
+          <p class="section__page-sub sub-title">Thể Hiện Cá Tính Vì Bomberg Là Khác Biệt</p>
+          <div class="block__btn"><a class="btn btn-buy">KHÁM PHÁ NGAY</a></div>
+        </div>
+      </div>
+    </section>
     </section>
 
     <!-- section5 -->
@@ -2170,14 +2092,93 @@
                   </li>
                 </ul>
               </div>
+              <div class="col-6"><a class="pic-link" href="http://">
+                  <picture class="section__page-picture">
+                    <source media="(max-width: 768px )"><img src="images/home/img-list-cate.png" alt="Banner">
+                  </picture>
+                </a></div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/function.js"></script>
+        </section>
+        <section class="section__page section__trending section7">
+          <div class="container">
+            <div class="section__Page-inner">
+              <div class="topbop__swiper swiper benefit__swiper">
+                <div class="topbop__swiper--top">
+                  <p class="topbop__swiper--heading">SẢN PHẨM MỚI</p>
+                  <div class="group-button-director">
+                    <div class="swiper-button-prev slide-btn"><i class="icon-chevron-downp-left"></i></div>
+                    <div class="swiper-button-next slide-btn"><i class="icon-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide topbop__slide">
+                    <div class="slide__image"></div><a href="#">
+                      <picture></picture><img src="/images/slide-image/benefit-image.png">
+                    </a>
+                    <div class="slide__text"></div>
+                    <div class="slide__text--heading">Giảm 10% với thành viên Top Bop</div>
+                  </div>
+                  <div class="swiper-slide topbop__slide">
+                    <div class="slide__image"></div><a href="#">
+                      <picture></picture><img src="/images/slide-image/benefit-image.png">
+                    </a>
+                    <div class="slide__text"></div>
+                    <div class="slide__text--heading">Giảm 10% với thành viên Top Bop</div>
+                  </div>
+                  <div class="swiper-slide topbop__slide">
+                    <div class="slide__image"></div><a href="#">
+                      <picture></picture><img src="/images/slide-image/benefit-image.png">
+                    </a>
+                    <div class="slide__text"></div>
+                    <div class="slide__text--heading">Giảm 10% với thành viên Top Bop</div>
+                  </div>
+                  <div class="swiper-slide topbop__slide">
+                    <div class="slide__image"></div><a href="#">
+                      <picture></picture><img src="/images/slide-image/benefit-image.png">
+                    </a>
+                    <div class="slide__text"></div>
+                    <div class="slide__text--heading">Giảm 10% với thành viên Top Bop</div>
+                  </div>
+                  <div class="swiper-slide topbop__slide">
+                    <div class="slide__image"></div><a href="#">
+                      <picture></picture><img src="/images/slide-image/benefit-image.png">
+                    </a>
+                    <div class="slide__text"></div>
+                    <div class="slide__text--heading">Giảm 10% với thành viên Top Bop</div>
+                  </div>
+                  <div class="swiper-slide topbop__slide">
+                    <div class="slide__image"></div><a href="#">
+                      <picture></picture><img src="/images/slide-image/benefit-image.png">
+                    </a>
+                    <div class="slide__text"></div>
+                    <div class="slide__text--heading">Giảm 10% với thành viên Top Bop</div>
+                  </div>
+                  <div class="swiper-slide topbop__slide">
+                    <div class="slide__image"></div><a href="#">
+                      <picture></picture><img src="/images/slide-image/benefit-image.png">
+                    </a>
+                    <div class="slide__text"></div>
+                    <div class="slide__text--heading">Giảm 10% với thành viên Top Bop</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section__page section__hightlight">
+          <div class="container">
+            <div class="section_page-inner"></div>
+          </div>
+        </section>
+        </main>
+        <footer class="page-footer">
+          <div class="container">
+            <p></p>&copy; 2016 |<i class="fa fa-value" aria-hidden="true">&nbsp;</i><a href="#">View Sourcesssssss</a>
+          </div>
+        </footer>
+        <script src="js/function.js"></script>
 </body>
 
 </html>
