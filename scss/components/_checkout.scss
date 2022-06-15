@@ -461,3 +461,19 @@
     text-overflow: ellipsis;
     word-break: break-word;
 }
+.box-desc{
+    display: none;
+    background: #e5e5e5;
+    margin-top: 1.6rem;
+    &-inner{
+        padding: 2rem 1.6rem;
+        > p {
+            &:not(:last-child){
+                margin-bottom: .4rem;
+            }
+        }
+        @include breakpoints('md'){
+            padding: 1.6rem;
+        }
+    }
+}

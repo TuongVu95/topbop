@@ -593,6 +593,12 @@ const payments = () => {
 
     $('.js-payment + input[type="radio"]').prop('checked', false);
     radio.prop('checked', true);
+
+    if(radio.attr('bank-transfer') === "true"){
+      $('.box-desc-bank').show();
+    }else{
+      $('.box-desc-bank').hide();
+    }
   });
 }
 
