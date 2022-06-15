@@ -12,6 +12,7 @@ const featureHeader = () => {
   const $purger = $('.page__header-burger');
   const $actionExpand = $('.jsActionExpand');
   const $profile = $('.page__profile');
+  const btnSearch = $('.form-search .btn-form-search');
 
   $jsOpenNav.click(function () {
     const $that = $(this);
@@ -33,6 +34,16 @@ const featureHeader = () => {
     }
 
   });
+
+  if($mobile){
+    btnSearch.click(function () {
+        $('.search-suggest-box').addClass('open');
+    })
+
+    $('.btn-ic-close').click(function () {
+      $('.search-suggest-box').removeClass('open');
+    })
+  }
 
   $document.click(function (e) {
     const elTarget = e.target;
