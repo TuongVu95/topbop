@@ -13,6 +13,7 @@ const featureHeader = () => {
   const $actionExpand = $('.jsActionExpand');
   const $profile = $('.page__profile');
   const btnSearch = $('.form-search .btn-form-search');
+  const btnLogin = $('.js--login');
 
   $jsOpenNav.click(function () {
     const $that = $(this);
@@ -32,11 +33,11 @@ const featureHeader = () => {
     if ($that.is($profile)) {
       $jsOpenNav.toggleClass('block-profile');
     }
-
   });
 
   if($mobile){
-    btnSearch.click(function () {
+    btnSearch.click(function (e) {
+      e.preventDefault();
         $('.search-suggest-box').addClass('open');
     })
 
@@ -53,9 +54,13 @@ const featureHeader = () => {
       $navMobile.removeClass('is-expand');
       $jsOpenNav.removeClass('is-open');
     }
-
   });
 
+
+  //login
+  btnLogin.click(function () {
+    console.log(1231231)
+  });
 }
 
 const topbopSwiper = new Swiper('.benefit__swiper', {
@@ -212,6 +217,7 @@ const pageHome = () => {
   }
 
   const topbopSwiper = new Swiper('.swiper-product', {
+    speed: 2000,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -289,7 +295,7 @@ const pageHome = () => {
         resetAnimation: true,
       }
     );
-    wow.init();
+    // wow.init();
   }
 
 }
@@ -331,28 +337,18 @@ const pageCate = () => {
     contenPara.text(para);
   });
 
-  btnOption.click(function () {
-    const $that = $(this);
-    $that.toggleClass('active');
-
-    optionDropdown.toggleClass('open');
-
-    console.log(1)
-    filterDropdown.removeClass('open');
-  });
-
   // sắp xếp
-  $radio.change(function (e) {
-    e.preventDefault();
+  // $radio.change(function (e) {
+  //   e.preventDefault();
 
-    const that = $(this);
+  //   const that = $(this);
 
-    $radio.prop('checked', false);
-    that.prop('checked', true);
+  //   $radio.prop('checked', false);
+  //   that.prop('checked', true);
 
-    btnOption.removeClass('active');
-    optionDropdown.removeClass('open');
-  });
+  //   btnOption.removeClass('active');
+  //   optionDropdown.removeClass('open');
+  // });
 
   // checkbox
   groupCheckbox.each(function () {
@@ -395,7 +391,6 @@ const pageCate = () => {
   jsFilter.click(function(){
     $('.option-dropdown').removeClass('open');
     filterDropdown.toggleClass('open');
-    console.log(122);
   });
 
   jsListItem.click(function(){
@@ -408,6 +403,7 @@ const pageCate = () => {
 
     filterDropdown.removeClass('open');
   });
+
 }
 
 const detailPolicy = () => {
@@ -536,12 +532,9 @@ const checkUsername = ($username) => {
   return false;
 }
 
-// console.log("checkUsername()", checkUsername());
-
 const checkAddClassInvalid = () => {
 
 }
-// console.log("checkUsername", checkUsername());
 // checkPhone();
 const validateUser = () => {
   inputNumberPhone.on('keyup keydown', function () {
@@ -631,8 +624,8 @@ const payments = () => {
     jsPayment.removeClass('active');
     $that.addClass('active');
 
-    $('.js-payment + input[type="radio"]').prop('checked', false);
-    radio.prop('checked', true);
+    $('.js-payment + input[type="radio"]').prop('checked', false).removeAttr('checked');
+    radio.prop('checked', true).attr('checked', true);
 
     if(radio.attr('bank-transfer') === "true"){
       $('.box-desc-bank').show();
@@ -645,12 +638,55 @@ const payments = () => {
 $document.on('click',function(e){
   const innerFilter = $('.inner-filter'), $target = e.target;
   const filterDropdown = $('.filter-dropdown');
-  // console.log("innerFilter.is($target)", $('.option-item, .radio, .radio input[type="radio"]').is($target), $target)
+
   if(!$('.option-item, .radio, .radio input[type="radio"]').is($target) && $('.option-item, .radio, .radio input[type="radio"]').has($target).length === 0){
     // $('.filter-dropdown, .option-dropdown').removeClass('opsen')
   }
 
 });
+
+const fnDropdown = () => {
+  let optionWrap = $('.option');
+  optionWrap.each(function (index,item) {
+
+    let that = $(this),
+        optionBtn = that.find('.option-button'),
+        optionItem = that.find('.option-item'),
+        optionLabel = that.find('.option-label'),
+        radio = that.find('.radio input[type="radio"]');
+
+    let filterDropdown = $('.filter-dropdown');
+
+    optionBtn.click(function (params) {
+      const that = $(this),
+      parent = that.closest('.option'), optionDropdown = parent.find('.option-dropdown');
+      that.toggleClass('active');
+
+      optionDropdown.toggleClass('open');
+      // filterDropdown.removeClass('open');
+    });
+
+    optionItem.click(function () {
+      let that = $(this), contextItem = that.children('.radio').text().trim();
+      optionLabel.text(contextItem);
+    })
+
+    radio.change(function (e) {
+      e.preventDefault();
+
+      let that = $(this),
+      parent = that.closest('.option'),
+      btnOption = parent.find('.option-button'),
+      optionDropdown = parent.find('.option-dropdown'), childrenRadio  = parent.find('.radio input[type="radio"]');
+
+      childrenRadio.prop('checked', false);
+      that.prop('checked', true);
+
+      btnOption.removeClass('active');
+      optionDropdown.removeClass('open');
+    });
+  });
+}
 
 const init = () => {
   featureHeader();
@@ -663,6 +699,7 @@ const init = () => {
   validateUser();
   submit();
   payments();
+  fnDropdown();
 }
 
 init();
@@ -680,8 +717,6 @@ $('.js-more').each(function () {
   content = $(this).html();
 
   show_char = 200;
-
-  console.log(content.length);
   if (content.length > show_char) {
     var c = content.substr(0, show_char);
     var h = content.substr(show_char, content.length - show_char);
@@ -730,7 +765,6 @@ jQuery.fn.extend({
         }
 
       });
-
     });
   }
 });

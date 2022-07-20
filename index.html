@@ -23,16 +23,19 @@
         <div class="page__header-left page__header--col">
           <a class="page__header-logo" href="/">
             <picture>
-              <source media="(max-width: 992px )" srcset="images/logo/logo-mb.png"><img src="images/logo/logo.png" alt="Logo">
+              <!-- <source media="(max-width: 992px )" srcset="images/logo/logo-mb.png"> -->
+              <img src="images/logo/logo.png" alt="Logo">
             </picture>
           </a>
         </div>
         <div class="page__header-right page__header--col">
           <div class="page__header-right--item form-search">
-            <div class="form-group">
-              <input class="form-input form-input-search" type="text" placeholder="Tìm kiếm">
-              <button class="btn btn-form-search icon-search" type="submit"><img src="images/icons/ic-search.svg" alt="Search"></button>
-            </div>
+            <form name="" method="post" action="/default.aspx">
+              <div class="form-group">
+                <input class="form-input form-input-search" type="text" placeholder="Tìm kiếm">
+                <button class="btn btn-form-search icon-search" type="submit"><img src="images/icons/ic-search.svg" alt="Search"></button>
+              </div>
+            </form>
           </div>
           <div class="page__header-right--item list__social">
             <ul>
@@ -42,8 +45,27 @@
             </ul>
           </div>
           <div class="page__header-right--item form__user">
-            <div class="form__regist form__user-item"><a class="txt-uppercase f-w-700">ĐĂNG KÝ</a></div><span class="line-vertical"></span>
-            <div class="form__login form__user-item"><a class="txt-uppercase f-w-700">Đăng nhập</a></div>
+            <!-- <div class="form__regist form__user-item"><a class="txt-uppercase f-w-700">ĐĂNG KÝ</a></div><span class="line-vertical"></span> -->
+            <!-- <div class="form__login form__user-item"><a class="txt-uppercase f-w-700">Đăng nhập</a></div> -->
+            <div class="form__login form__user-item js--login">
+              <img src="images/icons/user.svg" alt="User">
+            </div>
+            <div class="login__box-wrap">
+              <div class="login__box-inner">
+                <i class="login__icon icon-close"></i>
+
+                <div class="login__head">
+                  <picture class="login__logo">
+                    <img src="images/logo/logo.png" alt="Logo">
+                  </picture>
+                </div>
+                <div class="login__body">
+                  <form action="">
+
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -59,15 +81,15 @@
               </span>
             </div>
             <div class="search-suggest-result">
-                <p class="result-mess">Tìm kiếm gần đây nhất</p>
-                <ul class="result-list">
-                  <li class="result-list-item">
-                    <a href>Waldhoff</a>
-                  </li>
-                  <li class="result-list-item">
-                    <a href>Tonino Lamborghini</a>
-                  </li>
-                </ul>
+              <p class="result-mess">Tìm kiếm gần đây nhất</p>
+              <ul class="result-list">
+                <li class="result-list-item">
+                  <a href>Waldhoff</a>
+                </li>
+                <li class="result-list-item">
+                  <a href>Tonino Lamborghini</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -405,7 +427,7 @@
           <div class="row">
             <div class="col-6 col-md-12">
               <ul class="block__list">
-                <li class="block__list-item wow slideInLeft" data-wow-duration="2s" data-wow-delay="220ms"><a class="block__list-link" href="http://">
+                <li class="block__list-item wow slideInLeft" data-wow-duration="2s" data-wow-delay="220ms"><a class="block__list-link" href="file:///Users/macintoshhd/Documents/f-freelance/topbop/index.html">
                     <p class="block__list-name title-product">ĐỒNG HỒ NAM</p>
                     <picture class="section__page-picture block__picture">
                       <source media="(max-width: 768px )" srcset="images/home/img-list-cate1-mb.webp">
@@ -2179,6 +2201,26 @@
           </div>
         </footer>
         <script src="js/function.js"></script>
+        <script>
+         var initialLoad = true;
+
+$(document).ready(function() {
+
+    initialLoad = false;
+    name(initialLoad);
+});
+
+const name = (params) => {
+  if (params) {
+    //Do work that is done when the page was first refreshed/loaded.
+    console.log("work");
+} else {
+    //Do work when it's not the initial load.
+    console.log("Do it's not")
+}
+}
+name();
+        </script>
 </body>
 
 </html>

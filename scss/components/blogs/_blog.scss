@@ -1,0 +1,55 @@
+.module__pagination{
+    margin: 20px 0 40px;
+    .next{
+        span{
+            display: inline-block;
+            transform: rotate(180deg);
+        }
+    }
+    @include breakpoints('md'){
+        margin: 20px 0 0;
+    }
+}
+.pagination {
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            // color: #fff;
+        }
+    }
+
+    &__numbers {
+        display: inline-block;
+        vertical-align: top;
+        font-weight: bold;
+        margin: 0 2px;
+        padding: 8px 16px;
+        border-radius: 0.4rem;
+        cursor: pointer;
+
+        @media(min-width: 992px){
+            &:hover,&:focus{
+                color: #fff;
+                background: #131313;
+                font-weight: 600;
+                a{
+                    color: inherit;
+                }
+            }
+        }
+        &.active {
+            color: #fff;
+            background: #131313;
+            font-weight: 600;
+        }
+        @include breakpoints('md'){
+            padding: 8px;
+        }
+    }
+    &__btn{
+
+    }
+
+}
