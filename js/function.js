@@ -199,6 +199,7 @@ const pageHome = () => {
   if ($desktop) {
     var swiper = new Swiper(".swiper-trending", {
       slidesPerView: "auto",
+    speed: 1600,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -217,7 +218,8 @@ const pageHome = () => {
   }
 
   const topbopSwiper = new Swiper('.swiper-product', {
-    speed: 2000,
+    speed: 1600,
+    waitForTransition: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -231,7 +233,7 @@ const pageHome = () => {
       '768': {
         slidesPerView: 3.1,
         spaceBetween: 16,
-        slidesPerGroup: 3.1,
+        slidesPerGroup: 3,
       }
     }
   });
@@ -258,6 +260,7 @@ const pageHome = () => {
   });
 
   const blog = new Swiper('.swiper-blogs', {
+    speed: 1600,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
