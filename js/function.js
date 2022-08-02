@@ -56,7 +56,6 @@ const featureHeader = () => {
     }
   });
 
-
   //login
   btnLogin.click(function () {
     console.log(1231231)
@@ -598,10 +597,6 @@ const dropdownCity = () => {
   return flag;
 }
 
-const validateAddress = () => {
-
-}
-
 const submit = () => {
   const btnSubmit = $('.js-btn-submit');
 
@@ -695,6 +690,21 @@ const fnDropdown = () => {
   });
 }
 
+const fnFooter = () => {
+  let boxEmail = $('.box-email');
+  let btnOpenEmail = $('.btn-email'), submitEmail = $('.submit-email');
+
+  boxEmail.hide();
+  btnOpenEmail.on('click', function(e){
+    e.preventDefault();
+    boxEmail.slideDown(600).addClass('open');
+    $(this).delay(300).hide();
+    $('.form-icon, .btn-email').delay(300).hide();
+  });
+
+
+}
+
 const init = () => {
   featureHeader();
   pageHome();
@@ -707,6 +717,7 @@ const init = () => {
   submit();
   payments();
   fnDropdown();
+  fnFooter();
 }
 
 init();

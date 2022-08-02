@@ -252,3 +252,40 @@
         }
     }
 }
+.box-email{
+    input[type="email"]{
+        width: calc(100% - 100px);
+        height: 32px;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 14px;
+        outline: none;
+    }
+    .submit-email{
+        background: rgba(255,255,255,0.2);
+        width: 100px;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        border: none;
+        justify-content: flex-start;
+        color: #fff;
+        padding: .8rem .9rem;
+        margin-top: 12px;
+        border-radius: 4px;
+    }
+    @include breakpoints('md'){
+        display: flex;
+        align-items: center;
+        input[type="email"]{
+            border-radius: 4px 0 0 4px;
+        }
+        .submit-email{
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+}
