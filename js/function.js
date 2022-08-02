@@ -480,6 +480,10 @@ const pageCart = () => {
       $selectText.text(selectData);
 
       jsSelect.removeClass(classExpand);
+
+      triggerClass(optionItem, $(this), 'active');
+
+      parent.find('.option-data').attr('data-value', $that.attr('data-value'))
     });
   });
 
